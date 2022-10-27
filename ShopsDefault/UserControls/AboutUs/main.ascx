@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="main.ascx.cs" Inherits="ShopsDefault.UserControls.AboutUs.main" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true"  CodeBehind="main.ascx.cs" Inherits="ShopsDefault.UserControls.AboutUs.main" %>
 <div class="about-main section">
     <div class="container">
         <asp:ObjectDataSource ID="ds" runat="server" OnSelecting="ds_Selecting" SelectMethod="GetDataTable_SQL_pro" TypeName="Librari.Cls_AboutUs" />

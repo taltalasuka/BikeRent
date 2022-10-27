@@ -15,29 +15,29 @@ namespace ShopsDefault.UserControls.Header
 
         }
 
-        protected string GetCountItemCart()
-        {
-            int count = 0;
-            object total;
-            DataTable dt = (DataTable)Session["cart_items"];
-            if (dt != null)
-            {
-                total = dt.Compute("Sum(Quantity)", "");
-                if (total == null || total.ToString() == "")
-                {
-                    count = 0;
-                }
-                else
-                {
-                    count = Convert.ToInt32(total.ToString());
-                }
+        //protected string GetCountItemCart()
+        //{
+        //    int count = 0;
+        //    object total;
+        //    DataTable dt = (DataTable)Session["cart_items"];
+        //    if (dt != null)
+        //    {
+        //        total = dt.Compute("Sum(Quantity)", "");
+        //        if (total == null || total.ToString() == "")
+        //        {
+        //            count = 0;
+        //        }
+        //        else
+        //        {
+        //            count = Convert.ToInt32(total.ToString());
+        //        }
 
-            }
-            else
-            {
-                count = 0;
-            }
-            return count.ToString();
-        }
+        //    }
+        //    else
+        //    {
+        //        count = 0;
+        //    }
+        //    return count.ToString();
+        //}
     }
 }

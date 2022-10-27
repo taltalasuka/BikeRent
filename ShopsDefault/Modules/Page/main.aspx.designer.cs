@@ -20,5 +20,11 @@ namespace ShopsDefault.Modules.Page {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl slider_w;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl search_filter;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl pricing_w;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl why_choose_w;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl portfolio_w;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl rental_process_w;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl hot_news_w;
     }
 }

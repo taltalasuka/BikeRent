@@ -13,5 +13,6 @@ namespace ShopsDefault.Modules.Products
 
     public partial class main
     {
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl product_main_w;
     }
 }

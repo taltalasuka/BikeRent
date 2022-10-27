@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="pricing.ascx.cs" Inherits="ShopsDefault.UserControls.Products.pricing" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true"  CodeBehind="pricing.ascx.cs" Inherits="ShopsDefault.UserControls.Products.pricing" %>
 
 <div class="prd-pricing section">
     <div class="container">

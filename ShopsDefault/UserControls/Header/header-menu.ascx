@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="header-menu.ascx.cs" Inherits="ShopsDefault.UserControls.Header.header_menu" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true"  CodeBehind="header-menu.ascx.cs" Inherits="ShopsDefault.UserControls.Header.header_menu" %>
 
 <div class="hd-menu">
     <div class="container">
@@ -14,7 +14,7 @@
                 <div class="hd-cart-icon">
                     <a href="/gio-hang.html">
                         <i class="fa fa-shopping-basket"></i>
-                        <span class="hd-cart-item"><%= GetCountItemCart()%></span></a>
+                        <span class="hd-cart-item"><%= Utils.GetCountItemCart()%></span></a>
                 </div>
             </div>
         </div>

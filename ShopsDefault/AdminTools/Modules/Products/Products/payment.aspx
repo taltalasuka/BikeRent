@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminTools/AdminTools.Master" AutoEventWireup="true" CodeFile="payment.aspx.cs" Inherits="ShopsDefault.AdminTools.Modules.Products.Products.payment" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminTools/AdminTools.Master" AutoEventWireup="true"  CodeBehind="payment.aspx.cs" Inherits="ShopsDefault.AdminTools.Modules.Products.Products.payment" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
-    <title>Quốc Minh - Quản Lý Hình Thức Thanh Toán</title>
+    <title>ENSCore - Quản Lý Hình Thức Thanh Toán</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="css" runat="server">
 </asp:Content>

@@ -13,5 +13,6 @@ namespace ShopsDefault.Modules.Products
 
     public partial class cart
     {
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl cart_main_w;
     }
 }

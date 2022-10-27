@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeFile="catalog.aspx.cs" Inherits="ShopsDefault.Modules.Products.catalog" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true"  CodeBehind="catalog.aspx.cs" Inherits="ShopsDefault.Modules.Products.catalog" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
     <title>Danh Mục Sản Phẩm - Cho Thuê Xe Máy Ở Hà Nội</title>
 </asp:Content>

@@ -1,5 +1,13 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="main.ascx.cs" Inherits="ShopsDefault.AdminTools.Modules.Header.main" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true"  CodeBehind="main.ascx.cs" Inherits="ShopsDefault.AdminTools.Modules.Header.main" %>
 
+<script>
+    $(function () {
+        $('.avatar .has-sub').click(function () {
+
+            $('.hd-nav-sub').toggle();
+        });
+    });
+</script>
 
 <div class="hd-menu">
     <div class="row">
@@ -26,20 +34,15 @@
                 <div class="hd-user-setting hd-nav">
                     <ul>
                         <li class="avatar">
-                            <a href="#">
+                            <a class="has-sub" href="#">
                                 <img src="/AdminTools/images/user/minh-quoc.jpg" /></a>
                             <ul class="hd-nav-sub">
+                                <li class="nav-group">Cài đặt</li>
                                 <li>
-                                    <a href="#">Trang cá nhân</a>
+                                    <a href="#"><i class="icon-settings"></i>Đổi mật khẩu</a>
                                 </li>
                                 <li>
-                                    <a href="#">Thay đổi mật khẩu</a>
-                                </li>
-                                <li>
-                                    <a href="#">Khóa màn hình</a>
-                                </li>
-                                <li>
-                                    <a href="#">Đăng xuất</a>
+                                    <a href="/AdminTools/DangNhap.html"><i class="icon-logout"></i>Đăng xuất</a>
                                 </li>
                             </ul>
                         </li>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeFile="main.aspx.cs" Inherits="ShopsDefault.Modules.Page.main" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true"  CodeBehind="main.aspx.cs" Inherits="ShopsDefault.Modules.Page.main" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
     <title>Cho Thuê Xe Máy Ở Hà Nội</title>
 </asp:Content>
@@ -16,6 +16,7 @@
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="Banner_Slider" runat="server">
     <div id="slider_w" runat="server"></div>
+    <div id="search_filter" runat="server"></div>
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="Left" runat="server">
 </asp:Content>

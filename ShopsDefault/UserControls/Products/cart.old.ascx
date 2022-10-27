@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="cart.old.ascx.cs" Inherits="ShopsDefault.UserControls.Products.cartold" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true"  CodeBehind="cart.old.ascx.cs" Inherits="ShopsDefault.UserControls.Products.cartold" %>
 
     <div class="prd-cart section">
         <div class="block-header">Giỏ hàng</div>

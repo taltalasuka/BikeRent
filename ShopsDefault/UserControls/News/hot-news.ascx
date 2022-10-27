@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="hot-news.ascx.cs" Inherits="ShopsDefault.UserControls.News.hot_news" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true"  CodeBehind="hot-news.ascx.cs" Inherits="ShopsDefault.UserControls.News.hot_news" %>
 <div class="news-hot-news section">
     <div class="container">
         <div class="block-header">Tin tức nổi bật</div>

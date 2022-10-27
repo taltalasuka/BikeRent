@@ -1,8 +1,8 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="rental-process.ascx.cs" Inherits="ShopsDefault.UserControls.AboutUs.rental_process" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true"  CodeBehind="rental-process.ascx.cs" Inherits="ShopsDefault.UserControls.AboutUs.rental_process" %>
 
 <div class="about-rental-process section">
     <div class="container">
-        <div class="block-header">Quy trình <span>cho thuê xe</span> Quốc Minh</div>
+        <div class="block-header">Quy trình <span>cho thuê xe</span> ENSCore</div>
         <div class="row">
             <div class="col-3">
                 <div class="item">

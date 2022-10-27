@@ -12,12 +12,24 @@ namespace ShopsDefault.Modules.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Search_Filter_Load();
             Slider_Load();
             Pricing_Load();
             Why_Choose_Load();
             Portfolio_Load();
             Rental_Process_Load();
             Hot_News_Load();
+        }
+
+        private void Search_Filter_Load()
+        {
+            string linkFile = "/UserControls/Products/search-filter.ascx";
+            if (File.Exists(Server.MapPath(linkFile)))
+            {
+                Control main = LoadControl(linkFile);
+                search_filter.Controls.Add(main);
+            }
+
         }
 
         private void Slider_Load()

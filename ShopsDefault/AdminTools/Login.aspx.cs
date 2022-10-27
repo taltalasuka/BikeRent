@@ -14,10 +14,10 @@ namespace ShopsDefault.AdminTools
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Session["username"] = null;
         }
 
-        private void CheckLogin()
+        protected void btnLogin_Click(object sender, EventArgs e)
         {
             string Username = txtUserName.Text;
             string Password = txtPassword.Text;
@@ -38,8 +38,26 @@ namespace ShopsDefault.AdminTools
                 if (dt.Rows.Count > 0)
                 {
                     Session["username"] = Username;
-                    Response.Redirect("BanLamViec.aspx");
+                    Response.Redirect("/AdminTools/BanLamViec.html");
                     Session.RemoveAll();
+                }
+                else if (Username == "" || Password == "")
+                {
+                    lblError.Text = "Lỗi: Tên đăng nhập/Mật khẩu không được để rỗng!";
+                    if (Username == "")
+                    {
+                        txtUserName.Focus();
+                    }
+                    else
+                    {
+
+                        txtPassword.Focus();
+                    }
+                }
+                else
+                {
+                    lblError.Text = "Lỗi: Sai tên đăng nhập hoặc mật khẩu!";
+                    txtUserName.Focus();
                 }
                 conn.Close();
             }
@@ -52,11 +70,6 @@ namespace ShopsDefault.AdminTools
                 if (sqlComm != null) sqlComm.Dispose();
                 if (conn != null) conn.Close();
             }
-        }
-
-        protected void btnLogin_Click(object sender, EventArgs e)
-        {
-            CheckLogin();
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="why-choose.ascx.cs" Inherits="ShopsDefault.UserControls.AboutUs.why_choose" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true"  CodeBehind="why-choose.ascx.cs" Inherits="ShopsDefault.UserControls.AboutUs.why_choose" %>
 <div class="about-why-choose bg-img section">
     <div class="container">
         <div class="block-header">Tại sao nên <span>thuê xe máy</span> của chúng tôi</div>

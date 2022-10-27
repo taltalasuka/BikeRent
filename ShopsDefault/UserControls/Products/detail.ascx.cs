@@ -20,11 +20,12 @@ namespace ShopsDefault.UserControls.Products
             string sql = "SELECT * FROM tbShopsProducts, tbShopsCatalogs WHERE tbShopsCatalogs.ID_Catalog = tbShopsProducts.ID_Catalog and ID_Product = " + id;
             e.InputParameters["sSQL"] = sql;
         }
-                
+
         protected void btnAddToCart_Click(object sender, EventArgs e)
         {
             RepeaterItem item = (sender as Button).NamingContainer as RepeaterItem;
-            int idPrd = Convert.ToInt16(((Button)sender).CommandArgument);
+            //int idPrd = Convert.ToInt16(((Button)sender).CommandArgument);
+            int idPrd = Convert.ToInt32(Request["idProduct"].ToString());
             int quantity = Convert.ToInt32((item.FindControl("txtQuantity") as TextBox).Text);
             if (Session["cart_items"] != null)
             {
@@ -88,6 +89,33 @@ namespace ShopsDefault.UserControls.Products
 
                 Session["cart_items"] = dt;
             }
+            Response.Redirect(Request.RawUrl);
+        }
+
+        protected string getAmount(object Amount)
+        {
+            string txtAmount = "0";
+            int idPrd = Convert.ToInt32(Request["idProduct"].ToString());
+            DataTable dt = (DataTable)Session["cart_items"];
+            DataTable dtProduct = Cls_ShopsProducts.getDataTable_Join_ShopsCatalogs(idPrd);
+            if (Session["cart_items"] != null)
+            {
+                DataRow[] checkPrd = dt.Select("ID_Product = " + idPrd);
+                if (checkPrd.Length > 0)
+                {
+                    DataRow dr = checkPrd[0];
+                    txtAmount = Convert.ToString(Convert.ToInt32(dtProduct.Rows[0]["Amount"]) - Convert.ToInt32(dr["Quantity"]));
+                }
+                else
+                {
+                    txtAmount = Convert.ToString(dtProduct.Rows[0]["Amount"]);
+                }
+            }
+            else
+            {
+                txtAmount = Convert.ToString(dtProduct.Rows[0]["Amount"]);
+            }
+            return txtAmount;
         }
     }
 }

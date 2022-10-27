@@ -18,6 +18,7 @@ namespace ShopsDefault.UserControls.Products
                 BindData();
             }
         }
+
         protected void BindData()
         {
             DataTable cart = Session["cart_items"] as DataTable;
@@ -40,14 +41,13 @@ namespace ShopsDefault.UserControls.Products
             DataTable dt = Session["cart_items"] as DataTable;
             int ID = Convert.ToInt32(grv.DataKeys[e.RowIndex].Values[0]);
             DataRow[] dr = dt.Select(" ID_Product = '" + ID + "'");
-            //string sMessages = "alert('" + ID.ToString() + " - " + dt.Rows.Count.ToString() + "');"; 
-            //ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "", sMessages, true);
             if (dt.Rows.Count > 0)
             {
                 dt.Rows.Remove(dr[0]);
                 Session["cart_items"] = dt;
                 BindData();
             }
+            Response.Redirect("/gio-hang.html");
         }
 
         protected void grv_RowUpdating(object sender, GridViewUpdateEventArgs e)
@@ -55,7 +55,6 @@ namespace ShopsDefault.UserControls.Products
 
             DataTable dt = Session["cart_items"] as DataTable;
             int ID = Convert.ToInt32(grv.DataKeys[e.RowIndex].Values[0]);
-            //int quantity = Convert.ToInt32(grv.DataKeys[e.RowIndex].Values[3]);
             int quantity = Convert.ToInt32(((TextBox)grv.Rows[e.RowIndex].FindControl("txtQuantity")).Text);
             DataRow[] checkPrd = dt.Select(" ID_Product = '" + ID + "'");
             if (dt.Rows.Count > 0)
@@ -67,6 +66,7 @@ namespace ShopsDefault.UserControls.Products
                 Session["cart_items"] = dt;
                 BindData();
             }
+            Response.Redirect("/gio-hang.html");
         }
 
         protected string getTotal()
@@ -92,6 +92,21 @@ namespace ShopsDefault.UserControls.Products
                 count = 0;
             }
             return count.ToString();
+        }
+
+        protected void UpdatePanel1_Init(object sender, EventArgs e)
+        {
+            DataTable dt = Session["cart_items"] as DataTable;
+
+            if (dt == null || dt.Compute("Sum(Total)", "") == null || dt.Compute("Sum(Total)", "").ToString() == "")
+            {
+                UpdatePanel1.Visible = false;
+                lblEmpty.Text = "Không có sản phẩm nào trong giỏ hàng!";
+            } else
+            {
+                UpdatePanel1.Visible = true;
+                lblEmpty.Text = "";
+            }
         }
     }
 }

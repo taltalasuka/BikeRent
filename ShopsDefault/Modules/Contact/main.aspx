@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeFile="main.aspx.cs" Inherits="ShopsDefault.Modules.Contact.main" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true"  CodeBehind="main.aspx.cs" Inherits="ShopsDefault.Modules.Contact.main" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
     <title>Liên Hệ - Cho Thuê Xe Máy Ở Hà Nội</title>
 </asp:Content>
@@ -11,6 +11,7 @@
 <asp:Content ID="Content5" ContentPlaceHolderID="Left" runat="server">
 </asp:Content>
 <asp:Content ID="Content6" ContentPlaceHolderID="ContentMain" runat="server">
+    <div id="news_main_w" runat="server"></div>
 </asp:Content>
 <asp:Content ID="Content7" ContentPlaceHolderID="Right" runat="server">
 </asp:Content>

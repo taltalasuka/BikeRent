@@ -13,5 +13,6 @@ namespace ShopsDefault.Modules.Products
 
     public partial class checkout
     {
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl checkout_main_w;
     }
 }

@@ -13,5 +13,6 @@ namespace ShopsDefault.AdminTools.Modules.News.Catalogs
 
     public partial class main
     {
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl catalogs_ww;
     }
 }

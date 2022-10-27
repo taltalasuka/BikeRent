@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -14,7 +16,12 @@ namespace ShopsDefault.UserControls.Products
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            DataTable dt = Session["cart_items"] as DataTable;
 
+            if (dt == null || dt.Compute("Sum(Total)", "") == null || dt.Compute("Sum(Total)", "").ToString() == "")
+            {
+                Response.Redirect("/gio-hang.html");
+            }
         }
 
         protected void ds_Selecting(object sender, ObjectDataSourceSelectingEventArgs e)
@@ -63,168 +70,220 @@ namespace ShopsDefault.UserControls.Products
                 if (ob == DBNull.Value)
                     return "0000001";
                 else
-                    return (Convert.ToInt32(ob) + 1).ToString("0000000");
+                    return (Convert.ToInt32(ob)).ToString("0000000");
             }
             catch (Exception ex) { throw ex; }
         }
 
-        private void SendMaiInfor(string MailTo)
+        private void SendMailInfor(string MailTo)
         {
-            try
-            {
-                string Code = GenCodeOrder();
-                DataTable cart = Session["cart_items"] as DataTable;
-                double Total = Convert.ToDouble(getTotal());
-                string domain = Request.Url.GetLeftPart(UriPartial.Authority);
-                string paymentMethod = "Thanh toán tại cửa hàng";
-                string str = "<div class='fr_checkout fr_col12'>" +
-                    "<div class='header_ckout fr_col12'>" +
-                        "<div class='_header_ckout fr_col12'>" +
-                            "<div class='logo_ckout'>" +
-                                "<a href='" + domain + "' target='_blank'>" +
-                                    "<img src='" + domain + "/images/UploadImages/logo-cho-thue-xe-may-QM.png' />" +
-                                "</a>" +
-                            "</div>" +
-                            "<div class='slogan_ckout'>" +
-                                "<p><b>Cung cấp cho quý khách những tiện nghi phù hợp, dịch vụ đạt chuẩn và chất lượng tốt với mức giá cả bình dân sẽ giúp quý khách có những chuyến đi vui vẻ thoải mái, tiết kiệm được chi phí mà vẫn đảm bảo an toàn.</b></p>" +
-                            "</div>" +
+            string Code = GenCodeOrder();
+            DataTable cart = Session["cart_items"] as DataTable;
+            double Total = Convert.ToDouble(getTotal());
+            string domain = Request.Url.GetLeftPart(UriPartial.Authority);
+            string paymentMethod = "Thanh toán tại cửa hàng";
+            string str = "<div style='font-size: 14px;'>" +
+                "<div>" +
+                    "<div>" +
+                        "<div>" +
+                            "<a href='" + domain + "/quoc-minh.html' target='_blank'>" +
+                                "<img src='" + domain + "/images/UploadImages/logo-cho-thue-xe-may-QM.png' />" +
+                            "</a>" +
                         "</div>" +
-                        "<div class='_body_ckout fr_col12'>" +
-                            "<div class='bd_top_ckout'>" +
-                                "<p class='name_cus'>Kính chào <b>" + txtFullName.Text + " ,</b></p>" +
-                                "<p class='_title_sub'>Bạn đã thuê xe máy tại Quốc Minh</b> .</p>" +
-                                "<ul class='info_order'>" +
-                                    "<li>" +
-                                        "<strong>Mã đơn hàng :</strong>" +
-                                        "<span> " + Code + "</span>" +
-                                    "</li>" +
-                                    "<li>" +
-                                        "<strong>Trạng thái đơn hàng :</strong>" +
-                                        "<span> Đặt hàng thành công </span>" +
-                                    "</li>" +
-                                    "<li>" +
-                                        "<strong>Thời gian giao dịch :</strong>" +
-                                        "<span> " + DateTime.Now.ToString("dd/MM/yyyy hh:mm") + "</span>" +
-                                    "</li>" +
-                                    "<li>" +
-                                        "<strong>Hình thức thanh toán :</strong>" +
-                                        "<span> " + paymentMethod + "</span>" +
-                                    "</li>" +
-                                "</ul>" +
-                                "<table class='tb_order'>" +
-                                    "<tr>" +
-                                        "<td colspan='1'>Sản phẩm</td>" +
-                                        "<td>Số lượng</td>" +
-                                        "<td>Đơn giá</td>" +
-                                        "<td>Thành tiền</td>" +
-                                    "</tr>";
-
-
-
-                foreach (DataRow drCart in cart.Rows)
-                {
-                    str += "<tr class='prd_row'>" +
-                               "<td>" +
-                                   "<a href='#' target='_blank'>" + drCart["ProductName"].ToString() + "</a></td>" +
-                               "<td><b>" + drCart["Quantity"].ToString() + "</b></td>" +
-                               "<td>" + Convert.ToDouble(drCart["PriceOut"]).ToString("#,0") + " đ</td>" +
-                               "<td><b>" + (Convert.ToDouble(drCart["PriceOut"]) * Convert.ToInt32(drCart["Quantity"].ToString())).ToString("#,0") + " ₫</b></td>" +
-                           "</tr>";
-                }
-                str += "<tr class='_row_td'>" +
-                                       "<td colspan='4' style='padding-top: 5px;padding-bottom: 5px;'>Tổng giá trị đơn hàng <br /><b>(chưa bao gồm phí ship hàng)</b>" +
-                                       "</td>" +
-                                       "<td style='padding-top: 5px;padding-bottom: 5px;'>" +
-                                           "<b style='color: #f53030'>" + Total.ToString("#,0") + " ₫</b>" +
-                                       "</td>" +
-                                   "</tr>" +
-                               "</table>" +
-                           "</div>" +
+                        "<div>" +
+                            "<p><b>Cung cấp cho quý khách những tiện nghi phù hợp, dịch vụ đạt chuẩn và chất lượng tốt với mức giá cả bình dân sẽ giúp quý khách có những chuyến đi vui vẻ thoải mái, tiết kiệm được chi phí mà vẫn đảm bảo an toàn.</b></p>" +
+                        "</div>" +
+                    "</div>" +
+                    "<div>" +
+                        "<div>" +
+                            "<p>Kính chào <b>" + txtFullName.Text + "</b></p>" +
+                            "<p>Thông tin đơn hàng thuê xe tại ENSCore</b> .</p>" +
+                            "<ul>" +
+                                "<li>" +
+                                    "<strong>Mã đơn hàng :</strong>" +
+                                    "<span> " + Code + "</span>" +
+                                "</li>" +
+                                "<li>" +
+                                    "<strong>Trạng thái đơn hàng :</strong>" +
+                                    "<span> Đặt hàng thành công </span>" +
+                                "</li>" +
+                                "<li>" +
+                                    "<strong>Thời gian giao dịch :</strong>" +
+                                    "<span> " + DateTime.Now.ToString("dd/MM/yyyy hh:mm") + "</span>" +
+                                "</li>" +
+                                "<li>" +
+                                    "<strong>Hình thức thanh toán :</strong>" +
+                                    "<span> " + paymentMethod + "</span>" +
+                                "</li>" +
+                            "</ul>" +
+                            "<table>" +
+                                "<tr style='font-weight: 600;'>" +
+                                    "<td style='width: 200px'>Sản phẩm</td>" +
+                                    "<td style='width: 100px; text-align: center'>Số lượng</td>" +
+                                    "<td style='width: 100px; text-align: center'>Đơn giá</td>" +
+                                    "<td style='width: 100px; text-align: center'>Thành tiền</td>" +
+                                "</tr>";
+                                foreach (DataRow drCart in cart.Rows)
+                                {
+                                    str += "<tr class='prd_row'>" +
+                                               "<td>" +
+                                                   "<a href='#' target='_blank'>" + drCart["ProductName"].ToString() + "</a></td>" +
+                                               "<td style='text-align: center'><b>" + drCart["Quantity"].ToString() + "</b></td>" +
+                                               "<td style='text-align: center'>" + Convert.ToDouble(drCart["PriceOut"]).ToString("#,0") + " đ</td>" +
+                                               "<td style='text-align: center'><b>" + (Convert.ToDouble(drCart["PriceOut"]) * Convert.ToInt32(drCart["Quantity"].ToString())).ToString("#,0") + " ₫</b></td>" +
+                                           "</tr>";
+                                }
+                                str += "<tr>" +
+                                   "<td colspan='3' style='padding-top: 5px;padding-bottom: 5px;'>Tổng giá trị đơn hàng <br /><b>(chưa bao gồm phí ship hàng)</b>" +
+                                   "</td>" +
+                                   "<td style='padding-top: 5px;padding-bottom: 5px;text-align: center;font-size: 18px;'>" +
+                                       "<b style='color: #f53030'>" + Total.ToString("#,0") + " ₫</b>" +
+                                   "</td>" +
+                               "</tr>" +
+                           "</table>" +
                        "</div>" +
-                       "<div style='line-height: 24px;' class='_footer_ckout fr_col12'>" +
-                           "<b>Cảm ơn quý khách đã thuê xe máy tại " +
-                           "<a href='" + domain + "' target='_blank'>Quốc Minh</a>!</b>" +
-                       "</div>" +
+                    "</div>" +
+                    "<div style='line-height: 24px;' class='_footer_ckout fr_col12'>" +
+                       "<b>Cảm ơn quý khách đã thuê xe máy tại " +
+                       "<a href='" + domain + "/quoc-minh.html' target='_blank'>ENSCore</a>!</b>" +
+                    "</div>" +
 
-                       "<div style='line-height: 24px;' class='_footer_ckout fr_col12'>" +
-                           "Mọi thắc mắc xin liên hệ SĐT <b>0343 554 888</b>" +
-                       "</div>" +
-                   "</div>" +
-               "</div>";
+                    "<div style='line-height: 24px;'>" +
+                       "Mọi thắc mắc xin liên hệ SĐT <b>0343 554 888</b>" +
+                    "</div>" +
+                    "</div>" +
+                    "</div>";
 
 
-                System.Net.NetworkCredential login_cred = new System.Net.NetworkCredential("doquocminh191991@gmail.com", "minh1232019");
-                System.Net.Mail.MailMessage mail = new System.Net.Mail.MailMessage();
-                mail.From = new System.Net.Mail.MailAddress("doquocminh191991@gmail.com");
-                mail.To.Add(new System.Net.Mail.MailAddress(MailTo));
-                mail.CC.Add(new System.Net.Mail.MailAddress("doquocminh191991@gmail.com"));
-                mail.BodyEncoding = System.Text.Encoding.UTF8;
-                mail.Subject = "Thông tin đặt hàng tại Quốc Minh!";
-                mail.Body = str;
-                mail.IsBodyHtml = true;
-                System.Net.Mail.SmtpClient client = new System.Net.Mail.SmtpClient("smtp.gmail.com", 587);
-                client.DeliveryMethod = System.Net.Mail.SmtpDeliveryMethod.Network;
-                client.EnableSsl = true;
-                client.UseDefaultCredentials = false;
-                client.Credentials = login_cred;
-                client.Send(mail);
-            }
-            catch (Exception ex)
-            {
-            }
+            System.Net.NetworkCredential login_cred = new System.Net.NetworkCredential("doquocminh191991@gmail.com", "minh1232019");
+            System.Net.Mail.MailMessage mail = new System.Net.Mail.MailMessage();
+            mail.From = new System.Net.Mail.MailAddress("doquocminh191991@gmail.com");
+            mail.To.Add(new System.Net.Mail.MailAddress(MailTo));
+            mail.CC.Add(new System.Net.Mail.MailAddress("doquocminh191991@gmail.com"));
+            mail.BodyEncoding = System.Text.Encoding.UTF8;
+            mail.Subject = "Thông tin đặt hàng tại ENSCore!";
+            mail.Body = str;
+            mail.IsBodyHtml = true;
+            System.Net.Mail.SmtpClient client = new System.Net.Mail.SmtpClient("smtp.gmail.com", 587);
+            client.DeliveryMethod = System.Net.Mail.SmtpDeliveryMethod.Network;
+            client.EnableSsl = true;
+            client.UseDefaultCredentials = false;
+            client.Credentials = login_cred;
+            client.Send(mail);
+
+
         }
-
 
         protected void btnCheckout_Click(object sender, EventArgs e)
         {
-            Label lblPayment = (Label)Repeater1.FindControl("lblID_Payment");
-            Cls_ShopsOrdersDetail cls = new Cls_ShopsOrdersDetail();
-            //Cls_Users user = Session["WebsiteUser"] as Cls_Users;
-            cls.ID_Payment = Convert.ToInt32(lblPayment.Text);
-           // cls.ID_Payment = 1;
-            cls.ID_User = 2;
-            cls.UserName = "";
-            //if (Session["WebsiteUser"] != null)
-            //{
-            //    int ID_WebUser = user.ID_User;
-            //    cls.ID_User = ID_WebUser;
-            //}
-            //else
-            //{
-            //    cls.ID_User = 2;
-            //}
-            cls.OrdersName = txtFullName.Text;
-            //if (Session["WebsiteUser"] != null)
-            //{
-            //    string WebUserName = user.UserName;
-            //    cls.UserName = WebUserName;
-            //}
-            //else
-            //{
-            //    cls.UserName = "";
-            //}
-            cls.UserEmail = txtEmail.Text;
-            cls.UserAddress = txtAddress.Text;
-            cls.UserPhone = txtPhoneNumber.Text;
-            cls.PriceTotal = Convert.ToDouble(getTotal());
-            //cls.PriceTotal = 1111111;
-            cls.Description = txtDescription.Text;
-            //cls.AddTime = DateTime.Now;
-            //cls.EditTime = DateTime.Now;
-            cls.AddTime = Convert.ToDateTime(txtDatePick.Text);
-            cls.EditTime = Convert.ToDateTime(txtDayOff.Text);
-            cls.Hidden = true;
-            if (cls.doInsert() == 1)
+            DataTable dtCart = (DataTable)Session["cart_items"];
+            SqlConnection conn = new AccessDB().get_Conn();
+            conn.Open();
+            SqlTransaction trans = conn.BeginTransaction();
+            SqlCommand sqlComm;
+            try
             {
-                SendMaiInfor(txtEmail.Text);
-                string sMessages = "alert('Đã đặt hàng thành công!');";
-                ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), "", sMessages, true);
+                sqlComm = new SqlCommand("st_tbShopsOrdersDetail_Insert", conn, trans);
+                sqlComm.CommandType = CommandType.StoredProcedure;
+
+                sqlComm.Parameters.Add("@ID_Payment", SqlDbType.Int).Value = Convert.ToInt32(hdID_Payment.Value);
+                sqlComm.Parameters.Add("@ID_User", SqlDbType.Int).Value = 2;
+                sqlComm.Parameters.Add("@OrdersName", SqlDbType.NVarChar).Value = txtFullName.Text;
+                sqlComm.Parameters.Add("@UserName", SqlDbType.NVarChar).Value = "";
+                sqlComm.Parameters.Add("@UserEmail", SqlDbType.NVarChar).Value = txtEmail.Text;
+                sqlComm.Parameters.Add("@UserAddress", SqlDbType.NVarChar).Value = txtAddress.Text;
+                sqlComm.Parameters.Add("@UserPhone", SqlDbType.NVarChar).Value = txtPhoneNumber.Text;
+                sqlComm.Parameters.Add("@Status", SqlDbType.NVarChar).Value = "Chưa tới ngày thuê xe";
+                sqlComm.Parameters.Add("@DayIn", SqlDbType.DateTime).Value = DateTime.ParseExact(txtDayOff.Text, "dd/MM/yyyy", null);
+                sqlComm.Parameters.Add("@DayOut", SqlDbType.DateTime).Value = DateTime.ParseExact(txtDatePick.Text, "dd/MM/yyyy", null);
+                sqlComm.Parameters.Add("@Description", SqlDbType.NText).Value = txtDescription.Text;
+                sqlComm.Parameters.Add("@AddTime", SqlDbType.DateTime).Value = DateTime.Now;
+                sqlComm.Parameters.Add("@EditTime", SqlDbType.DateTime).Value = DateTime.Now;
+                sqlComm.Parameters.Add("@Hidden", SqlDbType.Bit).Value = true;
+
+                sqlComm.ExecuteNonQuery();
+
+
+                if (Session["cart_items"] != null)
+                {
+                    if (dtCart.Rows.Count > 0)
+                    {
+                        sqlComm = new SqlCommand("select top 1 * from tbShopsOrdersDetail order by ID_OrderProduct desc", conn, trans);
+                        sqlComm.CommandType = CommandType.Text;
+                        SqlDataReader dr = sqlComm.ExecuteReader();
+                        DataTable dt = new DataTable();
+                        dt.Load(dr);
+                        foreach (DataRow drCart in dtCart.Rows)
+                        {
+                            sqlComm = new SqlCommand("st_tbShopsOrders_Insert", conn, trans);
+                            sqlComm.CommandType = CommandType.StoredProcedure;
+                            sqlComm.Parameters.Add("@ID_OrderProduct", SqlDbType.Int).Value = dt.Rows[0]["ID_OrderProduct"].ToString();
+                            Session["OrderCode"] = dt.Rows[0]["ID_OrderProduct"].ToString();
+                            sqlComm.Parameters.Add("@ID_Product", SqlDbType.Int).Value = Convert.ToInt32(drCart["ID_Product"].ToString());
+                            sqlComm.Parameters.Add("@Amount", SqlDbType.Int).Value = Convert.ToInt32(drCart["Quantity"].ToString());
+                            sqlComm.Parameters.Add("@PriceTotal", SqlDbType.Float).Value = Convert.ToDouble(drCart["Total"].ToString());
+                            sqlComm.Parameters.Add("@AddTime", SqlDbType.DateTime).Value = DateTime.Now;
+                            sqlComm.Parameters.Add("@EditTime", SqlDbType.DateTime).Value = DateTime.Now;
+                            sqlComm.Parameters.Add("@Hidden", SqlDbType.Bit).Value = true;
+
+                            sqlComm.ExecuteNonQuery();
+
+
+                            //sqlComm = new SqlCommand("st_tbShopsProducts_UpdateQuantity", conn, trans);
+                            //sqlComm.CommandType = CommandType.StoredProcedure;
+                            //sqlComm.Parameters.Add("@ID_Product_find", SqlDbType.Int).Value = Convert.ToInt32(drCart["ID_Product"].ToString());
+                            //sqlComm.Parameters.Add("@Amount", SqlDbType.Int).Value = Convert.ToInt32(drCart["Quantity"].ToString());
+                            //sqlComm.ExecuteNonQuery();
+
+                        }
+                    }
+                }
+                trans.Commit();
+                SendMailInfor(txtEmail.Text);
+                string sMessages = "alert('Đã đặt hàng thành công! Vui lòng kiểm tra lại đơn hàng trong Email của bạn');";
+                ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "", sMessages, true);
+                Session["cart_items"] = null;
             }
-            else
+            catch (SqlException ex)
             {
-                string sMessages = "alert('Đã xảy ra lỗi trong quá trình đặt hàng! Bạn vui lòng kiểm tra lại!');";
-                ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), "", sMessages, true);
+                trans.Rollback();
+
+            }
+            finally
+            {
+                conn.Close();
             }
         }
+
+
+        //protected void btnCheckout_Click(object sender, EventArgs e)
+        //{
+        //    Cls_ShopsOrdersDetail cls = new Cls_ShopsOrdersDetail();
+        //    cls.ID_Payment = Convert.ToInt32(hdID_Payment.Value);
+        //    cls.ID_User = 2;
+        //    cls.UserName = "";
+        //    cls.OrdersName = txtFullName.Text;
+        //    cls.UserEmail = txtEmail.Text;
+        //    cls.UserAddress = txtAddress.Text;
+        //    cls.UserPhone = txtPhoneNumber.Text;
+        //    cls.PriceTotal = Convert.ToDouble(getTotal());
+        //    cls.Description = txtDescription.Text;
+        //    cls.AddTime = Convert.ToDateTime(txtDatePick.Text);
+        //    cls.EditTime = Convert.ToDateTime(txtDayOff.Text);
+        //    cls.Hidden = true;
+        //    if (cls.doInsert() == 1)
+        //    {
+        //        SendMailInfor(txtEmail.Text);
+        //        string sMessages = "alert('Đã đặt hàng thành công! Vui lòng kiểm tra lại đơn hàng trong Email của bạn');";
+        //        ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "", sMessages, true);
+        //        Session["cart_items"] = null;
+        //        //Response.Redirect("/quoc-minh.html");
+        //    }
+        //    else
+        //    {
+        //        string sMessages = "alert('Đã xảy ra lỗi trong quá trình đặt hàng! Bạn vui lòng kiểm tra lại!');";
+        //        ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "", sMessages, true);
+        //    }
+        //}
     }
 }

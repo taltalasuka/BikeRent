@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="main.ascx.cs" Inherits="ShopsDefault.UserControls.Products.main" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true"  CodeBehind="main.ascx.cs" Inherits="ShopsDefault.UserControls.Products.main" %>
 <div class="prd-default">
     <asp:ObjectDataSource ID="dsCatalog" runat="server" OnSelecting="ds_Catalogs_Selecting" SelectMethod="GetDataTable_SQL_pro" TypeName="Librari.Cls_ShopsCatalogs" />
     <asp:Repeater ID="Repeater3" runat="server" DataSourceID="dsCatalog">
@@ -11,6 +11,7 @@
                             <ItemTemplate>
                                 <div class="col-lg-4">
                                     <div class="item">
+                                        <asp:Label ID="lblID_Product" runat="server" Text='<%# Eval("ID_Product")%>' CssClass="d-none"></asp:Label>
                                         <div class="image">
                                             <a href="<%# Utils.getAHrefURL("san-pham", Eval("linkSEOCatalog"),Eval("LinkSEO"), Eval("ID_Product"))%>">
                                                 <img src="<%# Eval("Image")%>" />
@@ -26,7 +27,7 @@
                                                 <li><i class="fa fa-dashboard"></i><%# Eval("Weight")%> km/h</li>
                                             </ul>
                                             <div class="action">
-                                                <a href="#" class="btn-default">Thuê xe</a>
+                                                <asp:LinkButton ID="btnAddToCart" runat="server" CommandArgument='<%# Eval("ID_Product")%>' OnClick="btnAddToCart_Click" CausesValidation="false" Text="Thuê xe" UseSubmitBehavior="false" CssClass="btn-default add-to-cart" />
                                                 <a href="<%# Utils.getAHrefURL("san-pham", Eval("linkSEOCatalog"),Eval("LinkSEO"), Eval("ID_Product"))%>" class="btn-default">Chi tiết</a>
                                             </div>
                                         </div>

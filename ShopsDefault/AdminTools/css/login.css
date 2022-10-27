@@ -46,6 +46,9 @@
         background-color: #3a4149;
         border: 1px solid #23282c;
     }
+    .dark .card-body {
+        padding: 0;
+    }
 
     .dark .form-control {
         color: #e4e7ea;
@@ -84,3 +87,10 @@
             color: #fff;
             opacity: 1;
         }
+    .dark .text-error {
+        color: #e55353;
+        font-size: 13px;
+        height: 40px;
+        display: table-cell;
+        vertical-align: bottom;
+    }

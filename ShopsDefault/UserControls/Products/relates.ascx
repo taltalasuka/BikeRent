@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="relates.ascx.cs" Inherits="ShopsDefault.UserControls.Products.relates" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true"  CodeBehind="relates.ascx.cs" Inherits="ShopsDefault.UserControls.Products.relates" %>
 <style>
     .prd-relates.section {
         padding-top: 0;

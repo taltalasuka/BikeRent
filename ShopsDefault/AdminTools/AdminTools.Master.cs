@@ -12,6 +12,10 @@ namespace ShopsDefault.AdminTools
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(Session["username"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
             Header_Load();
             Left_Load();
             Fotter_Load();

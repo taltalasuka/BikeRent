@@ -13,5 +13,6 @@ namespace ShopsDefault.AdminTools.Modules.Products.Products
 
     public partial class payment
     {
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl payments_ww;
     }
 }

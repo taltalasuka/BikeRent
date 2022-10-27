@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="main.ascx.cs" Inherits="ShopsDefault.AdminTools.UserControls.News.News.main" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true"  CodeBehind="main.ascx.cs" Inherits="ShopsDefault.AdminTools.UserControls.News.News.main" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 <%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 
@@ -38,7 +38,7 @@
 <div class="container-fluid">
     <div class="block-default">
         <div class="block-header">
-            <i class="icon-bag"></i>Danh sách tin tức
+            <i class="icon-book-open"></i>Danh sách tin tức
         </div>
         <div class="block-body">
             <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>

@@ -68,7 +68,9 @@
         height: 6px;
         bottom: 7px;
     }
-
+    .checkout-content .hasDatepicker {
+        background-color: #fff;
+    }
     .checkout-content .checkout-warning-text {
         font-weight: 600;
         text-transform: capitalize;

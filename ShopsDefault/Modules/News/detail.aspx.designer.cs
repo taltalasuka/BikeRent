@@ -13,5 +13,7 @@ namespace ShopsDefault.Modules.News
 
     public partial class detail
     {
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl news_detail_w;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl news_relates_w;
     }
 }

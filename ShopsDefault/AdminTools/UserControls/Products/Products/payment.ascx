@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="payment.ascx.cs" Inherits="ShopsDefault.AdminTools.UserControls.Products.Products.payment" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true"  CodeBehind="payment.ascx.cs" Inherits="ShopsDefault.AdminTools.UserControls.Products.Products.payment" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 <%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 
@@ -11,7 +11,7 @@
 <div class="container-fluid">
     <div class="block-default">
         <div class="block-header">
-            <i class="icon-bag"></i>Danh sách hình thức thanh toán
+            <i class="icon-credit-card"></i>Danh sách hình thức thanh toán
         </div>
         <div class="block-body">
             <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>

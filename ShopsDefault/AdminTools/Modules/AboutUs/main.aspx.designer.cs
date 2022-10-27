@@ -13,5 +13,6 @@ namespace ShopsDefault.AdminTools.Modules.AboutUs
 
     public partial class main
     {
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl about_us_ww;
     }
 }

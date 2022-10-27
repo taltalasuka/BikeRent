@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeFile="checkout.aspx.cs" Inherits="ShopsDefault.Modules.Products.checkout" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true"  CodeBehind="checkout.aspx.cs" Inherits="ShopsDefault.Modules.Products.checkout" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
     <title>Thanh Toán - Cho Thuê Xe Máy Ở Hà Nội</title>
 </asp:Content>

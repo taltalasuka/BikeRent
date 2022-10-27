@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ShopsDefault.AdminTools.UserControls.AboutUs {
-    
-    
-    public partial class main {
-        
+namespace ShopsDefault.AdminTools.UserControls.AboutUs
+{
+
+
+    public partial class main
+    {
+
         /// <summary>
         /// ScriptManager1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace ShopsDefault.AdminTools.UserControls.AboutUs {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.ScriptManager ScriptManager1;
-        
+
         /// <summary>
         /// UpdatePanel1 control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace ShopsDefault.AdminTools.UserControls.AboutUs {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
-        
+
         /// <summary>
         /// btnAdd control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace ShopsDefault.AdminTools.UserControls.AboutUs {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton btnAdd;
-        
+
         /// <summary>
         /// grv control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace ShopsDefault.AdminTools.UserControls.AboutUs {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView grv;
-        
+
         /// <summary>
         /// pnlAddEdit control.
         /// </summary>
@@ -56,16 +58,16 @@ namespace ShopsDefault.AdminTools.UserControls.AboutUs {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlAddEdit;
-        
+
         /// <summary>
-        /// txtID_Slider control.
+        /// txtID_AboutUs control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtID_Slider;
-        
+        protected global::System.Web.UI.WebControls.TextBox txtID_AboutUs;
+
         /// <summary>
         /// txtTitle control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace ShopsDefault.AdminTools.UserControls.AboutUs {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTitle;
-        
+
         /// <summary>
         /// txtSummaryContent control.
         /// </summary>
@@ -83,7 +85,7 @@ namespace ShopsDefault.AdminTools.UserControls.AboutUs {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSummaryContent;
-        
+
         /// <summary>
         /// txtImage control.
         /// </summary>
@@ -92,7 +94,7 @@ namespace ShopsDefault.AdminTools.UserControls.AboutUs {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtImage;
-        
+
         /// <summary>
         /// fuImage control.
         /// </summary>
@@ -101,7 +103,7 @@ namespace ShopsDefault.AdminTools.UserControls.AboutUs {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload fuImage;
-        
+
         /// <summary>
         /// txtDetail control.
         /// </summary>
@@ -110,7 +112,7 @@ namespace ShopsDefault.AdminTools.UserControls.AboutUs {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::CKEditor.NET.CKEditorControl txtDetail;
-        
+
         /// <summary>
         /// cbHidden control.
         /// </summary>
@@ -119,7 +121,25 @@ namespace ShopsDefault.AdminTools.UserControls.AboutUs {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox cbHidden;
-        
+
+        /// <summary>
+        /// txtTitleWeb control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTitleWeb;
+
+        /// <summary>
+        /// txtLinkSEO control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtLinkSEO;
+
         /// <summary>
         /// btnSave control.
         /// </summary>
@@ -128,7 +148,7 @@ namespace ShopsDefault.AdminTools.UserControls.AboutUs {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton btnSave;
-        
+
         /// <summary>
         /// btnCancel control.
         /// </summary>
@@ -137,7 +157,7 @@ namespace ShopsDefault.AdminTools.UserControls.AboutUs {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton btnCancel;
-        
+
         /// <summary>
         /// lnkFake control.
         /// </summary>
@@ -146,7 +166,7 @@ namespace ShopsDefault.AdminTools.UserControls.AboutUs {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lnkFake;
-        
+
         /// <summary>
         /// popup control.
         /// </summary>

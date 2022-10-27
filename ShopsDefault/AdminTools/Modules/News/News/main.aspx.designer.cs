@@ -13,5 +13,6 @@ namespace ShopsDefault.AdminTools.Modules.News.News
 
     public partial class main
     {
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl news_ww;
     }
 }

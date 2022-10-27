@@ -1,5 +1,5 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="main.ascx.cs" Inherits="ShopsDefault.AdminTools.UserControls.Left.main" %>
-<div class="left-main">
+﻿<%@ Control Language="C#" AutoEventWireup="true"  CodeBehind="main.ascx.cs" Inherits="ShopsDefault.AdminTools.UserControls.Left.main" %>
+<div class="left-main scrollbar-y-custom">
     <ul class="nav">
         <li class="nav-item active">
             <a href="/AdminTools/BanLamViec.html">
@@ -31,10 +31,6 @@
                 <i class="icon-note"></i>Đơn hàng</a>
         </li>
         <li>
-            <a href="#">
-                <i class="icon-pie-chart"></i>Tình trạng đơn hàng</a>
-        </li>
-        <li>
             <a href="/AdminTools/QuanLyHinhThucThanhToan.html">
                 <i class="icon-credit-card"></i>Hình thức thanh toán</a>
         </li>
@@ -49,11 +45,7 @@
         </li>
         <li class="nav-title">Liên hệ</li>
         <li>
-            <a href="#">
-                <i class="icon-earphones-alt"></i>Thông tin liên hệ</a>
-        </li>
-        <li>
-            <a href="#">
+            <a href="/AdminTools/QuanLyLienHe.html">
                 <i class="icon-bubble"></i>Khách liên hệ</a>
         </li>
     </ul>

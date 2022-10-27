@@ -45,6 +45,43 @@ i.fa {
     padding-bottom: 5px;
     border-bottom: 1px dashed #e9eff2;
 }
+
+.text-empty {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+}
+
+.form-group {
+    position: relative;
+}
+
+.error-message {
+    position: absolute;
+    left: 50%;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: #ff7b5b;
+    padding: 6px;
+    border-radius: 3px;
+    top: -9px;
+    transform: translate(-50%, 0%);
+    width: 205px;
+    text-align: center;
+}
+    .error-message:before {
+        top: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: "";
+        height: 0;
+        width: 0;
+        position: absolute;
+        border-top-color: #ff7b5b;
+        border-width: 6px;
+        margin-left: -6px;
+    }
 /*================================================
 Button CSS
 ==================================================*/
@@ -62,6 +99,7 @@ Button CSS
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
 
     .btn-default:before,
@@ -134,31 +172,36 @@ Button CSS
     color: #fff;
     cursor: pointer;
 }
+
     .prd-amount .btn-amount.subtract {
         border-top-left-radius: 3px;
         border-bottom-left-radius: 3px;
         border-right: none;
     }
+
     .prd-amount .btn-amount.addition {
         border-top-right-radius: 3px;
         border-bottom-right-radius: 3px;
         border-left: none;
     }
+
     .prd-amount .btn-amount:hover {
     }
+
     .prd-amount .btn-amount i {
         padding-right: 0;
     }
-    .prd-amount input {
-        position: relative;
-        top: -1px;
-        display: inline-block;
-        width: 40px;
-        height: 30px;
-        line-height: 30px;
-        text-align: center;
-        border: 1px solid #ff7b5b;
-    }
+
+.prd-amount input {
+    position: relative;
+    top: -1px;
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #ff7b5b;
+}
 /*================================================
 Block Header,Item, Title, Content CSS
 ==================================================*/
@@ -467,9 +510,11 @@ Header CSS
             font-size: 20px;
             cursor: pointer;
         }
+
             .hd-menu .hd-cart .hd-cart-icon i {
                 color: #eee;
             }
+
             .hd-menu .hd-cart .hd-cart-icon .hd-cart-item {
                 position: absolute;
                 background-color: #ff7b5b;

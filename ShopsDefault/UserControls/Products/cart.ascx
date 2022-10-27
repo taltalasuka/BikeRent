@@ -1,20 +1,21 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="cart.ascx.cs" Inherits="ShopsDefault.UserControls.Products.cart" %>
-
+﻿<%@ Control Language="C#" AutoEventWireup="true"  CodeBehind="cart.ascx.cs" Inherits="ShopsDefault.UserControls.Products.cart" %>
 
 <div class="prd-cart section">
     <div class="block-header">Giỏ hàng</div>
     <div class="container">
+        <asp:Label runat="server" ID="lblEmpty" CssClass="text-empty"></asp:Label>
         <asp:ScriptManager ID="ScriptManager1" runat="server">
         </asp:ScriptManager>
-        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server" OnInit="UpdatePanel1_Init">
             <ContentTemplate>
+                <%--<div runat="server" id="checkCart"></div>--%>
                 <div class="row">
                     <div class="col-8">
                         <div class="table-cart">
                             <asp:GridView ID="grv" runat="server" AutoGenerateColumns="false" OnRowDataBound="grv_RowDataBound" DataKeyNames="ID_Product" OnRowDeleting="grv_RowDeleting" OnRowUpdating="grv_RowUpdating">
                                 <Columns>
                                     <asp:BoundField DataField="ID_Product" HeaderText="ID" HtmlEncode="true" />
-                                    
+
                                     <asp:BoundField DataField="ProductName" HeaderText="Tên sản phẩm" HtmlEncode="true" />
 
                                     <asp:TemplateField HeaderText="Số lượng">
@@ -27,13 +28,13 @@
 
                                     <asp:TemplateField HeaderText="Đơn giá">
                                         <ItemTemplate>
-                                            <div class="prd-price"><%# Utils.getPrice(Eval("PriceOut"))%></div>
+                                            <div class="prd-price"><%# Utils.getPrice(Eval("PriceOut"))%><sup>đ</sup></div>
                                         </ItemTemplate>
                                     </asp:TemplateField>
 
                                     <asp:TemplateField HeaderText="Thành tiền">
                                         <ItemTemplate>
-                                            <div class="prd-total"><%# Utils.getPrice(Eval("Total"))%></div>
+                                            <div class="prd-total"><%# Utils.getPrice(Eval("Total"))%><sup>đ</sup></div>
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                     <asp:TemplateField>
@@ -44,6 +45,7 @@
                                     </asp:TemplateField>
                                 </Columns>
                             </asp:GridView>
+
                         </div>
                     </div>
                     <div class="col-4">
@@ -54,7 +56,7 @@
                                 </tr>
                                 <tr>
                                     <td>Tổng cộng:</td>
-                                    <td><%= Utils.getPrice(getTotal()) %></td>
+                                    <td><%= Utils.getPrice(getTotal()) %><sup>đ</sup></td>
                                 </tr>
                                 <tr>
                                     <td><a href="/san-pham.html" class="btn-default">Mua thêm</a></td>

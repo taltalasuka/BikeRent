@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminTools.master.cs" Inherits="ShopsDefault.AdminTools.AdminTools" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true"  CodeBehind="AdminTools.master.cs" Inherits="ShopsDefault.AdminTools.AdminTools" %>
 
 <!DOCTYPE html>
 
