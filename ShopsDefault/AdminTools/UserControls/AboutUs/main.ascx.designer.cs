@@ -6,7 +6,7 @@
 //     the code is regenerated. 
 // </auto-generated>
 //------------------------------------------------------------------------------
-
+using System;
 namespace ShopsDefault.AdminTools.UserControls.AboutUs {
     
     
