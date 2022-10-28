@@ -74,40 +74,40 @@
                         <div class="row">
                             <div class="col-6">
                                 <div class="form-group">
-                                    <label for="company">Họ tên</label>
-                                    <asp:TextBox ID="txtFullName" runat="server" onKeyUp='validateName(ckName)' placeholder=" họ tên" CssClass="form-control"></asp:TextBox>
+                                    <label for="company">Full Name</label>
+                                    <asp:TextBox ID="txtFullName" runat="server" onKeyUp='validateName(ckName)' placeholder=" Full Name" CssClass="form-control"></asp:TextBox>
                                     <label class="error-message d-none" id="name-error"></label>
                                 </div>
                                 <div class="form-group">
-                                    <label for="company">Số điện thoại</label>
-                                    <asp:TextBox ID="txtPhoneNumber" runat="server" onKeyUp='validatePhone(ckPhone)' placeholder=" số điện thoại" CssClass="form-control"></asp:TextBox>
+                                    <label for="company">Phone number</label>
+                                    <asp:TextBox ID="txtPhoneNumber" runat="server" onKeyUp='validatePhone(ckPhone)' placeholder=" Phone number" CssClass="form-control"></asp:TextBox>
                                     <label class="error-message d-none" id="phone-error"></label>
                                 </div>
                                 <div class="form-group">
-                                    <label for="company">Ngày Thuê</label>
-                                    <asp:TextBox ID="txtDatePick" runat="server" placeholder="Chọn ngày mượn xe" CssClass="form-control"></asp:TextBox>
+                                    <label for="company">Date</label>
+                                    <asp:TextBox ID="txtDatePick" runat="server" placeholder="Date" CssClass="form-control"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-group">
-                                    <label for="company">Email</label>
-                                    <asp:TextBox ID="txtEmail" runat="server" onKeyUp='validateEmail(ckEmail)' placeholder=" email" CssClass="form-control"></asp:TextBox>
+                                    <label for="company">Email Address</label>
+                                    <asp:TextBox ID="txtEmail" runat="server" onKeyUp='validateEmail(ckEmail)' placeholder=" Email Address" CssClass="form-control"></asp:TextBox>
                                     <label class="error-message d-none" id="email-error"></label>
                                 </div>
                                 <div class="form-group">
-                                    <label for="company">Địa chỉ nhận hàng</label>
-                                    <asp:TextBox ID="txtAddress" runat="server" onKeyUp='validateAddress(ckAddress)' placeholder=" địa chỉ nhận hàng" CssClass="form-control"></asp:TextBox>
+                                    <label for="company">Delivery Address</label>
+                                    <asp:TextBox ID="txtAddress" runat="server" onKeyUp='validateAddress(ckAddress)' placeholder=" Delivery Address" CssClass="form-control"></asp:TextBox>
                                     <label class="error-message d-none" id="address-error"></label>
                                 </div>
                                 <div class="form-group">
-                                    <label for="company">Ngày Trả</label>
-                                    <asp:TextBox ID="txtDayOff" runat="server" placeholder="Chọn ngày Return" CssClass="form-control"></asp:TextBox>
+                                    <label for="company">Return Date</label>
+                                    <asp:TextBox ID="txtDayOff" runat="server" placeholder="Return Date" CssClass="form-control"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label for="company">Ghi chú</label>
-                                    <asp:TextBox ID="txtDescription" runat="server" TextMode="MultiLine" placeholder=" ghi chú đơn hàng" CssClass="form-control"></asp:TextBox>
+                                    <label for="company">Notes</label>
+                                    <asp:TextBox ID="txtDescription" runat="server" TextMode="MultiLine" placeholder=" Notes details" CssClass="form-control"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
@@ -154,7 +154,7 @@
                                                 <span class="prd-name"><a href="<%# Utils.getAHrefURL("san-pham", Eval("linkSEOCatalog"),Eval("LinkSEO"), Eval("ID_Product"))%>"><%# Eval("ProductName")%></a></span>
                                             </div>
                                             <div>
-                                                Thuộc loại <strong style="font-weight: 600;"><%# Eval("CatalogName")%></strong>
+                                                Bike type: <strong style="font-weight: 600;"><%# Eval("CatalogName")%></strong>
                                             </div>
                                         </div>
                                         <div class="col-4">
@@ -184,7 +184,7 @@
                         <asp:LinkButton ID="btnCheckout" runat="server" OnClientClick="return validateForm(ckName, ckPhone, ckEmail, ckAddress)" OnClick="btnCheckout_Click" CssClass="btn-default">Submit</asp:LinkButton>
                     </div>
                     <div class="checkout-warning-text">
-                        Quý khách vui lòng kiểm tra lại Order details trước khi nhấn vào nút Submit
+                        Please check your details before placing your order!
                     </div>
                 </div>
             </div>

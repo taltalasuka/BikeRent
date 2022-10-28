@@ -23,7 +23,7 @@
                             <asp:BoundField DataField="ID_OrderProduct" HeaderText="ID" HtmlEncode="true" />
                             <asp:BoundField DataField="OrdersName" HeaderText="Tên người đặt" HtmlEncode="true" />
                             <asp:BoundField DataField="Status" HeaderText="Tình trạng" HtmlEncode="true" />
-                            <asp:BoundField DataField="UserPhone" HeaderText="Số điện thoại" HtmlEncode="true" />
+                            <asp:BoundField DataField="UserPhone" HeaderText="Phone number" HtmlEncode="true" />
                             <asp:BoundField DataField="PaymentName" HeaderText="Tên HTTT" HtmlEncode="true" />
                             <asp:BoundField DataField="DayOut" HeaderText="Ngày đặt" HtmlEncode="true" />
                             <asp:BoundField DataField="DayIn" HeaderText="Ngày trả" HtmlEncode="true" />
@@ -69,7 +69,7 @@
                                                         <asp:TextBox ID="txtAddress" runat="server" ReadOnly="true" CssClass="form-control"></asp:TextBox>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="company">Số điện thoại</label>
+                                                        <label for="company">Phone number</label>
                                                         <asp:TextBox ID="txtPhone" runat="server" ReadOnly="true" CssClass="form-control"></asp:TextBox>
                                                     </div>
                                                 </div>

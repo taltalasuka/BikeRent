@@ -21,7 +21,7 @@
                             <asp:BoundField DataField="ID_Contact" HeaderText="ID" HtmlEncode="true" />
                             <asp:BoundField DataField="ContactName" HeaderText="Title" HtmlEncode="true" />
                             <asp:BoundField DataField="FullName" HeaderText="Tên người gởi" HtmlEncode="true" />
-                            <asp:BoundField DataField="Phone" HeaderText="Số điện thoại" HtmlEncode="true" />
+                            <asp:BoundField DataField="Phone" HeaderText="Phone number" HtmlEncode="true" />
                             <asp:BoundField DataField="Email" HeaderText="Địa chỉ Email" HtmlEncode="true" />
                             <asp:TemplateField HeaderText="Action">
                                 <ItemTemplate>
