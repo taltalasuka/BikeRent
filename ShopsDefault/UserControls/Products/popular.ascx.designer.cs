@@ -11,7 +11,7 @@ namespace ShopsDefault.UserControls.Products
 {
 
 
-    public partial class pricing
+    public partial class popular
     {
     }
 }

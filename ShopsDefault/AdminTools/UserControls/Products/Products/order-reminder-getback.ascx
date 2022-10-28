@@ -13,7 +13,7 @@
                     <asp:TemplateField HeaderText="Action">
                         <ItemTemplate>
                             <asp:LinkButton ID="lnkEdit" runat="server" OnClick="btnEdit_Click" CssClass="btn btn-info"><i class="icon-pencil"></i> Details</asp:LinkButton>
-                            <asp:LinkButton ID="lnkUpdate" runat="server" CausesValidation="false" CommandName="Update" CssClass="btn btn-danger"><i class="icon-ban"></i> Hủy đơn</asp:LinkButton>
+                            <asp:LinkButton ID="lnkUpdate" runat="server" CausesValidation="false" CommandName="Update" CssClass="btn btn-danger"><i class="icon-ban"></i> Cancel đơn</asp:LinkButton>
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>

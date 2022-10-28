@@ -11,13 +11,13 @@ CKEDITOR.plugins.setLang('youtube', 'vi', {
 	chkOlderCode : 'Sử dụng mã nhúng cũ',
 	chkAutoplay: 'Tự động chạy video',
 	noCode : 'Bạn phải  mã nhúng hoặc URL',
-	invalidEmbed : 'Mã nhúng bạn đã  không đúng',
-	invalidUrl : 'URL bạn đã  không đúng',
+	invalidEmbed : 'Mã nhúng bạn đã  Not đúng',
+	invalidUrl : 'URL bạn đã  Not đúng',
 	or : 'hoặc',
 	noWidth : 'Bạn phải chiều rộng',
 	invalidWidth : 'Chiều rộng hợp lệ',
 	noHeight : 'Bạn phải chiều cao',
 	invalidHeight : 'Chiều cao hợp lệ',
-	invalidTime : 'Thời gian bắt đầu không đúng',
+	invalidTime : 'Thời gian bắt đầu Not đúng',
 	txtResponsive : 'Responsive video'
 });

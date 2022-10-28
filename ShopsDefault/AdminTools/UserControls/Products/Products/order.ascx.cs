@@ -197,12 +197,12 @@ namespace ShopsDefault.AdminTools.UserControls.Products.Products
             cls.Hidden = false;
             if (cls.doUpdateHidden() == 1)
             {
-                string sMessages = "alert('Đã hủy đơn hàng thành công');";
+                string sMessages = "alert('Đã Cancel đơn hàng thành công');";
                 ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), "", sMessages, true);
             }
             else
             {
-                string sMessages = "alert('Đã xảy ra lỗi trong quá trình hủy đơn hàng dữ liệu');";
+                string sMessages = "alert('Đã xảy ra lỗi trong quá trình Cancel đơn hàng dữ liệu');";
                 ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), "", sMessages, true);
             }
             BindData();

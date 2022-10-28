@@ -4,7 +4,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license
 */
 CKEDITOR.plugins.setLang( 'liststyle', 'vi', {
 	armenian: 'Số theo kiểu Armenian',
-	bulletedTitle: 'Thuộc tính danh sách không thứ tự',
+	bulletedTitle: 'Thuộc tính danh sách Not thứ tự',
 	circle: 'Khuyên tròn',
 	decimal: 'Kiểu số (1, 2, 3 ...)',
 	decimalLeadingZero: 'Kiểu số (01, 02, 03...)',
@@ -13,8 +13,8 @@ CKEDITOR.plugins.setLang( 'liststyle', 'vi', {
 	lowerAlpha: 'Kiểu abc thường (a, b, c, d, e...)',
 	lowerGreek: 'Kiểu Hy Lạp (alpha, beta, gamma...)',
 	lowerRoman: 'Số La Mã kiểu thường (i, ii, iii, iv, v...)',
-	none: 'Không gì cả',
-	notset: '<không thiết lập>',
+	none: 'Not gì cả',
+	notset: '<Not thiết lập>',
 	numberedTitle: 'Thuộc tính danh sách có thứ tự',
 	square: 'Hình vuông',
 	start: 'Bắt đầu',

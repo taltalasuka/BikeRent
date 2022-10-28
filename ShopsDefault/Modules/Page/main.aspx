@@ -6,7 +6,7 @@
     <link href="../../css/owl.theme.default.min.css" rel="stylesheet" />
     <link href="../../css/owl.carousel.min.css" rel="stylesheet" />
     <link href="../../css/slider.css" rel="stylesheet" />
-    <link href="../../css/pricing.css" rel="stylesheet" />
+    <link href="../../css/popular.css" rel="stylesheet" />
     <link href="../../css/why-choose.css" rel="stylesheet" />
     <link href="../../css/portfolio.css" rel="stylesheet" />
     <link href="../../css/rental-process.css" rel="stylesheet" />
@@ -21,7 +21,7 @@
 <asp:Content ID="Content5" ContentPlaceHolderID="Left" runat="server">
 </asp:Content>
 <asp:Content ID="Content6" ContentPlaceHolderID="ContentMain" runat="server">
-    <div id="pricing_w" runat="server"></div>
+    <div id="popular_w" runat="server"></div>
     <div id="why_choose_w" runat="server"></div>
     <div id="portfolio_w" runat="server"></div>
     <div id="rental_process_w" runat="server"></div>

@@ -45,7 +45,7 @@
         
         $("#<%= btnSearch.ClientID%>").click(function (e) {
             if ($("#<%= txtID_Catalog.ClientID%>").val() == 0) {
-                alert('Bạn chưa Select type!');
+                alert('You haven not selected bike type!');
                 e.preventDefault();
             }
 

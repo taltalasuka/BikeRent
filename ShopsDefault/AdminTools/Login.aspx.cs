@@ -43,7 +43,7 @@ namespace ShopsDefault.AdminTools
                 }
                 else if (Username == "" || Password == "")
                 {
-                    lblError.Text = "Lỗi: Tên Login/Mật khẩu không được để rỗng!";
+                    lblError.Text = "Lỗi: Tên Login/Mật khẩu Not được để rỗng!";
                     if (Username == "")
                     {
                         txtUserName.Focus();

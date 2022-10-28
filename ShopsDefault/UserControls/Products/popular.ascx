@@ -1,16 +1,17 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true"  CodeBehind="pricing.ascx.cs" Inherits="ShopsDefault.UserControls.Products.pricing" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true"  CodeBehind="popular.ascx.cs" Inherits="ShopsDefault.UserControls.Products.popular" %>
 
-<div class="prd-pricing section">
+<div class="prd-popular section">
     <div class="container">
         <div class="block-header"><span>Popular Products</span></div>
         <div class="row">
             <div class="col-12">
-                <table class="tb-pricing">
+                <table class="tb-popular">
                     <tr class="tb-colspan">
                         <td colspan="5">Automatic motorcycles</td>
                     </tr>
+                 
                     <tr>
-                        <td>Ware RSX</td>                       
+                        <td>Wave RSX</td>                       
                     </tr>
                     <tr>
                         <td>Sirius</td>             

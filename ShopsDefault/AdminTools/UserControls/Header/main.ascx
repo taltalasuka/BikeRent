@@ -42,7 +42,7 @@
                                     <a href="#"><i class="icon-settings"></i>Change Password</a>
                                 </li>
                                 <li>
-                                    <a href="/AdminTools/DangNhap.html"><i class="icon-logout"></i>Log out</a>
+                                    <a href="/AdminTools/Login.html"><i class="icon-logout"></i>Log out</a>
                                 </li>
                             </ul>
                         </li>

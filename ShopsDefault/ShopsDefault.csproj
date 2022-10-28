@@ -4148,7 +4148,7 @@
     <Content Include="css\owl.carousel.min.css" />
     <Content Include="css\owl.theme.default.min.css" />
     <Content Include="css\portfolio.css" />
-    <Content Include="css\pricing.css" />
+    <Content Include="css\popular.css" />
     <Content Include="css\rental-process.css" />
     <Content Include="css\search-result.css" />
     <Content Include="css\slider.css" />
@@ -4224,7 +4224,7 @@
     <Content Include="UserControls\Products\detail.ascx" />
     <Content Include="UserControls\Products\main.ascx" />
     <Content Include="UserControls\Products\portfolio.ascx" />
-    <Content Include="UserControls\Products\pricing.ascx" />
+    <Content Include="UserControls\Products\popular.ascx" />
     <Content Include="UserControls\Products\relates.ascx" />
     <Content Include="UserControls\Products\search-filter.ascx" />
     <Content Include="UserControls\Products\search-result.ascx" />
@@ -4625,12 +4625,12 @@
     <Compile Include="UserControls\Products\portfolio.ascx.designer.cs">
       <DependentUpon>portfolio.ascx</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\Products\pricing.ascx.cs">
-      <DependentUpon>pricing.ascx</DependentUpon>
+    <Compile Include="UserControls\Products\popular.ascx.cs">
+      <DependentUpon>popular.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserControls\Products\pricing.ascx.designer.cs">
-      <DependentUpon>pricing.ascx</DependentUpon>
+    <Compile Include="UserControls\Products\popular.ascx.designer.cs">
+      <DependentUpon>popular.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Products\relates.ascx.cs">
       <DependentUpon>relates.ascx</DependentUpon>

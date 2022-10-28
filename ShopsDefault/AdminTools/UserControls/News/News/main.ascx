@@ -38,7 +38,7 @@
 <div class="container-fluid">
     <div class="block-default">
         <div class="block-header">
-            <i class="icon-book-open"></i>Danh sách Articles
+            <i class="icon-book-open"></i>Articles
         </div>
         <div class="block-body">
             <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
@@ -77,7 +77,7 @@
                         <div class="popup-body">
                             <div class="card">
                                 <div class="card-header">
-                                    <i class="icon-note"></i>Add Bike Category
+                                    <i class="icon-note"></i>Add Category
                                 </div>
                                 <div class="card-body scrollbar-y-custom">
                                     <div class="form-group d-none">
@@ -89,21 +89,21 @@
                                         <label for="company">Articles Category</label>
                                         <asp:SqlDataSource ID="ds" runat="server" EnableCaching="false"></asp:SqlDataSource>
                                         <asp:DropDownList ID="txtID_Catalog" runat="server" DataSourceID="ds" DataTextField="CatalogName" DataValueField="ID_Catalog" AppendDataBoundItems="true" CssClass="form-control">
-                                            <asp:ListItem Text="Chọn Articles Category" Value="0" Selected="true" />
+                                            <asp:ListItem Text="Choose Category" Value="0" Selected="true" />
                                         </asp:DropDownList>
                                     </div>
                                     <div class="form-group">
                                         <label for="company">Title</label>
-                                        <asp:TextBox ID="txtTitle" runat="server" placeholder=" tên Title" CssClass="form-control"></asp:TextBox>
+                                        <asp:TextBox ID="txtTitle" runat="server" placeholder="Title" CssClass="form-control"></asp:TextBox>
                                     </div>
                                     <div class="form-group">
                                         <label for="company">Description</label>
-                                        <asp:TextBox ID="txtSummaryContent" runat="server" placeholder=" Description Articles" CssClass="form-control"></asp:TextBox>
+                                        <asp:TextBox ID="txtSummaryContent" runat="server" placeholder=" Description" CssClass="form-control"></asp:TextBox>
                                     </div>
                                     <div class="form-group">
                                         <label for="company">Image</label>
                                         <div class="position-relative">
-                                            <asp:TextBox ID="txtImage" runat="server" placeholder=" link Image" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox ID="txtImage" runat="server" placeholder=" Image URL" CssClass="form-control"></asp:TextBox>
                                             <asp:FileUpload ID="fuImage" runat="server" CssClass="form-control btn-fu" accept=".png,.jpg,.jpeg,.gif" />
                                         </div>
                                     </div>
@@ -128,7 +128,7 @@
 
                                     <div class="form-actions">
                                         <asp:LinkButton ID="btnSave" runat="server" OnClick="btnSave_Click" CssClass="btn btn-primary">Save</asp:LinkButton>
-                                        <asp:LinkButton ID="btnCancel" runat="server" CssClass="btn btn-secondary">Hủy</asp:LinkButton>
+                                        <asp:LinkButton ID="btnCancel" runat="server" CssClass="btn btn-secondary">Cancel</asp:LinkButton>
                                     </div>
                                 </div>
                             </div>

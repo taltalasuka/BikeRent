@@ -87,7 +87,7 @@
                                     <div class="form-group">
                                         <label for="company">Image</label>
                                         <div class="position-relative">
-                                            <asp:TextBox ID="txtImage" runat="server" placeholder=" link Image" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox ID="txtImage" runat="server" placeholder=" Image URL" CssClass="form-control"></asp:TextBox>
                                             <asp:FileUpload ID="fuImage" runat="server" CssClass="form-control btn-fu" accept=".png,.jpg,.jpeg,.gif" />
                                         </div>
                                     </div>

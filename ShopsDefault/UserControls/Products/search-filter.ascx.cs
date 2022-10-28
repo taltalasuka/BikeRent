@@ -25,7 +25,7 @@ namespace ShopsDefault.UserControls.Products
             var date = DateTime.ParseExact(txtDatePick.Text, "MM/dd/yyyy", null);
             Session["searchID_Catalog"] = Convert.ToInt32(txtID_Catalog.SelectedValue.ToString());
             Session["searchDatePick"] = date.ToString("MM/dd/yyyy");
-            Response.Redirect("/ket-qua-tim-kiem.html");
+            Response.Redirect("/search-results.html");
         }
     }
 }

@@ -30,7 +30,7 @@ CKEDITOR.plugins.setLang( 'link', 'vi', {
 	langDirRTL: 'Phải sang trái (RTL)',
 	menu: 'Sửa liên kết',
 	name: 'Tên',
-	noAnchors: '(Không có điểm neo nào trong tài liệu)',
+	noAnchors: '(Not có điểm neo nào trong tài liệu)',
 	noEmail: 'Hãy đưa vào Address thư điện tử',
 	noUrl: 'Hãy đưa vào đường dẫn liên kết (URL)',
 	other: '<khác>',

@@ -9,7 +9,7 @@ CKEDITOR.plugins.setLang( 'find', 'vi', {
 	matchCase: 'Phân biệt chữ hoa/thường',
 	matchCyclic: 'Giống một phần',
 	matchWord: 'Giống toàn bộ từ',
-	notFoundMsg: 'Không tìm thấy chuỗi cần tìm.',
+	notFoundMsg: 'Not tìm thấy chuỗi cần tìm.',
 	replace: 'Thay thế',
 	replaceAll: 'Thay thế tất cả',
 	replaceSuccessMsg: '%1 vị trí đã được thay thế.',

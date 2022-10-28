@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true"  CodeBehind="hot-news.ascx.cs" Inherits="ShopsDefault.UserControls.News.hot_news" %>
 <div class="news-hot-news section">
     <div class="container">
-        <div class="block-header">Articles nổi bật</div>
+        <div class="block-header">Featured Articles</div>
         <div class="row">
 
             <asp:ObjectDataSource ID="ds" runat="server" OnSelecting="ds_Selecting" SelectMethod="GetDataTable_SQL_pro" TypeName="Librari.Cls_News" />

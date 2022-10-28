@@ -40,7 +40,7 @@
                             <asp:BoundField DataField="Title" HeaderText="Title" HtmlEncode="true" />
                             <asp:BoundField DataField="SummaryContent" HeaderText="Description" HtmlEncode="true" />
                             <asp:TemplateField HeaderText="Status" SortExpression="Hidden">
-                                <ItemTemplate><%# (Boolean.Parse(Eval("Hidden").ToString())) ? "Active" : "Không Active" %></ItemTemplate>
+                                <ItemTemplate><%# (Boolean.Parse(Eval("Hidden").ToString())) ? "Active" : "Not Active" %></ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="Action">
                                 <ItemTemplate>
@@ -71,16 +71,16 @@
                                     </div>                                    
                                     <div class="form-group">
                                         <label for="company">Title</label>
-                                        <asp:TextBox ID="txtTitle" runat="server" placeholder=" tên Title" CssClass="form-control"></asp:TextBox>
+                                        <asp:TextBox ID="txtTitle" runat="server" placeholder=" Title" CssClass="form-control"></asp:TextBox>
                                     </div>
                                     <div class="form-group">
                                         <label for="company">Description</label>
-                                        <asp:TextBox ID="txtSummaryContent" runat="server" placeholder=" Description slider" CssClass="form-control"></asp:TextBox>
+                                        <asp:TextBox ID="txtSummaryContent" runat="server" placeholder=" Description" CssClass="form-control"></asp:TextBox>
                                     </div>
                                     <div class="form-group">
                                         <label for="company">Image</label>
                                         <div class="position-relative">
-                                            <asp:TextBox ID="txtImage" runat="server" placeholder=" link Image" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox ID="txtImage" runat="server" placeholder=" Image URL" CssClass="form-control"></asp:TextBox>
                                             <asp:FileUpload ID="fuImage" runat="server" CssClass="form-control btn-fu" accept=".png,.jpg,.jpeg,.gif" />
                                         </div>
                                     </div>
@@ -97,7 +97,7 @@
 
                                     <div class="form-actions">
                                         <asp:LinkButton ID="btnSave" runat="server" OnClick="btnSave_Click" CssClass="btn btn-primary">Save</asp:LinkButton>
-                                        <asp:LinkButton ID="btnCancel" runat="server" CssClass="btn btn-secondary">Hủy</asp:LinkButton>
+                                        <asp:LinkButton ID="btnCancel" runat="server" CssClass="btn btn-secondary">Cancel</asp:LinkButton>
                                     </div>
                                 </div>
                             </div>

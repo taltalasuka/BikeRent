@@ -5,7 +5,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license
 CKEDITOR.plugins.setLang( 'flash', 'vi', {
 	access: 'Truy cập mã',
 	accessAlways: 'Luôn luôn',
-	accessNever: 'Không bao giờ',
+	accessNever: 'Not bao giờ',
 	accessSameDomain: 'Cùng tên miền',
 	alignAbsBottom: 'Dưới tuyệt đối',
 	alignAbsMiddle: 'Giữa tuyệt đối',
@@ -30,7 +30,7 @@ CKEDITOR.plugins.setLang( 'flash', 'vi', {
 	scale: 'Tỷ lệ',
 	scaleAll: 'Hiển thị tất cả',
 	scaleFit: 'Vừa vặn',
-	scaleNoBorder: 'Không đường viền',
+	scaleNoBorder: 'Not đường viền',
 	title: 'Thuộc tính Flash',
 	vSpace: 'Khoảng đệm dọc',
 	validateHSpace: 'Khoảng đệm ngang phải là số nguyên.',

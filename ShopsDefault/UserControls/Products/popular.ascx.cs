@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace ShopsDefault.UserControls.Products
 {
-    public partial class pricing : System.Web.UI.UserControl
+    public partial class popular : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {

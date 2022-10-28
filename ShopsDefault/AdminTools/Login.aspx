@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>EZ Bikes - Login vào hệ thống</title>
+    <title>EZ Bikes - Login for Administrator</title>
     <link rel="icon" href="../images/UploadImages/favicon.ico" type="image/x-icon" />
     <link href="../css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/simple-line-icons.css" rel="stylesheet" />
@@ -25,14 +25,14 @@
                                         <div class="card p-4">
                                             <div class="card-body">
                                                 <h1>Login</h1>
-                                                <p class="text-muted">Login vào tài khoản của bạn</p>
+                                                <p class="text-muted">Sign in to your account</p>
                                                 <div class="input-group mb-3">
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text">
                                                             <i class="icon-user"></i>
                                                         </span>
                                                     </div>
-                                                    <asp:TextBox runat="server" ID="txtUserName" CssClass="form-control" placeholder="Tên Login" autofocus></asp:TextBox>
+                                                    <asp:TextBox runat="server" ID="txtUserName" CssClass="form-control" placeholder="Username" autofocus></asp:TextBox>
                                                 </div>
                                                 <div class="input-group mb-4">
                                                     <div class="input-group-prepend">
@@ -40,7 +40,7 @@
                                                             <i class="icon-lock"></i>
                                                         </span>
                                                     </div>
-                                                    <asp:TextBox runat="server" ID="txtPassword" TextMode="Password" CssClass="form-control" placeholder="Mật khẩu"></asp:TextBox>
+                                                    <asp:TextBox runat="server" ID="txtPassword" TextMode="Password" CssClass="form-control" placeholder="Password"></asp:TextBox>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-6">
@@ -59,7 +59,7 @@
                                             <div class="card-body text-center">
                                                 <div>
                                                     <h2>DNVKN Softwares</h2>
-                                                    <p>Bạn đang sử dụng hệ thống quản lý của DNVKN Softwares. Nếu có lỗi trong quá trình Login vào hệ thống vui lòng Contact Us với bộ phận kỹ thuật của chúng tôi.</p>
+                                                    <p>This software is made by DNVKN Softwares. If you encounter any issues using our software, feel free to contact us.</p>
                                                     <button class="btn btn-primary active mt-3" type="button">Contact Us!</button>
                                                 </div>
                                             </div>
@@ -75,7 +75,7 @@
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h4 class="modal-title">Lỗi Login</h4>
+                                    <h4 class="modal-title">Errorn</h4>
                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                                 </div>
                                 <div id="warningContent" class="modal-body">

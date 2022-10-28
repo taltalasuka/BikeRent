@@ -33,13 +33,13 @@ namespace ShopsDefault.Modules.Page
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl search_filter;
 
         /// <summary>
-        /// pricing_w control.
+        /// popular_w control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl pricing_w;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl popular_w;
 
         /// <summary>
         /// why_choose_w control.

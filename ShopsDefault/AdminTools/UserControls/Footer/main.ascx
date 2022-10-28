@@ -4,6 +4,6 @@
         <a href="/ez-bikes.html" target="_blank">EZ Bikes</a> © 2022 creativeLabs.
     </div>
     <div class="copyright">
-        Copyright by <a href="/ez-bikes.html" target="_blank">EZ Bikes</a>
+        Copyright © <a href="/ez-bikes.html" target="_blank">DNVKN Softwares</a>
     </div>
 </div>

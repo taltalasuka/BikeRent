@@ -61,7 +61,7 @@
                                 <tr>
                                     <td><a href="/products.html" class="btn-default">Browse</a></td>
                                     <td>
-                                        <a href="/dat-hang.html" class="btn-default">Checkout</a></td>
+                                        <a href="/checkout.html" class="btn-default">Checkout</a></td>
                                 </tr>
                             </table>
                         </div>

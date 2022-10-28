@@ -14,7 +14,7 @@ namespace ShopsDefault.Modules.Page
         {
             Search_Filter_Load();
             Slider_Load();
-            Pricing_Load();
+            popular_Load();
             Why_Choose_Load();
             Portfolio_Load();
             Rental_Process_Load();
@@ -43,13 +43,13 @@ namespace ShopsDefault.Modules.Page
 
         }
 
-        private void Pricing_Load()
+        private void popular_Load()
         {
-            string linkFile = "/UserControls/Products/pricing.ascx";
+            string linkFile = "/UserControls/Products/popular.ascx";
             if (File.Exists(Server.MapPath(linkFile)))
             {
-                Control pricing = LoadControl(linkFile);
-                pricing_w.Controls.Add(pricing);
+                Control popular = LoadControl(linkFile);
+                popular_w.Controls.Add(popular);
             }
         }
 

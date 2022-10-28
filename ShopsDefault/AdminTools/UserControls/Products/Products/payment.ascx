@@ -11,7 +11,7 @@
 <div class="container-fluid">
     <div class="block-default">
         <div class="block-header">
-            <i class="icon-credit-card"></i>Danh sách Payment Methods
+            <i class="icon-credit-card"></i>Payment Methods
         </div>
         <div class="block-body">
             <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
@@ -26,7 +26,7 @@
                             <asp:BoundField DataField="ID_Payment" HeaderText="ID" HtmlEncode="true" />
                             <asp:BoundField DataField="PaymentName" HeaderText="Tên Payment Methods" HtmlEncode="true" />
                             <asp:TemplateField HeaderText="Status" SortExpression="Hidden">
-                                <ItemTemplate><%# (Boolean.Parse(Eval("Hidden").ToString())) ? "Active" : "Không Active" %></ItemTemplate>
+                                <ItemTemplate><%# (Boolean.Parse(Eval("Hidden").ToString())) ? "Active" : "Not Active" %></ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="Action">
                                 <ItemTemplate>
@@ -65,7 +65,7 @@
 
                                     <div class="form-actions">
                                         <asp:LinkButton ID="btnSave" runat="server" OnClick="btnSave_Click" CssClass="btn btn-primary">Save</asp:LinkButton>
-                                        <asp:LinkButton ID="btnCancel" runat="server" CssClass="btn btn-secondary">Hủy</asp:LinkButton>
+                                        <asp:LinkButton ID="btnCancel" runat="server" CssClass="btn btn-secondary">Cancel</asp:LinkButton>
                                     </div>
                                 </div>
                             </div>

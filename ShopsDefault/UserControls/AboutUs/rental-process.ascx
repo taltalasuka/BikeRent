@@ -2,7 +2,7 @@
 
 <div class="about-rental-process section">
     <div class="container">
-        <div class="block-header">Quy trình <span>cho Add to cart</span> EZ Bikes</div>
+        <div class="block-header"><span>Rent process</span></div>
         <div class="row">
             <div class="col-3">
                 <div class="item">
@@ -10,8 +10,7 @@
                         <img src="../../images/UploadImages/ve-chung-toi/chon-va-goi-xe.png" />
                     </div>
                     <div class="content">
-                        <div class="title">Chọn và đặt xe</div>
-                        <div class="desc">Xem và chọn xe yêu thích trên trang. Đặt xe bằng cách yêu nhấn vào nút đặt xe.</div>
+                        <div class="title">Choose your desired bikes</div>      
                     </div>
                 </div>
             </div>
@@ -21,8 +20,7 @@
                         <img src="../../images/UploadImages/ve-chung-toi/thu-tuc-nhan-xe.png" />
                     </div>
                     <div class="content">
-                        <div class="title">Làm thủ tục đặt xe</div>
-                        <div class="desc">Chúng tôi sẽ giữ cmnd hoặc hộ chiếu, thanh toán tiền Add to cart và nhận xe để sử dụng.</div>
+                        <div class="title">Fill out your information</div>
                     </div>
                 </div>
             </div>
@@ -32,8 +30,7 @@
                         <img src="../../images/UploadImages/ve-chung-toi/tan-huong-chuyen-di.png" />
                     </div>
                     <div class="content">
-                        <div class="title">Tận hưởng chuyến đi</div>
-                        <div class="desc">Điều khiển xe đúng luật và an toàn, tận hưởng và trải nghiệm du lịch Hà Nội bằng xe máy.</div>
+                        <div class="title">Enjoy your ride</div>
                     </div>
                 </div>
             </div>
@@ -43,8 +40,7 @@
                         <img src="../../images/UploadImages/ve-chung-toi/tra-xe-da-thue.png" />
                     </div>
                     <div class="content">
-                        <div class="title">Chọn và đặt xe</div>
-                        <div class="desc">Contact Us nhân viên đến lấy xe hoặc quý khách tự mang xe đến trả tại cửa hàng.</div>
+                        <div class="title">Return</div>
                     </div>
                 </div>
             </div>
