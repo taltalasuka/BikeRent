@@ -45,7 +45,7 @@
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                 <ContentTemplate>
                     <div class="btn-groups">
-                        <asp:LinkButton ID="btnAdd" runat="server" OnClick="btnAdd_Click" CssClass="btn btn-success add-new"><i class="icon-plus"></i> Thêm</asp:LinkButton>
+                        <asp:LinkButton ID="btnAdd" runat="server" OnClick="btnAdd_Click" CssClass="btn btn-success add-new"><i class="icon-plus"></i> Add</asp:LinkButton>
                     </div>
                     <asp:GridView ID="grv" runat="server" AutoGenerateColumns="False" AllowPaging="True" OnRowDataBound="grv_OnRowDataBound" DataKeyNames="ID_Product" OnRowDeleting="grv_RowDeleting" OnPageIndexChanging="grv_PageIndexChanging" CssClass="table table-default">
                         <PagerStyle CssClass="pagination" />
@@ -82,7 +82,7 @@
                         <div class="popup-body">
                             <div class="card">
                                 <div class="card-header">
-                                    <i class="icon-note"></i>Thêm xe
+                                    <i class="icon-note"></i>Add xe
                                 </div>
                                 <div class="card-body scrollbar-y-custom">
                                     <div class="form-group d-none">
@@ -92,48 +92,48 @@
                                     <div class="row">
                                         <div class="col-6">
                                             <div class="form-group">
-                                                <label for="company">Nhóm Products</label>
+                                                <label for="company">Products Category</label>
                                                 <asp:SqlDataSource ID="ds" runat="server" EnableCaching="false"></asp:SqlDataSource>
                                                 <asp:DropDownList ID="txtID_Catalog" runat="server" DataSourceID="ds" DataTextField="CatalogName" DataValueField="ID_Catalog" AppendDataBoundItems="true" CssClass="form-control">
-                                                    <asp:ListItem Text="Chọn nhóm Products" Value="0" Selected="true" />
+                                                    <asp:ListItem Text="Chọn Products Category" Value="0" Selected="true" />
                                                 </asp:DropDownList>
                                             </div>
                                             <div class="form-group">
                                                 <label for="company">Product</label>
-                                                <asp:TextBox ID="txtProductName" runat="server" placeholder="Nhập tên danh mục" CssClass="form-control"></asp:TextBox>
+                                                <asp:TextBox ID="txtProductName" runat="server" placeholder=" Name" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
                                                 <label for="company">Code</label>
-                                                <asp:TextBox ID="txtProductCode" runat="server" placeholder="Nhập mã Products" CssClass="form-control"></asp:TextBox>
+                                                <asp:TextBox ID="txtProductCode" runat="server" placeholder=" mã Products" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
                                                 <label for="company">Price</label>
-                                                <asp:TextBox ID="txtPriceOut" runat="server" placeholder="Nhập giá Products" CssClass="form-control"></asp:TextBox>
+                                                <asp:TextBox ID="txtPriceOut" runat="server" placeholder=" giá Products" CssClass="form-control"></asp:TextBox>
                                             </div>
                                         </div>
                                         <div class="col-6">                                            
                                             <div class="form-group">
                                                 <label for="company">Quantity</label>
-                                                <asp:TextBox ID="txtAmount" runat="server" placeholder="Nhập Quantity" CssClass="form-control"></asp:TextBox>
+                                                <asp:TextBox ID="txtAmount" runat="server" placeholder=" Quantity" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
                                                 <label for="company">Color</label>
-                                                <asp:TextBox ID="txtColor" runat="server" placeholder="Nhập màu Products" CssClass="form-control"></asp:TextBox>
+                                                <asp:TextBox ID="txtColor" runat="server" placeholder=" màu Products" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
                                                 <label for="company">Speed</label>
-                                                <asp:TextBox ID="txtWeight" runat="server" placeholder="Nhập Speed Products" CssClass="form-control"></asp:TextBox>
+                                                <asp:TextBox ID="txtWeight" runat="server" placeholder=" Speed Products" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
                                                 <label for="company">Summary</label>
-                                                <asp:TextBox ID="txtSummaryContent" runat="server" placeholder="Nhập mô tả Products" CssClass="form-control"></asp:TextBox>
+                                                <asp:TextBox ID="txtSummaryContent" runat="server" placeholder=" Description Products" CssClass="form-control"></asp:TextBox>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="company">Images</label>
                                         <div class="position-relative">
-                                            <asp:TextBox ID="txtImage" runat="server" placeholder="Nhập link hình ảnh" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox ID="txtImage" runat="server" placeholder=" link Image" CssClass="form-control"></asp:TextBox>
                                             <asp:FileUpload ID="fuImage" runat="server" CssClass="form-control btn-fu" accept=".png,.jpg,.jpeg,.gif" />
                                         </div>
                                     </div>
@@ -149,11 +149,11 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="company">Title</label>
-                                        <asp:TextBox ID="txtTitleWeb" runat="server" placeholder="Nhập Title website" CssClass="form-control"></asp:TextBox>
+                                        <asp:TextBox ID="txtTitleWeb" runat="server" placeholder=" Title" CssClass="form-control"></asp:TextBox>
                                     </div>
                                     <div class="form-group">
                                         <label for="country">URL</label>
-                                        <asp:TextBox ID="txtLinkSEO" runat="server" placeholder="Nhập đường dẫn website" CssClass="form-control"></asp:TextBox>
+                                        <asp:TextBox ID="txtLinkSEO" runat="server" placeholder=" URL" CssClass="form-control"></asp:TextBox>
                                     </div>
 
                                     <div class="form-actions">

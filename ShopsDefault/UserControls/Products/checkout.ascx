@@ -69,18 +69,18 @@
         <div class="row">
             <div class="col-8">
                 <div class="checkout-item">
-                    <div class="title-header">Địa điểm nhận hàng</div>
+                    <div class="title-header">Your delivery details</div>
                     <div class="checkout-content">
                         <div class="row">
                             <div class="col-6">
                                 <div class="form-group">
                                     <label for="company">Họ tên</label>
-                                    <asp:TextBox ID="txtFullName" runat="server" onKeyUp='validateName(ckName)' placeholder="Nhập họ tên" CssClass="form-control"></asp:TextBox>
+                                    <asp:TextBox ID="txtFullName" runat="server" onKeyUp='validateName(ckName)' placeholder=" họ tên" CssClass="form-control"></asp:TextBox>
                                     <label class="error-message d-none" id="name-error"></label>
                                 </div>
                                 <div class="form-group">
                                     <label for="company">Số điện thoại</label>
-                                    <asp:TextBox ID="txtPhoneNumber" runat="server" onKeyUp='validatePhone(ckPhone)' placeholder="Nhập số điện thoại" CssClass="form-control"></asp:TextBox>
+                                    <asp:TextBox ID="txtPhoneNumber" runat="server" onKeyUp='validatePhone(ckPhone)' placeholder=" số điện thoại" CssClass="form-control"></asp:TextBox>
                                     <label class="error-message d-none" id="phone-error"></label>
                                 </div>
                                 <div class="form-group">
@@ -91,12 +91,12 @@
                             <div class="col-6">
                                 <div class="form-group">
                                     <label for="company">Email</label>
-                                    <asp:TextBox ID="txtEmail" runat="server" onKeyUp='validateEmail(ckEmail)' placeholder="Nhập email" CssClass="form-control"></asp:TextBox>
+                                    <asp:TextBox ID="txtEmail" runat="server" onKeyUp='validateEmail(ckEmail)' placeholder=" email" CssClass="form-control"></asp:TextBox>
                                     <label class="error-message d-none" id="email-error"></label>
                                 </div>
                                 <div class="form-group">
                                     <label for="company">Địa chỉ nhận hàng</label>
-                                    <asp:TextBox ID="txtAddress" runat="server" onKeyUp='validateAddress(ckAddress)' placeholder="Nhập địa chỉ nhận hàng" CssClass="form-control"></asp:TextBox>
+                                    <asp:TextBox ID="txtAddress" runat="server" onKeyUp='validateAddress(ckAddress)' placeholder=" địa chỉ nhận hàng" CssClass="form-control"></asp:TextBox>
                                     <label class="error-message d-none" id="address-error"></label>
                                 </div>
                                 <div class="form-group">
@@ -107,14 +107,14 @@
                             <div class="col-12">
                                 <div class="form-group">
                                     <label for="company">Ghi chú</label>
-                                    <asp:TextBox ID="txtDescription" runat="server" TextMode="MultiLine" placeholder="Nhập ghi chú đơn hàng" CssClass="form-control"></asp:TextBox>
+                                    <asp:TextBox ID="txtDescription" runat="server" TextMode="MultiLine" placeholder=" ghi chú đơn hàng" CssClass="form-control"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="checkout-item">
-                    <div class="title-header">Hình thức thanh toán</div>
+                    <div class="title-header">Payment Methods</div>
                     <div class="checkout-content">
                         <asp:ObjectDataSource ID="ds" runat="server" OnSelecting="ds_Selecting" SelectMethod="GetDataTable_SQL_pro" TypeName="Librari.Cls_ShopsPayments" />
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -141,7 +141,7 @@
                 </div>
             </div>
             <div class="col-4">
-                <div class="title-header">Thông tin đơn hàng</div>
+                <div class="title-header">Order details</div>
                 <div class="checkout-content">
                     <div class="checkout-cart">
                         <asp:Repeater ID="Repeater3" runat="server" OnInit="dsCart_OnLoad">
@@ -167,7 +167,7 @@
                                 <div class="item">
                                     <div class="row">
                                         <div class="col-6">
-                                            Thành tiền:
+                                            Total:
                                         </div>
                                         <div class="col-6">
                                             <div class="total">
@@ -180,11 +180,11 @@
                         </asp:Repeater>
                     </div>
                     <div class="text-center">
-                        <a href="gio-hang.html" class="btn-default">Cart</a>
+                        <a href="cart.html" class="btn-default">Cart</a>
                         <asp:LinkButton ID="btnCheckout" runat="server" OnClientClick="return validateForm(ckName, ckPhone, ckEmail, ckAddress)" OnClick="btnCheckout_Click" CssClass="btn-default">Submit</asp:LinkButton>
                     </div>
                     <div class="checkout-warning-text">
-                        Quý khách vui lòng kiểm tra lại thông tin đơn hàng trước khi nhấn vào nút Submit
+                        Quý khách vui lòng kiểm tra lại Order details trước khi nhấn vào nút Submit
                     </div>
                 </div>
             </div>

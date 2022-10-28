@@ -4,12 +4,12 @@
 
 <ul class="breadcrumb">
     <li><a href="/AdminTools/Dashboard.html">Dashboard</a></li>
-    <li>Nhóm Articles</li>
+    <li>Articles Category</li>
 </ul>
 <div class="container-fluid">
     <div class="block-default">
         <div class="block-header">
-            <i class="icon-bubble"></i>Khách Contact Us
+            <i class="icon-bubble"></i>Messages from customers
         </div>
         <div class="block-body">
             <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>

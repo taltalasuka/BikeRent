@@ -12,7 +12,7 @@
             </ul>
             <div class="hd-cart">
                 <div class="hd-cart-icon">
-                    <a href="/gio-hang.html">
+                    <a href="/cart.html">
                         <i class="fa fa-shopping-basket"></i>
                         <span class="hd-cart-item"><%= Utils.GetCountItemCart()%></span></a>
                 </div>

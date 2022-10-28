@@ -20,7 +20,7 @@ namespace ShopsDefault.UserControls.Products
 
             if (dt == null || dt.Compute("Sum(Total)", "") == null || dt.Compute("Sum(Total)", "").ToString() == "")
             {
-                Response.Redirect("/gio-hang.html");
+                Response.Redirect("/cart.html");
             }
         }
 

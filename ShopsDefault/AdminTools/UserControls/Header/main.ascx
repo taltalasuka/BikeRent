@@ -23,8 +23,8 @@
                 <div class="hd-nav">
                     <ul>
                         <li><a href="/AdminTools/Dashboard.html">Dashboard</a></li>
-                        <li><a href="#">Người dùng</a></li>
-                        <li><a href="#">Cài đặt</a></li>
+                        <li><a href="#">Account</a></li>
+                        <li><a href="#">Settings</a></li>
                     </ul>
                 </div>
             </div>
@@ -37,9 +37,9 @@
                             <a class="has-sub" href="#">
                                 <img src="/AdminTools/images/user/minh-quoc.jpg" /></a>
                             <ul class="hd-nav-sub">
-                                <li class="nav-group">Cài đặt</li>
+                                <li class="nav-group">Settings</li>
                                 <li>
-                                    <a href="#"><i class="icon-settings"></i>Đổi mật khẩu</a>
+                                    <a href="#"><i class="icon-settings"></i>Change Password</a>
                                 </li>
                                 <li>
                                     <a href="/AdminTools/DangNhap.html"><i class="icon-logout"></i>Log out</a>

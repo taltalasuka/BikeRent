@@ -12,7 +12,7 @@ CKEDITOR.plugins.setLang( 'link', 'vi', {
 		menu: 'Thuộc tính điểm neo',
 		title: 'Thuộc tính điểm neo',
 		name: 'Tên của điểm neo',
-		errorName: 'Hãy nhập vào tên của điểm neo',
+		errorName: 'Hãy  vào tên của điểm neo',
 		remove: 'Xóa neo'
 	},
 	anchorId: 'Theo định danh thành phần',

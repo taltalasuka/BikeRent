@@ -16,7 +16,7 @@
                                 <Columns>
                                     <asp:BoundField DataField="ID_Product" HeaderText="ID" HtmlEncode="true" />
 
-                                    <asp:BoundField DataField="ProductName" HeaderText="Tên Products" HtmlEncode="true" />
+                                    <asp:BoundField DataField="ProductName" HeaderText="Product" HtmlEncode="true" />
 
                                     <asp:TemplateField HeaderText="Quantity">
                                         <ItemTemplate>
@@ -26,13 +26,13 @@
                                         </ItemTemplate>
                                     </asp:TemplateField>
 
-                                    <asp:TemplateField HeaderText="Đơn giá">
+                                    <asp:TemplateField HeaderText="Price">
                                         <ItemTemplate>
                                             <div class="prd-price"><%# Utils.getPrice(Eval("PriceOut"))%><sup>đ</sup></div>
                                         </ItemTemplate>
                                     </asp:TemplateField>
 
-                                    <asp:TemplateField HeaderText="Thành tiền">
+                                    <asp:TemplateField HeaderText="Total">
                                         <ItemTemplate>
                                             <div class="prd-total"><%# Utils.getPrice(Eval("Total"))%><sup>đ</sup></div>
                                         </ItemTemplate>
@@ -52,14 +52,14 @@
                         <div class="cart-info">
                             <table>
                                 <tr>
-                                    <th colspan="2">Thông tin Cart</th>
+                                    <th colspan="2">Cart</th>
                                 </tr>
                                 <tr>
-                                    <td>Tổng cộng:</td>
+                                    <td>Total:</td>
                                     <td><%= Utils.getPrice(getTotal()) %><sup>đ</sup></td>
                                 </tr>
                                 <tr>
-                                    <td><a href="/san-pham.html" class="btn-default">Mua thêm</a></td>
+                                    <td><a href="/san-pham.html" class="btn-default">browse</a></td>
                                     <td>
                                         <a href="/dat-hang.html" class="btn-default">Submit</a></td>
                                 </tr>

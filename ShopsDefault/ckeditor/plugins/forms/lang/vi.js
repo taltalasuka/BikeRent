@@ -9,7 +9,7 @@ CKEDITOR.plugins.setLang( 'forms', 'vi', {
 		type: 'Kiểu',
 		typeBtn: 'Nút bấm',
 		typeSbm: 'Nút gửi',
-		typeRst: 'Nút nhập lại'
+		typeRst: 'Nút  lại'
 	},
 	checkboxAndRadio: {
 		checkboxTitle: 'Thuộc tính nút kiểm',

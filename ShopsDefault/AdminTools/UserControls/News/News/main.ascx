@@ -45,7 +45,7 @@
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                 <ContentTemplate>
                     <div class="btn-groups">
-                        <asp:LinkButton ID="btnAdd" runat="server" OnClick="btnAdd_Click" CssClass="btn btn-success add-new"><i class="icon-plus"></i> Thêm</asp:LinkButton>
+                        <asp:LinkButton ID="btnAdd" runat="server" OnClick="btnAdd_Click" CssClass="btn btn-success add-new"><i class="icon-plus"></i> Add</asp:LinkButton>
                     </div>
                     <asp:GridView ID="grv" runat="server" AutoGenerateColumns="False" AllowPaging="True" OnRowDataBound="grv_OnRowDataBound" DataKeyNames="ID_News" OnRowDeleting="grv_RowDeleting" OnPageIndexChanging="grv_PageIndexChanging" CssClass="table table-default">
                         <PagerStyle CssClass="pagination" />
@@ -54,7 +54,7 @@
                             <asp:BoundField DataField="Title" HeaderText="Title" HtmlEncode="true" />
                             <asp:BoundField DataField="CatalogName" HeaderText="Articles category" HtmlEncode="true" />
                             <asp:TemplateField HeaderText="Status" SortExpression="Hidden">
-                                <ItemTemplate><%# (Boolean.Parse(Eval("Hidden").ToString())) ? "Actived" : "Not Actived" %></ItemTemplate>
+                                <ItemTemplate><%# (Boolean.Parse(Eval("Hidden").ToString())) ? "Active" : "Not Active" %></ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="Action">
                                 <ItemTemplate>
@@ -77,7 +77,7 @@
                         <div class="popup-body">
                             <div class="card">
                                 <div class="card-header">
-                                    <i class="icon-note"></i>Thêm danh mục xe
+                                    <i class="icon-note"></i>Add Bike Category
                                 </div>
                                 <div class="card-body scrollbar-y-custom">
                                     <div class="form-group d-none">
@@ -86,24 +86,24 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="company">Nhóm Articles</label>
+                                        <label for="company">Articles Category</label>
                                         <asp:SqlDataSource ID="ds" runat="server" EnableCaching="false"></asp:SqlDataSource>
                                         <asp:DropDownList ID="txtID_Catalog" runat="server" DataSourceID="ds" DataTextField="CatalogName" DataValueField="ID_Catalog" AppendDataBoundItems="true" CssClass="form-control">
-                                            <asp:ListItem Text="Chọn nhóm Articles" Value="0" Selected="true" />
+                                            <asp:ListItem Text="Chọn Articles Category" Value="0" Selected="true" />
                                         </asp:DropDownList>
                                     </div>
                                     <div class="form-group">
                                         <label for="company">Title</label>
-                                        <asp:TextBox ID="txtTitle" runat="server" placeholder="Nhập tên Title" CssClass="form-control"></asp:TextBox>
+                                        <asp:TextBox ID="txtTitle" runat="server" placeholder=" tên Title" CssClass="form-control"></asp:TextBox>
                                     </div>
                                     <div class="form-group">
-                                        <label for="company">Mô tả</label>
-                                        <asp:TextBox ID="txtSummaryContent" runat="server" placeholder="Nhập mô tả Articles" CssClass="form-control"></asp:TextBox>
+                                        <label for="company">Description</label>
+                                        <asp:TextBox ID="txtSummaryContent" runat="server" placeholder=" Description Articles" CssClass="form-control"></asp:TextBox>
                                     </div>
                                     <div class="form-group">
-                                        <label for="company">Hình ảnh</label>
+                                        <label for="company">Image</label>
                                         <div class="position-relative">
-                                            <asp:TextBox ID="txtImage" runat="server" placeholder="Nhập link hình ảnh" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox ID="txtImage" runat="server" placeholder=" link Image" CssClass="form-control"></asp:TextBox>
                                             <asp:FileUpload ID="fuImage" runat="server" CssClass="form-control btn-fu" accept=".png,.jpg,.jpeg,.gif" />
                                         </div>
                                     </div>
@@ -118,12 +118,12 @@
                                         <asp:CheckBox ID="cbHidden" runat="server" Style="margin-left: 8px;"></asp:CheckBox>
                                     </div>
                                     <div class="form-group">
-                                        <label for="company">Title website</label>
-                                        <asp:TextBox ID="txtTitleWeb" runat="server" placeholder="Nhập Title website" CssClass="form-control"></asp:TextBox>
+                                        <label for="company">Title</label>
+                                        <asp:TextBox ID="txtTitleWeb" runat="server" placeholder=" Title" CssClass="form-control"></asp:TextBox>
                                     </div>
                                     <div class="form-group">
-                                        <label for="country">Đường dẫn website</label>
-                                        <asp:TextBox ID="txtLinkSEO" runat="server" placeholder="Nhập đường dẫn website" CssClass="form-control"></asp:TextBox>
+                                        <label for="country">URL</label>
+                                        <asp:TextBox ID="txtLinkSEO" runat="server" placeholder=" URL" CssClass="form-control"></asp:TextBox>
                                     </div>
 
                                     <div class="form-actions">

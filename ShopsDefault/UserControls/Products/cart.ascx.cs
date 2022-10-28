@@ -33,7 +33,7 @@ namespace ShopsDefault.UserControls.Products
             {
                 string getName = e.Row.Cells[1].Text;
                 LinkButton lnk = (LinkButton)e.Row.FindControl("lnkDelete");
-                lnk.Attributes.Add("onclick", "return confirm('Bạn có muốn xóa Products " + getName + " không?')");
+                lnk.Attributes.Add("onclick", "return confirm('Delete " + getName + "?')");
             }
         }
         protected void grv_RowDeleting(object sender, GridViewDeleteEventArgs e)
@@ -47,7 +47,7 @@ namespace ShopsDefault.UserControls.Products
                 Session["cart_items"] = dt;
                 BindData();
             }
-            Response.Redirect("/gio-hang.html");
+            Response.Redirect("/cart.html");
         }
 
         protected void grv_RowUpdating(object sender, GridViewUpdateEventArgs e)
@@ -66,7 +66,7 @@ namespace ShopsDefault.UserControls.Products
                 Session["cart_items"] = dt;
                 BindData();
             }
-            Response.Redirect("/gio-hang.html");
+            Response.Redirect("/cart.html");
         }
 
         protected string getTotal()
@@ -101,7 +101,7 @@ namespace ShopsDefault.UserControls.Products
             if (dt == null || dt.Compute("Sum(Total)", "") == null || dt.Compute("Sum(Total)", "").ToString() == "")
             {
                 UpdatePanel1.Visible = false;
-                lblEmpty.Text = "Không có Products nào trong Cart!";
+                lblEmpty.Text = "Cart is empty!";
             } else
             {
                 UpdatePanel1.Visible = true;

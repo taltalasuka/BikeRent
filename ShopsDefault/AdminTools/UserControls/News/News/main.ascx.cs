@@ -40,7 +40,7 @@ namespace ShopsDefault.AdminTools.UserControls.News.News
             {
                 string getName = e.Row.Cells[1].Text;
                 LinkButton lnk = (LinkButton)e.Row.FindControl("lnkDelete");
-                lnk.Attributes.Add("onclick", "return confirm('Bạn có muốn xóa Articles " + getName + " không?')");
+                lnk.Attributes.Add("onclick", "return confirm('Delete " + getName + "?')");
             }
         }
 
@@ -102,12 +102,12 @@ namespace ShopsDefault.AdminTools.UserControls.News.News
 
             if (cls.doDelete() == 1)
             {
-                string sMessages = "alert('Đã xóa thành công');";
+                string sMessages = "alert('Deleted');";
                 ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), "", sMessages, true);
             }
             else
             {
-                string sMessages = "alert('Đã xảy ra lỗi trong quá trình xóa dữ liệu');";
+                string sMessages = "alert('An error has occurred!');";
                 ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), "", sMessages, true);
             }
             BindData();
@@ -141,12 +141,12 @@ namespace ShopsDefault.AdminTools.UserControls.News.News
                 }
                 if (cls.doInsert() == 1)
                 {
-                    string sMessages = "alert('Đã thêm dữ liệu thành công!');";
+                    string sMessages = "alert('Successfully added!');";
                     ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), "", sMessages, true);
                 }
                 else
                 {
-                    string sMessages = "alert('Đã xảy ra lỗi trong quá trình thêm dữ liệu! Bạn vui lòng kiểm tra lại!');";
+                    string sMessages = "alert('An error has occurred!');";
                     ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), "", sMessages, true);
                 }
             }
@@ -175,12 +175,12 @@ namespace ShopsDefault.AdminTools.UserControls.News.News
                 }
                 if (cls.doUpdate() == 1)
                 {
-                    string sMessages = "alert('Đã chỉnh Edit dữ liệu thành công!');";
+                    string sMessages = "alert('Successfully edited!');";
                     ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), "", sMessages, true);
                 }
                 else
                 {
-                    string sMessages = "alert('Đã xảy ra lỗi trong quá trình chỉnh Edit dữ liệu! Bạn vui lòng kiểm tra lại!');";
+                    string sMessages = "alert('An error has occurred!');";
                     ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), "", sMessages, true);
                 }
             }

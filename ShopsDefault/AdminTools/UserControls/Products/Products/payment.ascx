@@ -4,27 +4,27 @@
 
 <ul class="breadcrumb">
     <li><a href="/AdminTools/Dashboard.html">Dashboard</a></li>
-    <li>Hình thức thanh toán</li>
+    <li>Payment Methods</li>
 </ul>
 
 
 <div class="container-fluid">
     <div class="block-default">
         <div class="block-header">
-            <i class="icon-credit-card"></i>Danh sách hình thức thanh toán
+            <i class="icon-credit-card"></i>Danh sách Payment Methods
         </div>
         <div class="block-body">
             <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                 <ContentTemplate>
                     <div class="btn-groups">
-                        <asp:LinkButton ID="btnAdd" runat="server" OnClick="btnAdd_Click" CssClass="btn btn-success add-new"><i class="icon-plus"></i> Thêm</asp:LinkButton>
+                        <asp:LinkButton ID="btnAdd" runat="server" OnClick="btnAdd_Click" CssClass="btn btn-success add-new"><i class="icon-plus"></i> Add</asp:LinkButton>
                     </div>
                     <asp:GridView ID="grv" runat="server" AutoGenerateColumns="False" AllowPaging="True" OnRowDataBound="grv_OnRowDataBound" DataKeyNames="ID_Payment" OnRowDeleting="grv_RowDeleting" OnPageIndexChanging="grv_PageIndexChanging" CssClass="table table-default">
                         <PagerStyle CssClass="pagination" />
                         <Columns>
                             <asp:BoundField DataField="ID_Payment" HeaderText="ID" HtmlEncode="true" />
-                            <asp:BoundField DataField="PaymentName" HeaderText="Tên hình thức thanh toán" HtmlEncode="true" />
+                            <asp:BoundField DataField="PaymentName" HeaderText="Tên Payment Methods" HtmlEncode="true" />
                             <asp:TemplateField HeaderText="Status" SortExpression="Hidden">
                                 <ItemTemplate><%# (Boolean.Parse(Eval("Hidden").ToString())) ? "Active" : "Không Active" %></ItemTemplate>
                             </asp:TemplateField>
@@ -41,7 +41,7 @@
                         <div class="popup-body">
                             <div class="card">
                                 <div class="card-header">
-                                    <i class="icon-note"></i>Thêm hình thức thanh toán
+                                    <i class="icon-note"></i>Add Payment Methods
                                 </div>
                                 <div class="card-body scrollbar-y-custom">
                                     <div class="form-group d-none">
@@ -49,8 +49,8 @@
                                         <asp:TextBox ID="txtID_Payment" runat="server" placeholder="ID Thanh toán" CssClass="form-control" ReadOnly="true"></asp:TextBox>
                                     </div>
                                     <div class="form-group">
-                                        <label for="company">Tên hình thức thanh toán</label>
-                                        <asp:TextBox ID="txtPaymentName" runat="server" placeholder="Nhập hình thức thanh toán" CssClass="form-control"></asp:TextBox>
+                                        <label for="company">Tên Payment Methods</label>
+                                        <asp:TextBox ID="txtPaymentName" runat="server" placeholder=" Payment Methods" CssClass="form-control"></asp:TextBox>
                                     </div>
                                     <div class="form-group">
                                         <label for="street">Nội dung Details</label>

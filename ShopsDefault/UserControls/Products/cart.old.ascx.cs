@@ -34,7 +34,7 @@ namespace ShopsDefault.UserControls.Products
 
         protected void GridView1_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
         {
-            //Edit thông tin Cart
+            //Edit Cart
             string id = GridView1.DataKeys[e.NewSelectedIndex].Value.ToString();
             TextBox quantity = GridView1.Rows[e.NewSelectedIndex].Cells[2].FindControl("txtQuantity")
                 as TextBox;

@@ -3,12 +3,12 @@
 
     if (name.length == 0) {
         $('#name-error').removeClass('d-none');
-        producePrompt('Tên không được để trống', 'name-error');
+        producePrompt('This field cannot be blank', 'name-error');
         return false;
 
     } else if (!name.match(/^[A-Za-z ]*/)) {
         $('#name-error').removeClass('d-none');
-        producePrompt('Vui lòng nhập họ và tên', 'name-error');
+        producePrompt('Please enter your full name, 'name-error');
         return false;
     } else {
         producePrompt('', 'name-error');
@@ -22,15 +22,15 @@ function validatePhone(id) {
 
     if (phone.length == 0) {
         $('#phone-error').removeClass('d-none');
-        producePrompt('SĐT không được để trống', 'phone-error');
+        producePrompt('This field cannot be blank', 'phone-error');
         return false;
     } else if (phone.length < 10) {
         $('#phone-error').removeClass('d-none');
-        producePrompt('SĐT chưa đúng định dạng', 'phone-error');
+        producePrompt('Incorect format', 'phone-error');
         return false;
     } else if (!phone.match(/^[0-9]{10,11}$/)) {
         $('#phone-error').removeClass('d-none');
-        producePrompt('SĐT đúng định dạng', 'phone-error');
+        producePrompt('Correct format', 'phone-error');
         return false;
     } else {
         producePrompt('', 'phone-error');
@@ -44,11 +44,11 @@ function validateEmail(id) {
 
     if (email.length == 0) {
         $('#email-error').removeClass('d-none');
-        producePrompt('Email không được để trống', 'email-error');
+        producePrompt('This field cannot be blank', 'email-error');
         return false;
     } else if (!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
         $('#email-error').removeClass('d-none');
-        producePrompt('Email sai định dạng', 'email-error');
+        producePrompt('Inccorect format', 'email-error');
         return false;
 
     } else {
@@ -63,7 +63,7 @@ function validateAddress(id) {
 
     if (address.length == 0) {
         $('#address-error').removeClass('d-none');
-        producePrompt('Địa chỉ không được để trống', 'address-error');
+        producePrompt('This field cannot be blank', 'address-error');
         return false;
     } else {
         producePrompt('', 'address-error');

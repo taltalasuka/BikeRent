@@ -27,7 +27,7 @@ namespace ShopsDefault.AdminTools.UserControls.Products.Products
             if (dt.Rows.Count == 0)
             {
                 lblGridviewEmpty.Visible = true;
-                lblGridviewEmpty.Text = "Không có đơn hàng trả vào ngày mai!";
+                lblGridviewEmpty.Text = "No Returns tomorrow!";
             }
             else
             {

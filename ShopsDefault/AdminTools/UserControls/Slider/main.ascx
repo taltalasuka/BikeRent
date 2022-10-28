@@ -24,21 +24,21 @@
 <div class="container-fluid">
     <div class="block-default">
         <div class="block-header">
-            <i class="icon-bag"></i>Danh sách slider
+            <i class="icon-bag"></i>Carousel
         </div>
         <div class="block-body">
             <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                 <ContentTemplate>
                     <div class="btn-groups">
-                        <asp:LinkButton ID="btnAdd" runat="server" OnClick="btnAdd_Click" CssClass="btn btn-success add-new"><i class="icon-plus"></i> Thêm</asp:LinkButton>
+                        <asp:LinkButton ID="btnAdd" runat="server" OnClick="btnAdd_Click" CssClass="btn btn-success add-new"><i class="icon-plus"></i> Add</asp:LinkButton>
                     </div>
                     <asp:GridView ID="grv" runat="server" AutoGenerateColumns="False" AllowPaging="True" OnRowDataBound="grv_OnRowDataBound" DataKeyNames="ID_Slider" OnRowDeleting="grv_RowDeleting" OnPageIndexChanging="grv_PageIndexChanging" CssClass="table table-default">
                         <PagerStyle CssClass="pagination" />
                         <Columns>
                             <asp:BoundField DataField="ID_Slider" HeaderText="ID" HtmlEncode="true" />
                             <asp:BoundField DataField="Title" HeaderText="Title" HtmlEncode="true" />
-                            <asp:BoundField DataField="SummaryContent" HeaderText="Mô tả" HtmlEncode="true" />
+                            <asp:BoundField DataField="SummaryContent" HeaderText="Description" HtmlEncode="true" />
                             <asp:TemplateField HeaderText="Status" SortExpression="Hidden">
                                 <ItemTemplate><%# (Boolean.Parse(Eval("Hidden").ToString())) ? "Active" : "Không Active" %></ItemTemplate>
                             </asp:TemplateField>
@@ -62,7 +62,7 @@
                         <div class="popup-body">
                             <div class="card">
                                 <div class="card-header">
-                                    <i class="icon-note"></i>Thêm danh mục
+                                    <i class="icon-note"></i>Add danh mục
                                 </div>
                                 <div class="card-body scrollbar-y-custom">
                                     <div class="form-group d-none">
@@ -71,16 +71,16 @@
                                     </div>                                    
                                     <div class="form-group">
                                         <label for="company">Title</label>
-                                        <asp:TextBox ID="txtTitle" runat="server" placeholder="Nhập tên Title" CssClass="form-control"></asp:TextBox>
+                                        <asp:TextBox ID="txtTitle" runat="server" placeholder=" tên Title" CssClass="form-control"></asp:TextBox>
                                     </div>
                                     <div class="form-group">
-                                        <label for="company">Mô tả</label>
-                                        <asp:TextBox ID="txtSummaryContent" runat="server" placeholder="Nhập mô tả slider" CssClass="form-control"></asp:TextBox>
+                                        <label for="company">Description</label>
+                                        <asp:TextBox ID="txtSummaryContent" runat="server" placeholder=" Description slider" CssClass="form-control"></asp:TextBox>
                                     </div>
                                     <div class="form-group">
-                                        <label for="company">Hình ảnh</label>
+                                        <label for="company">Image</label>
                                         <div class="position-relative">
-                                            <asp:TextBox ID="txtImage" runat="server" placeholder="Nhập link hình ảnh" CssClass="form-control"></asp:TextBox>
+                                            <asp:TextBox ID="txtImage" runat="server" placeholder=" link Image" CssClass="form-control"></asp:TextBox>
                                             <asp:FileUpload ID="fuImage" runat="server" CssClass="form-control btn-fu" accept=".png,.jpg,.jpeg,.gif" />
                                         </div>
                                     </div>

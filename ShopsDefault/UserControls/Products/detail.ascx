@@ -30,10 +30,10 @@
     function checkItem(quantity, e) {
         var totalamout = parseInt($('.total-amount').text());
         if (totalamout == 0) {
-            alert("Sản phẩm này đã hết hàng trong kho nên không thêm vào giỏ hàng được!");
+            alert("Sản phẩm này đã hết hàng trong kho nên không Add vào giỏ hàng được!");
             e.preventDefault();
         } else if (totalamout - parseInt(quantity) < 0) {
-            alert("Sản phẩm cần mua chênh lệch cho với Products còn trong kho nên không thêm vào giỏ hàng được!");
+            alert("Sản phẩm cần mua chênh lệch cho với Products còn trong kho nên không Add vào giỏ hàng được!");
             e.preventDefault();
         } else {
             //var cartCount = parseInt($('.hd-cart-item').text()) + parseInt(quantity);

@@ -53,7 +53,7 @@
                                         </li>
 
                                         <li class="nav-item">
-                                            <a class="nav-link" data-toggle="tab" href="#thong-tin-don-hang">Thông tin đơn hàng</a>
+                                            <a class="nav-link" data-toggle="tab" href="#thong-tin-don-hang">Order details</a>
                                         </li>
                                     </ul>
                                     <div class="tab-content">
@@ -89,7 +89,7 @@
                                                 </div>
                                                 <div class="col-4">
                                                     <div class="form-group">
-                                                        <label for="company">Hình thức thanh toán</label>
+                                                        <label for="company">Payment Methods</label>
                                                         <asp:TextBox ID="txtPayment" runat="server" ReadOnly="true" CssClass="form-control"></asp:TextBox>
                                                     </div>
                                                     <div class="form-group">
@@ -113,8 +113,8 @@
                                                             <asp:BoundField DataField="ProductCode" HeaderText="Mã xe" HtmlEncode="true" />
                                                             <asp:BoundField DataField="ProductName" HeaderText="Tên xe" HtmlEncode="true" />
                                                             <asp:BoundField DataField="Amount" HeaderText="Quantity" HtmlEncode="true" />
-                                                            <asp:BoundField DataField="PriceOut" HeaderText="Đơn giá" HtmlEncode="true" />
-                                                            <asp:BoundField DataField="PriceTotal" HeaderText="Tổng cộng" HtmlEncode="true" />
+                                                            <asp:BoundField DataField="PriceOut" HeaderText="Price" HtmlEncode="true" />
+                                                            <asp:BoundField DataField="PriceTotal" HeaderText="Total" HtmlEncode="true" />
                                                         </Columns>
                                                     </asp:GridView>
                                                 </div>
