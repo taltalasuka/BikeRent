@@ -26,14 +26,14 @@ namespace ShopsDefault.UserControls.Contact
 
         private void SendMailInfor()
         {
-            System.Net.NetworkCredential login_cred = new System.Net.NetworkCredential("doquocminh191991@gmail.com", "minh1232019");
+            System.Net.NetworkCredential login_cred = new System.Net.NetworkCredential("dnvknguyen@gmail.com", "dcgnjescmakdsvta");
             System.Net.Mail.MailMessage mail = new System.Net.Mail.MailMessage();
-            mail.From = new System.Net.Mail.MailAddress("doquocminh191991@gmail.com");
+            mail.From = new System.Net.Mail.MailAddress("dnvknguyen@gmail.com");
             mail.To.Add(new System.Net.Mail.MailAddress(txtEmail.Text));
-            mail.CC.Add(new System.Net.Mail.MailAddress("doquocminh191991@gmail.com"));
+            mail.CC.Add(new System.Net.Mail.MailAddress("dnvknguyen@gmail.com"));
             mail.BodyEncoding = System.Text.Encoding.UTF8;
-            mail.Subject = txtContactName.Text;
-            mail.Body = txtDetail.Text;
+            mail.Subject = "Information Received";
+            mail.Body = "<b>Your message: </b>" + txtDetail.Text;
             mail.IsBodyHtml = true;
             System.Net.Mail.SmtpClient client = new System.Net.Mail.SmtpClient("smtp.gmail.com", 587);
             client.DeliveryMethod = System.Net.Mail.SmtpDeliveryMethod.Network;
@@ -59,14 +59,14 @@ namespace ShopsDefault.UserControls.Contact
             cls.Hidden = true;
             if (cls.doInsert() == 1)
             {
-                string sMessages = "alert('Đã gởi liên hệ thành công!');";
+                string sMessages = "alert('Your information has been received!');";
                 ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "", sMessages, true);
                 SendMailInfor();
                 resetForm();
             }
             else
             {
-                string sMessages = "alert('Đã xảy ra lỗi trong quá trình gởi liên hệ! Bạn vui lòng kiểm tra lại!');";
+                string sMessages = "alert('An error has occurred, we have not received your information!');";
                 ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "", sMessages, true);
             }
         }

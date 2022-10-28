@@ -86,42 +86,32 @@ namespace ShopsDefault.UserControls.Products
                 "<div>" +
                     "<div>" +
                         "<div>" +
-                            "<a href='" + domain + "/quoc-minh.html' target='_blank'>" +
-                                "<img src='" + domain + "/images/UploadImages/logo-cho-thue-xe-may-QM.png' />" +
-                            "</a>" +
-                        "</div>" +
-                        "<div>" +
-                            "<p><b>Cung cấp cho quý khách những tiện nghi phù hợp, dịch vụ đạt chuẩn và chất lượng tốt với mức giá cả bình dân sẽ giúp quý khách có những chuyến đi vui vẻ thoải mái, tiết kiệm được chi phí mà vẫn đảm bảo an toàn.</b></p>" +
-                        "</div>" +
-                    "</div>" +
-                    "<div>" +
-                        "<div>" +
-                            "<p>Kính chào <b>" + txtFullName.Text + "</b></p>" +
-                            "<p>Thông tin đơn hàng thuê xe tại ENSCore</b> .</p>" +
+                            "<p>Hi, <b>" + txtFullName.Text + "</b></p>" +
+                            "<p>Below is the details of your order</b> .</p>" +
                             "<ul>" +
                                 "<li>" +
-                                    "<strong>Mã đơn hàng :</strong>" +
+                                    "<strong>Order number :</strong>" +
                                     "<span> " + Code + "</span>" +
                                 "</li>" +
                                 "<li>" +
-                                    "<strong>Trạng thái đơn hàng :</strong>" +
-                                    "<span> Đặt hàng thành công </span>" +
+                                    "<strong>Order status :</strong>" +
+                                    "<span> Order received </span>" +
                                 "</li>" +
                                 "<li>" +
-                                    "<strong>Thời gian giao dịch :</strong>" +
+                                    "<strong>Order placed at :</strong>" +
                                     "<span> " + DateTime.Now.ToString("dd/MM/yyyy hh:mm") + "</span>" +
                                 "</li>" +
                                 "<li>" +
-                                    "<strong>Hình thức thanh toán :</strong>" +
+                                    "<strong>Payment Method :</strong>" +
                                     "<span> " + paymentMethod + "</span>" +
                                 "</li>" +
                             "</ul>" +
                             "<table>" +
                                 "<tr style='font-weight: 600;'>" +
-                                    "<td style='width: 200px'>Sản phẩm</td>" +
-                                    "<td style='width: 100px; text-align: center'>Số lượng</td>" +
-                                    "<td style='width: 100px; text-align: center'>Đơn giá</td>" +
-                                    "<td style='width: 100px; text-align: center'>Thành tiền</td>" +
+                                    "<td style='width: 200px'>Product</td>" +
+                                    "<td style='width: 100px; text-align: center'>Quantity</td>" +
+                                    "<td style='width: 100px; text-align: center'>Price</td>" +
+                                    "<td style='width: 100px; text-align: center'>Total</td>" +
                                 "</tr>";
                                 foreach (DataRow drCart in cart.Rows)
                                 {
@@ -134,7 +124,7 @@ namespace ShopsDefault.UserControls.Products
                                            "</tr>";
                                 }
                                 str += "<tr>" +
-                                   "<td colspan='3' style='padding-top: 5px;padding-bottom: 5px;'>Tổng giá trị đơn hàng <br /><b>(chưa bao gồm phí ship hàng)</b>" +
+                                   "<td colspan='3' style='padding-top: 5px;padding-bottom: 5px;'>Order total <br /><b>(Delivery fee is not included)</b>" +
                                    "</td>" +
                                    "<td style='padding-top: 5px;padding-bottom: 5px;text-align: center;font-size: 18px;'>" +
                                        "<b style='color: #f53030'>" + Total.ToString("#,0") + " ₫</b>" +
@@ -144,12 +134,12 @@ namespace ShopsDefault.UserControls.Products
                        "</div>" +
                     "</div>" +
                     "<div style='line-height: 24px;' class='_footer_ckout fr_col12'>" +
-                       "<b>Cảm ơn quý khách đã thuê xe máy tại " +
-                       "<a href='" + domain + "/quoc-minh.html' target='_blank'>ENSCore</a>!</b>" +
+                       "<b>Thank you for placing your order at " +
+                       "<a href='" + domain + "/quoc-minh.html' target='_blank'>EZ Bikes</a>!</b>" +
                     "</div>" +
 
                     "<div style='line-height: 24px;'>" +
-                       "Mọi thắc mắc xin liên hệ SĐT <b>0343 554 888</b>" +
+                       "Please contact <b>028.7300.2266</b> for support" +
                     "</div>" +
                     "</div>" +
                     "</div>";
@@ -159,9 +149,9 @@ namespace ShopsDefault.UserControls.Products
             System.Net.Mail.MailMessage mail = new System.Net.Mail.MailMessage();
             mail.From = new System.Net.Mail.MailAddress("dnvknguyen@gmail.com");
             mail.To.Add(new System.Net.Mail.MailAddress(MailTo));
-            mail.CC.Add(new System.Net.Mail.MailAddress("doquocminh191991@gmail.com"));
+            mail.CC.Add(new System.Net.Mail.MailAddress("dnvknguyen@gmail.com"));
             mail.BodyEncoding = System.Text.Encoding.UTF8;
-            mail.Subject = "Thông tin đặt hàng tại ENSCore!";
+            mail.Subject = "Your bike rental order!";
             mail.Body = str;
             mail.IsBodyHtml = true;
             System.Net.Mail.SmtpClient client = new System.Net.Mail.SmtpClient("smtp.gmail.com", 587);
@@ -240,7 +230,7 @@ namespace ShopsDefault.UserControls.Products
                 }
                 trans.Commit();
                 SendMailInfor(txtEmail.Text);
-                string sMessages = "alert('Đã đặt hàng thành công! Vui lòng kiểm tra lại đơn hàng trong Email của bạn');";
+                string sMessages = "alert('Order has been placed! Please check your email inbox for details!');";
                 ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "", sMessages, true);
                 Session["cart_items"] = null;
             }
@@ -274,14 +264,14 @@ namespace ShopsDefault.UserControls.Products
         //    if (cls.doInsert() == 1)
         //    {
         //        SendMailInfor(txtEmail.Text);
-        //        string sMessages = "alert('Đã đặt hàng thành công! Vui lòng kiểm tra lại đơn hàng trong Email của bạn');";
+        //        string sMessages = "alert('Order has been placed! Please check your email inbox for details!');";
         //        ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "", sMessages, true);
         //        Session["cart_items"] = null;
         //        //Response.Redirect("/quoc-minh.html");
         //    }
         //    else
         //    {
-        //        string sMessages = "alert('Đã xảy ra lỗi trong quá trình đặt hàng! Bạn vui lòng kiểm tra lại!');";
+        //        string sMessages = "alert('An error has occured, your order has not been placed!');";
         //        ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "", sMessages, true);
         //    }
         //}
