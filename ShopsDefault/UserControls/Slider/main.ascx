@@ -13,7 +13,7 @@
                                     <div class="slider-text">
                                         <p><%# Eval("Title")%></p>
                                         <h2><%# Eval("SummaryContent")%></h2>
-                                        <a href="/product.html" class="btn-default">Đặt ngay</a>
+                                        <a href="/products.html" class="btn-default">Đặt ngay</a>
                                     </div>
                                 </div>
                             </div>

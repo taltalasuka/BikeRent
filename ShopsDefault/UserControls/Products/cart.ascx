@@ -59,7 +59,7 @@
                                     <td><%= Utils.getPrice(getTotal()) %><sup>đ</sup></td>
                                 </tr>
                                 <tr>
-                                    <td><a href="/product.html" class="btn-default">Browse</a></td>
+                                    <td><a href="/products.html" class="btn-default">Browse</a></td>
                                     <td>
                                         <a href="/dat-hang.html" class="btn-default">Checkout</a></td>
                                 </tr>
