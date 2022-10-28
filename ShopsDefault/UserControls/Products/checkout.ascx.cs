@@ -155,9 +155,9 @@ namespace ShopsDefault.UserControls.Products
                     "</div>";
 
 
-            System.Net.NetworkCredential login_cred = new System.Net.NetworkCredential("doquocminh191991@gmail.com", "minh1232019");
+            System.Net.NetworkCredential login_cred = new System.Net.NetworkCredential("dnvknguyen@gmail.com", "dcgnjescmakdsvta");
             System.Net.Mail.MailMessage mail = new System.Net.Mail.MailMessage();
-            mail.From = new System.Net.Mail.MailAddress("doquocminh191991@gmail.com");
+            mail.From = new System.Net.Mail.MailAddress("dnvknguyen@gmail.com");
             mail.To.Add(new System.Net.Mail.MailAddress(MailTo));
             mail.CC.Add(new System.Net.Mail.MailAddress("doquocminh191991@gmail.com"));
             mail.BodyEncoding = System.Text.Encoding.UTF8;
