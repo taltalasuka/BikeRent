@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true"  CodeBehind="search-result.ascx.cs" Inherits="ShopsDefault.UserControls.Products.search_result" %>
 <div class="prd-default search-result">
     <div class="section-1">
-        <div class="block-header">Kết quả tìm kiếm</div>
+        <div class="block-header">Kết quả Search</div>
         <div class="container">
             <asp:ObjectDataSource ID="ds" runat="server" OnSelecting="ds_Selecting" SelectMethod="GetDataTable_SQL_pro" TypeName="Librari.Cls_ShopsProducts" />
             <asp:Repeater ID="Repeater4" runat="server" DataSourceID="ds">
@@ -20,8 +20,8 @@
                             <div><%# Utils.subString(Convert.ToString(Eval("Description")), 120)%></div>
                             <ul>
                                 <li><span>Màu sắc:</span> <%# Eval("Color")%></li>
-                                <li><span>Tốc độ:</span> <%# Eval("Weight")%> km/h</li>
-                                <li><span>Số lượng:</span> <%# Eval("SoLuongCon")%></li>
+                                <li><span>Speed:</span> <%# Eval("Weight")%> km/h</li>
+                                <li><span>Quantity:</span> <%# Eval("SoLuongCon")%></li>
                             </ul>
                         </div>
                         <div class="action col-3">
@@ -51,8 +51,8 @@
                             <div><%# Utils.subString(Convert.ToString(Eval("Description")), 120)%></div>
                             <ul>
                                 <li><span>Màu sắc:</span> <%# Eval("Color")%></li>
-                                <li><span>Tốc độ:</span> <%# Eval("Weight")%> km/h</li>
-                                <li><span>Số lượng:</span> <%# Eval("Amount")%></li>
+                                <li><span>Speed:</span> <%# Eval("Weight")%> km/h</li>
+                                <li><span>Quantity:</span> <%# Eval("Amount")%></li>
                             </ul>
                         </div>
                         <div class="action col-3">

@@ -22,7 +22,7 @@
                 </div>
                 <div class="hd-nav">
                     <ul>
-                        <li><a href="/AdminTools/Dashboard.html">Bàn làm việc</a></li>
+                        <li><a href="/AdminTools/Dashboard.html">Dashboard</a></li>
                         <li><a href="#">Người dùng</a></li>
                         <li><a href="#">Cài đặt</a></li>
                     </ul>

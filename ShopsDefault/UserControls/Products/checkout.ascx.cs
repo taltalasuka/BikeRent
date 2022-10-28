@@ -183,7 +183,7 @@ namespace ShopsDefault.UserControls.Products
                 sqlComm.Parameters.Add("@UserEmail", SqlDbType.NVarChar).Value = txtEmail.Text;
                 sqlComm.Parameters.Add("@UserAddress", SqlDbType.NVarChar).Value = txtAddress.Text;
                 sqlComm.Parameters.Add("@UserPhone", SqlDbType.NVarChar).Value = txtPhoneNumber.Text;
-                sqlComm.Parameters.Add("@Status", SqlDbType.NVarChar).Value = "Chưa tới ngày thuê xe";
+                sqlComm.Parameters.Add("@Status", SqlDbType.NVarChar).Value = "Not yet";
                 sqlComm.Parameters.Add("@DayIn", SqlDbType.DateTime).Value = DateTime.ParseExact(txtDayOff.Text, "dd/MM/yyyy", null);
                 sqlComm.Parameters.Add("@DayOut", SqlDbType.DateTime).Value = DateTime.ParseExact(txtDatePick.Text, "dd/MM/yyyy", null);
                 sqlComm.Parameters.Add("@Description", SqlDbType.NText).Value = txtDescription.Text;

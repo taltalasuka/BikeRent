@@ -2,22 +2,22 @@
 
 <div class="prd-pricing section">
     <div class="container">
-        <div class="block-header">Bảng giá <span>thuê xe máy</span> theo ngày</div>
+        <div class="block-header"><span>Our Prices</span></div>
         <div class="row">
             <div class="col-12">
                 <table class="tb-pricing">
                     <tr>
                         <th></th>
-                        <th>Ngày 1</th>
-                        <th>Ngày 2</th>
-                        <th>Ngày 3</th>
-                        <th>Ngày 4</th>
+                        <th>Day 1</th>
+                        <th>Day 2</th>
+                        <th>Day 3</th>
+                        <th>Day 4</th>
                     </tr>
                     <tr class="tb-colspan">
-                        <td colspan="5">Xe số</td>
+                        <td colspan="5">Automatic motorcycles</td>
                     </tr>
                     <tr>
-                        <td>Ware srx</td>
+                        <td>Ware RSX</td>
                         <td>100.000</td>
                         <td>90.000</td>
                         <td>80.000</td>
@@ -31,7 +31,7 @@
                         <td>70.000</td>
                     </tr>
                     <tr class="tb-colspan">
-                        <td colspan="5">Xe tay ga</td>
+                        <td colspan="5">Scooters</td>
                     </tr>
                     <tr>
                         <td>Nouvo 3</td>

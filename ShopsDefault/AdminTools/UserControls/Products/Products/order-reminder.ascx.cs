@@ -26,7 +26,7 @@ namespace ShopsDefault.AdminTools.UserControls.Products.Products
             if (dt.Rows.Count == 0)
             {
                 lblGridviewEmpty.Visible = true;
-                lblGridviewEmpty.Text = "Ngày mai không có đơn Submit nào!";
+                lblGridviewEmpty.Text = "There are no orders tomorrow!";
             }
             else
             {
@@ -59,7 +59,7 @@ namespace ShopsDefault.AdminTools.UserControls.Products.Products
             {
                 string getName = e.Row.Cells[1].Text;
                 LinkButton lnk = (LinkButton)e.Row.FindControl("lnkUpdate");
-                lnk.Attributes.Add("onclick", "return confirm('Bạn có muốn hủy đơn hàng " + getName + " không?')");
+                lnk.Attributes.Add("onclick", "return confirm('Do you want to delete " + getName + "?')");
             }
         }
 
@@ -76,17 +76,17 @@ namespace ShopsDefault.AdminTools.UserControls.Products.Products
             Cls_ShopsOrdersDetail cls = Cls_ShopsOrdersDetail.getOject_Key(ID_find);
 
             string status = cls.Status.ToString();
-            if (status == "Chưa tới ngày thuê xe")
+            if (status == "Not yet")
             {
                 btnUpdateStatus.Visible = true;
-                btnUpdateStatus.Text = "Giao xe";
+                btnUpdateStatus.Text = "Deliver";
             }
-            else if (status == "Đã giao xe")
+            else if (status == "Delivered")
             {
                 btnUpdateStatus.Visible = true;
-                btnUpdateStatus.Text = "Trả xe";
+                btnUpdateStatus.Text = "Return";
             }
-            else if (status == "Đã trả xe")
+            else if (status == "Returned")
             {
                 btnUpdateStatus.Visible = false;
             }
@@ -116,9 +116,9 @@ namespace ShopsDefault.AdminTools.UserControls.Products.Products
             SqlConnection conn = new AccessDB().get_Conn();
             conn.Open();
             SqlCommand sqlComm;
-            if (status == "Chưa tới ngày thuê xe")
+            if (status == "Not yet")
             {
-                cls.Status = "Đã giao xe";
+                cls.Status = "Delivered";
                 try
                 {
                     for (int i = 0; i < grvDetail.Rows.Count; i++)
@@ -144,18 +144,18 @@ namespace ShopsDefault.AdminTools.UserControls.Products.Products
 
                 if (cls.doUpdateStatus() == 1)
                 {
-                    string sMessages = "alert('Cập nhật dữ liệu thành công');";
+                    string sMessages = "alert('Update dữ liệu thành công');";
                     ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), "", sMessages, true);
                 }
                 else
                 {
-                    string sMessages = "alert('Đã xảy ra lỗi trong quá trình cập nhật dữ liệu');";
+                    string sMessages = "alert('Đã xảy ra lỗi trong quá trình Update dữ liệu');";
                     ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), "", sMessages, true);
                 }
             }
-            else if (status == "Đã giao xe")
+            else if (status == "Delivered")
             {
-                cls.Status = "Đã trả xe";
+                cls.Status = "Returned";
                 try
                 {
                     for (int i = 0; i < grvDetail.Rows.Count; i++)
@@ -180,12 +180,12 @@ namespace ShopsDefault.AdminTools.UserControls.Products.Products
 
                 if (cls.doUpdateStatus() == 1)
                 {
-                    string sMessages = "alert('Cập nhật dữ liệu thành công');";
+                    string sMessages = "alert('Update dữ liệu thành công');";
                     ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), "", sMessages, true);
                 }
                 else
                 {
-                    string sMessages = "alert('Đã xảy ra lỗi trong quá trình cập nhật dữ liệu');";
+                    string sMessages = "alert('Đã xảy ra lỗi trong quá trình Update dữ liệu');";
                     ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), "", sMessages, true);
                 }
             }

@@ -3,7 +3,7 @@
 <%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 
 <ul class="breadcrumb">
-    <li><a href="/AdminTools/Dashboard.html">Bàn làm việc</a></li>
+    <li><a href="/AdminTools/Dashboard.html">Dashboard</a></li>
     <li>Nhóm Articles</li>
 </ul>
 <div class="container-fluid">
@@ -19,13 +19,13 @@
                         <PagerStyle CssClass="pagination" />
                         <Columns>
                             <asp:BoundField DataField="ID_Contact" HeaderText="ID" HtmlEncode="true" />
-                            <asp:BoundField DataField="ContactName" HeaderText="Tiêu đề" HtmlEncode="true" />
+                            <asp:BoundField DataField="ContactName" HeaderText="Title" HtmlEncode="true" />
                             <asp:BoundField DataField="FullName" HeaderText="Tên người gởi" HtmlEncode="true" />
                             <asp:BoundField DataField="Phone" HeaderText="Số điện thoại" HtmlEncode="true" />
                             <asp:BoundField DataField="Email" HeaderText="Địa chỉ Email" HtmlEncode="true" />
-                            <asp:TemplateField HeaderText="Hành động">
+                            <asp:TemplateField HeaderText="Action">
                                 <ItemTemplate>
-                                    <asp:LinkButton ID="lnkEdit" runat="server" OnClick="btnEdit_Click" CssClass="btn btn-info"><i class="icon-pencil"></i> Chi tiết</asp:LinkButton>
+                                    <asp:LinkButton ID="lnkEdit" runat="server" OnClick="btnEdit_Click" CssClass="btn btn-info"><i class="icon-pencil"></i> Details</asp:LinkButton>
                                     <asp:LinkButton ID="lnkDelete" runat="server" CausesValidation="false" CommandName="Delete" CssClass="btn btn-danger"><i class="icon-trash"></i> Xóa</asp:LinkButton>
                                 </ItemTemplate>
                             </asp:TemplateField>
@@ -36,13 +36,13 @@
                         <div class="popup-body">
                             <div class="card">
                                 <div class="card-header">
-                                    <i class="icon-note"></i>Chi tiết Contact Us
+                                    <i class="icon-note"></i>Details Contact Us
                                 </div>
                                 <div class="card-body scrollbar-y-custom">
                                     <div class="row">
                                         <div class="col-6">
                                             <div class="form-group">
-                                                <label for="company">Tiêu đề</label>
+                                                <label for="company">Title</label>
                                                 <asp:TextBox ID="txtContactName" runat="server" CssClass="form-control" ReadOnly="true"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
@@ -62,7 +62,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="country">Chi tiết</label>
+                                        <label for="country">Details</label>
                                         <CKEditor:CKEditorControl ID="txtDetail" Language="Vi" BasePath="~/ckeditor" runat="server"></CKEditor:CKEditorControl>
                                     </div>
                                     <div class="form-actions">

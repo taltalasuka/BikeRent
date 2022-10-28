@@ -3,7 +3,7 @@
     <ul class="nav">
         <li class="nav-item active">
             <a href="/AdminTools/Dashboard.html">
-                <i class="icon-speedometer"></i>Bàn làm việc
+                <i class="icon-speedometer"></i>Dashboard
             </a>
         </li>
         <li class="nav-title">Slider</li>
@@ -24,7 +24,7 @@
         </li>
         <li>
             <a href="/AdminTools/QuanLySanPham.html">
-                <i class="icon-bag"></i>Danh sách Products</a>
+                <i class="icon-bag"></i>Products</a>
         </li>
         <li>
             <a href="/AdminTools/QuanLyDonHang.html">

@@ -54,12 +54,12 @@
                         <img src="<%# Eval("Image")%>" alt="<%# Eval("ProductName")%>" />
                     </div>
                     <div class="col-6">
-                        <div class="_line"><strong>Loại xe:</strong> <%# Eval("CatalogName")%></div>
+                        <div class="_line"><strong>Bike Type:</strong> <%# Eval("CatalogName")%></div>
                         <div class="_line"><strong>Mã xe:</strong> <%# Eval("ProductCode")%></div>
                         <div class="_line"><strong>Màu sắc:</strong> <%# Eval("Color")%></div>
-                        <div class="_line"><strong>Tốc độ:</strong> <%# Eval("Weight")%></div>
+                        <div class="_line"><strong>Speed:</strong> <%# Eval("Weight")%></div>
                         <div class="_line"><strong>Giá thuê:</strong> <%# Utils.getPrice(Eval("PriceOut"))%><sup>VNĐ</sup><span>/Ngày</span></div>
-                        <div class="_line prd-amount"><strong>Số lượng:</strong> <span class="btn-amount btn_decrement"><i class="fa fa-minus"></i></span><asp:TextBox ID="txtQuantity" runat="server" class="addtocart_quantity" type="text" value="1"></asp:TextBox><span class="btn-amount btn_increment"><i class="fa fa-plus"></i></span>
+                        <div class="_line prd-amount"><strong>Quantity:</strong> <span class="btn-amount btn_decrement"><i class="fa fa-minus"></i></span><asp:TextBox ID="txtQuantity" runat="server" class="addtocart_quantity" type="text" value="1"></asp:TextBox><span class="btn-amount btn_increment"><i class="fa fa-plus"></i></span>
                             <asp:Label ID="lblAmount" runat="server" class="total-amount" Text='<%= getAmount( Eval("Amount"))%>'></asp:Label>
                             chiếc có sẵn</div>
                         <div>

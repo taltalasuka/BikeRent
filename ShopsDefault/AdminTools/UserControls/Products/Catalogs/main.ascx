@@ -24,7 +24,7 @@
 </script>
 
 <ul class="breadcrumb">
-    <li><a href="/AdminTools/Dashboard.html">Bàn làm việc</a></li>
+    <li><a href="/AdminTools/Dashboard.html">Dashboard</a></li>
     <li>Nhóm Products</li>
 </ul>
 <div class="container-fluid">
@@ -45,12 +45,12 @@
                             <asp:BoundField DataField="ID_Catalog" HeaderText="ID" HtmlEncode="true" />
                             <asp:BoundField DataField="CatalogName" HeaderText="Tên nhóm Products" HtmlEncode="true" />
                             <asp:BoundField DataField="LinkSEO" HeaderText="Đường dẫn SEO" HtmlEncode="true" />
-                            <asp:TemplateField HeaderText="Trạng thái" SortExpression="Hidden">
-                                <ItemTemplate><%# (Boolean.Parse(Eval("Hidden").ToString())) ? "Kích hoạt" : "Không kích hoạt" %></ItemTemplate>
+                            <asp:TemplateField HeaderText="Status" SortExpression="Hidden">
+                                <ItemTemplate><%# (Boolean.Parse(Eval("Hidden").ToString())) ? "Active" : "Không Active" %></ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Hành động">
+                            <asp:TemplateField HeaderText="Action">
                                 <ItemTemplate>
-                                    <asp:LinkButton ID="lnkEdit" runat="server" OnClick="btnEdit_Click" CssClass="btn btn-info"><i class="icon-pencil"></i> Sửa</asp:LinkButton>
+                                    <asp:LinkButton ID="lnkEdit" runat="server" OnClick="btnEdit_Click" CssClass="btn btn-info"><i class="icon-pencil"></i> Edit</asp:LinkButton>
                                     <asp:LinkButton ID="lnkDelete" runat="server" CausesValidation="false" CommandName="Delete" CssClass="btn btn-danger"><i class="icon-trash"></i> Xóa </asp:LinkButton>
                                 </ItemTemplate>
                             </asp:TemplateField>
@@ -81,8 +81,8 @@
                                         <asp:TextBox ID="txtCatalogName" runat="server" placeholder="Nhập tên danh mục" CssClass="form-control"></asp:TextBox>
                                     </div>
                                     <div class="form-group">
-                                        <label for="company">Tiêu đề website</label>
-                                        <asp:TextBox ID="txtTitleWeb" runat="server" placeholder="Nhập tiêu đề website" CssClass="form-control"></asp:TextBox>
+                                        <label for="company">Title website</label>
+                                        <asp:TextBox ID="txtTitleWeb" runat="server" placeholder="Nhập Title website" CssClass="form-control"></asp:TextBox>
                                     </div>
                                     <div class="form-group">
                                         <label for="company">Hình ảnh</label>
@@ -99,7 +99,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="ContentMain_ctl00_cbHidden">Kích hoạt</label>
+                                        <label for="ContentMain_ctl00_cbHidden">Active</label>
                                         <asp:CheckBox ID="cbHidden" runat="server" Style="margin-left: 8px;"></asp:CheckBox>
                                     </div>
 
@@ -109,9 +109,9 @@
                                     </div>
 
                                     <div class="form-actions">
-                                        <%--<asp:Button ID="btnSave" runat="server" Text="Lưu" OnClick="btnSave_Click" CssClass="btn btn-primary" />
+                                        <%--<asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" CssClass="btn btn-primary" />
                                         <asp:Button ID="btnCancel" runat="server" Text="Hủy" CssClass="btn btn-secondary" />--%>
-                                        <asp:LinkButton ID="btnSave" runat="server" OnClick="btnSave_Click" CssClass="btn btn-primary">Lưu</asp:LinkButton>
+                                        <asp:LinkButton ID="btnSave" runat="server" OnClick="btnSave_Click" CssClass="btn btn-primary">Save</asp:LinkButton>
                                         <asp:LinkButton ID="btnCancel" runat="server" CssClass="btn btn-secondary">Hủy</asp:LinkButton>
                                     </div>
                                 </div>

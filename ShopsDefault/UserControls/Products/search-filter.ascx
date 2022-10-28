@@ -45,7 +45,7 @@
         
         $("#<%= btnSearch.ClientID%>").click(function (e) {
             if ($("#<%= txtID_Catalog.ClientID%>").val() == 0) {
-                alert('Bạn chưa chọn loại xe!');
+                alert('Bạn chưa Select type!');
                 e.preventDefault();
             }
 
@@ -81,28 +81,28 @@
         <div class="filter-box">
             <div class="row">
                 <div class="col-3">
-                    <h3 class="filter-text">Tìm kiếm xe</h3>
+                    <h3 class="filter-text">Search for bikes</h3>
                 </div>
                 <div class="col-9">
                     <div class="filter-content">
                         <div class="row">
                             <div class="col-5">
                                 <div class="form-group">
-                                    <label>Loại xe</label>
+                                    <label>Bike Type</label>
                                     <asp:SqlDataSource ID="ds" runat="server" EnableCaching="false"></asp:SqlDataSource>
                                     <asp:DropDownList ID="txtID_Catalog" runat="server" DataSourceID="ds" DataTextField="CatalogName" DataValueField="ID_Catalog" AppendDataBoundItems="true" CssClass="form-control">
-                                        <asp:ListItem Text="Chọn loại xe" Value="0" Selected="true" />
+                                        <asp:ListItem Text="Select type" Value="0" Selected="true" />
                                     </asp:DropDownList>
                                 </div>
                             </div>
                             <div class="col-5">
                                 <div class="form-group">
-                                    <label>Ngày thuê xe</label>
-                                    <asp:TextBox ID="txtDatePick" runat="server" placeholder="Chọn ngày thuê xe" CssClass="form-control"></asp:TextBox>
+                                    <label>Date</label>
+                                    <asp:TextBox ID="txtDatePick" runat="server" placeholder="Chọn Date" CssClass="form-control"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-2">
-                                <asp:LinkButton ID="btnSearch" runat="server" OnClick="btnSearch_Click" Text="Tìm kiếm" CssClass="btn-default"></asp:LinkButton>
+                                <asp:LinkButton ID="btnSearch" runat="server" OnClick="btnSearch_Click" Text="Search" CssClass="btn-default"></asp:LinkButton>
                             </div>
                         </div>
                     </div>

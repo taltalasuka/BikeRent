@@ -30,7 +30,7 @@
 </style>
 
 <ul class="breadcrumb">
-    <li><a href="/AdminTools/Dashboard.html">Bàn làm việc</a></li>
+    <li><a href="/AdminTools/Dashboard.html">Dashboard</a></li>
     <li>Products</li>
 </ul>
 
@@ -38,7 +38,7 @@
 <div class="container-fluid">
     <div class="block-default">
         <div class="block-header">
-            <i class="icon-bag"></i>Danh sách Products
+            <i class="icon-bag"></i>Products
         </div>
         <div class="block-body">
             <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
@@ -51,19 +51,19 @@
                         <PagerStyle CssClass="pagination" />
                         <Columns>
                             <asp:BoundField DataField="ID_Product" HeaderText="ID" HtmlEncode="true" />
-                            <asp:BoundField DataField="ProductName" HeaderText="Tên SP" HtmlEncode="true" />
-                            <asp:BoundField DataField="CatalogName" HeaderText="Tên nhóm SP" HtmlEncode="true" />
-                            <asp:BoundField DataField="ProductCode" HeaderText="Mã SP" HtmlEncode="true" />
-                            <asp:BoundField DataField="PriceOut" HeaderText="Giá thuê" HtmlEncode="true" />
-                            <asp:BoundField DataField="Color" HeaderText="Màu sắc" HtmlEncode="true" />
-                            <asp:BoundField DataField="Amount" HeaderText="Số lượng" HtmlEncode="true" />
-                            <asp:BoundField DataField="Weight" HeaderText="Tốc độ" HtmlEncode="true" />
-                            <asp:TemplateField HeaderText="Trạng thái" SortExpression="Hidden">
-                                <ItemTemplate><%# (Boolean.Parse(Eval("Hidden").ToString())) ? "Kích hoạt" : "Không kích hoạt" %></ItemTemplate>
+                            <asp:BoundField DataField="ProductName" HeaderText="Name" HtmlEncode="true" />
+                            <asp:BoundField DataField="CatalogName" HeaderText="Category" HtmlEncode="true" />
+                            <asp:BoundField DataField="ProductCode" HeaderText="Code" HtmlEncode="true" />
+                            <asp:BoundField DataField="PriceOut" HeaderText="Price" HtmlEncode="true" />
+                            <asp:BoundField DataField="Color" HeaderText="Color" HtmlEncode="true" />
+                            <asp:BoundField DataField="Amount" HeaderText="Quantity" HtmlEncode="true" />
+                            <asp:BoundField DataField="Weight" HeaderText="Speed" HtmlEncode="true" />
+                            <asp:TemplateField HeaderText="Status" SortExpression="Hidden">
+                                <ItemTemplate><%# (Boolean.Parse(Eval("Hidden").ToString())) ? "Active" : "Không Active" %></ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Hành động">
+                            <asp:TemplateField HeaderText="Action">
                                 <ItemTemplate>
-                                    <asp:LinkButton ID="lnkEdit" runat="server" OnClick="btnEdit_Click" CssClass="btn btn-info"><i class="icon-pencil"></i> Sửa</asp:LinkButton>
+                                    <asp:LinkButton ID="lnkEdit" runat="server" OnClick="btnEdit_Click" CssClass="btn btn-info"><i class="icon-pencil"></i> Edit</asp:LinkButton>
                                     <asp:LinkButton ID="lnkDelete" runat="server" CausesValidation="false" CommandName="Delete" CssClass="btn btn-danger"><i class="icon-trash"></i> Xóa </asp:LinkButton>
                                 </ItemTemplate>
                             </asp:TemplateField>
@@ -99,65 +99,65 @@
                                                 </asp:DropDownList>
                                             </div>
                                             <div class="form-group">
-                                                <label for="company">Tên Products</label>
+                                                <label for="company">Product</label>
                                                 <asp:TextBox ID="txtProductName" runat="server" placeholder="Nhập tên danh mục" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
-                                                <label for="company">Mã Products</label>
+                                                <label for="company">Code</label>
                                                 <asp:TextBox ID="txtProductCode" runat="server" placeholder="Nhập mã Products" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
-                                                <label for="company">Giá Products</label>
+                                                <label for="company">Price</label>
                                                 <asp:TextBox ID="txtPriceOut" runat="server" placeholder="Nhập giá Products" CssClass="form-control"></asp:TextBox>
                                             </div>
                                         </div>
                                         <div class="col-6">                                            
                                             <div class="form-group">
-                                                <label for="company">Số lượng</label>
-                                                <asp:TextBox ID="txtAmount" runat="server" placeholder="Nhập số lượng" CssClass="form-control"></asp:TextBox>
+                                                <label for="company">Quantity</label>
+                                                <asp:TextBox ID="txtAmount" runat="server" placeholder="Nhập Quantity" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
-                                                <label for="company">Màu sắc</label>
+                                                <label for="company">Color</label>
                                                 <asp:TextBox ID="txtColor" runat="server" placeholder="Nhập màu Products" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
-                                                <label for="company">Tốc độ</label>
-                                                <asp:TextBox ID="txtWeight" runat="server" placeholder="Nhập tốc độ Products" CssClass="form-control"></asp:TextBox>
+                                                <label for="company">Speed</label>
+                                                <asp:TextBox ID="txtWeight" runat="server" placeholder="Nhập Speed Products" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
-                                                <label for="company">Mô tả</label>
+                                                <label for="company">Summary</label>
                                                 <asp:TextBox ID="txtSummaryContent" runat="server" placeholder="Nhập mô tả Products" CssClass="form-control"></asp:TextBox>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="company">Hình ảnh</label>
+                                        <label for="company">Images</label>
                                         <div class="position-relative">
                                             <asp:TextBox ID="txtImage" runat="server" placeholder="Nhập link hình ảnh" CssClass="form-control"></asp:TextBox>
                                             <asp:FileUpload ID="fuImage" runat="server" CssClass="form-control btn-fu" accept=".png,.jpg,.jpeg,.gif" />
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="street">Nội dung chi tiết</label>
+                                        <label for="street">Details</label>
                                         <div class="form-control custom-editor">
                                             <CKEditor:CKEditorControl ID="txtDetail" Language="Vi" BasePath="~/ckeditor" runat="server"></CKEditor:CKEditorControl>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="ContentMain_ctl00_cbHidden">Kích hoạt</label>
+                                        <label for="ContentMain_ctl00_cbHidden">Active</label>
                                         <asp:CheckBox ID="cbHidden" runat="server" Style="margin-left: 8px;"></asp:CheckBox>
                                     </div>
                                     <div class="form-group">
-                                        <label for="company">Tiêu đề website</label>
-                                        <asp:TextBox ID="txtTitleWeb" runat="server" placeholder="Nhập tiêu đề website" CssClass="form-control"></asp:TextBox>
+                                        <label for="company">Title</label>
+                                        <asp:TextBox ID="txtTitleWeb" runat="server" placeholder="Nhập Title website" CssClass="form-control"></asp:TextBox>
                                     </div>
                                     <div class="form-group">
-                                        <label for="country">Đường dẫn website</label>
+                                        <label for="country">URL</label>
                                         <asp:TextBox ID="txtLinkSEO" runat="server" placeholder="Nhập đường dẫn website" CssClass="form-control"></asp:TextBox>
                                     </div>
 
                                     <div class="form-actions">
-                                        <asp:LinkButton ID="btnSave" runat="server" OnClick="btnSave_Click" CssClass="btn btn-primary">Lưu</asp:LinkButton>
+                                        <asp:LinkButton ID="btnSave" runat="server" OnClick="btnSave_Click" CssClass="btn btn-primary">Save</asp:LinkButton>
                                         <asp:LinkButton ID="btnCancel" runat="server" CssClass="btn btn-secondary">Hủy</asp:LinkButton>
                                     </div>
                                 </div>

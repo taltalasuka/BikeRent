@@ -56,14 +56,14 @@ namespace ShopsDefault.AdminTools.UserControls.News.Catalogs
 
         protected void btnAdd_Click(object sender, EventArgs e)
         {
-            btnSave.Text = "Lưu";
+            btnSave.Text = "Save";
             RefreshText();
             popup.Show();
         }
 
         protected void btnEdit_Click(object sender, EventArgs e)
         {
-            btnSave.Text = "Cập nhật";
+            btnSave.Text = "Update";
             GridViewRow row = (GridViewRow)((LinkButton)sender).Parent.Parent;
             var ID_find = Convert.ToInt32(row.Cells[0].Text);
             Cls_NewsCatalogs cls = Cls_NewsCatalogs.getOject_Key(ID_find);
@@ -107,7 +107,7 @@ namespace ShopsDefault.AdminTools.UserControls.News.Catalogs
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
-            if (btnSave.Text == "Lưu")
+            if (btnSave.Text == "Save")
             {
                 Cls_NewsCatalogs cls = new Cls_NewsCatalogs();
                 cls.ID_Parent = 1;
@@ -141,11 +141,11 @@ namespace ShopsDefault.AdminTools.UserControls.News.Catalogs
                 }
                 else
                 {
-                    string sMessages = "alert('Đã xảy ra lỗi trong quá trình lưu dữ liệu! Bạn vui lòng kiểm tra lại!');";
+                    string sMessages = "alert('Đã xảy ra lỗi trong quá trình Save dữ liệu! Bạn vui lòng kiểm tra lại!');";
                     ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), "", sMessages, true);
                 }
             }
-            else if (btnSave.Text == "Cập nhật")
+            else if (btnSave.Text == "Update")
             {
                 Cls_NewsCatalogs cls = new Cls_NewsCatalogs();
                 cls.ID_Catalog_find = Convert.ToInt32(txtID_Catalog.Text);
@@ -173,12 +173,12 @@ namespace ShopsDefault.AdminTools.UserControls.News.Catalogs
                 }
                 if (cls.doUpdate() == 1)
                 {
-                    string sMessages = "alert('Đã chỉnh sửa dữ liệu thành công!');";
+                    string sMessages = "alert('Đã chỉnh Edit dữ liệu thành công!');";
                     ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), "", sMessages, true);
                 }
                 else
                 {
-                    string sMessages = "alert('Đã xảy ra lỗi trong quá trình chỉnh sửa dữ liệu! Bạn vui lòng kiểm tra lại!');";
+                    string sMessages = "alert('Đã xảy ra lỗi trong quá trình chỉnh Edit dữ liệu! Bạn vui lòng kiểm tra lại!');";
                     ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), "", sMessages, true);
                 }
             }

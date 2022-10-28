@@ -3,7 +3,7 @@
 <%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 
 <ul class="breadcrumb">
-    <li><a href="/AdminTools/Dashboard.html">Bàn làm việc</a></li>
+    <li><a href="/AdminTools/Dashboard.html">Dashboard</a></li>
     <li>Hình thức thanh toán</li>
 </ul>
 
@@ -25,12 +25,12 @@
                         <Columns>
                             <asp:BoundField DataField="ID_Payment" HeaderText="ID" HtmlEncode="true" />
                             <asp:BoundField DataField="PaymentName" HeaderText="Tên hình thức thanh toán" HtmlEncode="true" />
-                            <asp:TemplateField HeaderText="Trạng thái" SortExpression="Hidden">
-                                <ItemTemplate><%# (Boolean.Parse(Eval("Hidden").ToString())) ? "Kích hoạt" : "Không kích hoạt" %></ItemTemplate>
+                            <asp:TemplateField HeaderText="Status" SortExpression="Hidden">
+                                <ItemTemplate><%# (Boolean.Parse(Eval("Hidden").ToString())) ? "Active" : "Không Active" %></ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Hành động">
+                            <asp:TemplateField HeaderText="Action">
                                 <ItemTemplate>
-                                    <asp:LinkButton ID="lnkEdit" runat="server" OnClick="btnEdit_Click" CssClass="btn btn-info"><i class="icon-pencil"></i> Sửa</asp:LinkButton>
+                                    <asp:LinkButton ID="lnkEdit" runat="server" OnClick="btnEdit_Click" CssClass="btn btn-info"><i class="icon-pencil"></i> Edit</asp:LinkButton>
                                     <asp:LinkButton ID="lnkDelete" runat="server" CausesValidation="false" CommandName="Delete" CssClass="btn btn-danger"><i class="icon-trash"></i> Xóa </asp:LinkButton>
                                 </ItemTemplate>
                             </asp:TemplateField>
@@ -53,18 +53,18 @@
                                         <asp:TextBox ID="txtPaymentName" runat="server" placeholder="Nhập hình thức thanh toán" CssClass="form-control"></asp:TextBox>
                                     </div>
                                     <div class="form-group">
-                                        <label for="street">Nội dung chi tiết</label>
+                                        <label for="street">Nội dung Details</label>
                                         <div class="form-control custom-editor">
                                             <CKEditor:CKEditorControl ID="txtDetail" Language="Vi" BasePath="~/ckeditor" runat="server"></CKEditor:CKEditorControl>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="ContentMain_ctl00_cbHidden">Kích hoạt</label>
+                                        <label for="ContentMain_ctl00_cbHidden">Active</label>
                                         <asp:CheckBox ID="cbHidden" runat="server" Style="margin-left: 8px;"></asp:CheckBox>
                                     </div>
 
                                     <div class="form-actions">
-                                        <asp:LinkButton ID="btnSave" runat="server" OnClick="btnSave_Click" CssClass="btn btn-primary">Lưu</asp:LinkButton>
+                                        <asp:LinkButton ID="btnSave" runat="server" OnClick="btnSave_Click" CssClass="btn btn-primary">Save</asp:LinkButton>
                                         <asp:LinkButton ID="btnCancel" runat="server" CssClass="btn btn-secondary">Hủy</asp:LinkButton>
                                     </div>
                                 </div>

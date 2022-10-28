@@ -10,9 +10,9 @@
                     <asp:BoundField DataField="OrdersName" HeaderText="Tên người đặt" HtmlEncode="true" />
                     <asp:BoundField DataField="UserPhone" HeaderText="Số điện thoại" HtmlEncode="true" />
                     <asp:BoundField DataField="DayIn" DataFormatString="{0:dd/MM/yyyy}" HeaderText="Ngày trả" HtmlEncode="true" />
-                    <asp:TemplateField HeaderText="Hành động">
+                    <asp:TemplateField HeaderText="Action">
                         <ItemTemplate>
-                            <asp:LinkButton ID="lnkEdit" runat="server" OnClick="btnEdit_Click" CssClass="btn btn-info"><i class="icon-pencil"></i> Chi tiết</asp:LinkButton>
+                            <asp:LinkButton ID="lnkEdit" runat="server" OnClick="btnEdit_Click" CssClass="btn btn-info"><i class="icon-pencil"></i> Details</asp:LinkButton>
                             <asp:LinkButton ID="lnkUpdate" runat="server" CausesValidation="false" CommandName="Update" CssClass="btn btn-danger"><i class="icon-ban"></i> Hủy đơn</asp:LinkButton>
                         </ItemTemplate>
                     </asp:TemplateField>
@@ -23,7 +23,7 @@
                 <div class="popup-body">
                     <div class="card">
                         <div class="card-header">
-                            <i class="icon-note"></i>Thông tin chi tiết đơn hàng
+                            <i class="icon-note"></i>Thông tin Details đơn hàng
                         </div>
                         <div class="card-body scrollbar-y-custom">
                             <div class="form-group d-none">
@@ -95,7 +95,7 @@
                                                     <asp:BoundField DataField="ID_Product" HeaderText="ID" HtmlEncode="true" />
                                                     <asp:BoundField DataField="ProductCode" HeaderText="Mã xe" HtmlEncode="true" />
                                                     <asp:BoundField DataField="ProductName" HeaderText="Tên xe" HtmlEncode="true" />
-                                                    <asp:BoundField DataField="Amount" HeaderText="Số lượng" HtmlEncode="true" />
+                                                    <asp:BoundField DataField="Amount" HeaderText="Quantity" HtmlEncode="true" />
                                                     <asp:BoundField DataField="PriceOut" HeaderText="Đơn giá" HtmlEncode="true" />
                                                     <asp:BoundField DataField="PriceTotal" HeaderText="Tổng cộng" HtmlEncode="true" />
                                                 </Columns>
@@ -105,7 +105,7 @@
                                 </div>
                             </div>
                             <div class="form-actions">
-                                <asp:LinkButton ID="btnUpdateStatus" runat="server" OnClick="btnUpdateStatus_Click" CssClass="btn btn-success" Text="Giao xe"></asp:LinkButton>
+                                <asp:LinkButton ID="btnUpdateStatus" runat="server" OnClick="btnUpdateStatus_Click" CssClass="btn btn-success" Text="Deliver"></asp:LinkButton>
                                 <asp:LinkButton ID="btnCancel" runat="server" CssClass="btn btn-secondary">Tắt</asp:LinkButton>
                             </div>
                         </div>

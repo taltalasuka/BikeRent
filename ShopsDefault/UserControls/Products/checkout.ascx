@@ -101,7 +101,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="company">Ngày Trả</label>
-                                    <asp:TextBox ID="txtDayOff" runat="server" placeholder="Chọn ngày trả xe" CssClass="form-control"></asp:TextBox>
+                                    <asp:TextBox ID="txtDayOff" runat="server" placeholder="Chọn ngày Return" CssClass="form-control"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-12">

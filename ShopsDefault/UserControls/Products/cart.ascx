@@ -18,7 +18,7 @@
 
                                     <asp:BoundField DataField="ProductName" HeaderText="Tên Products" HtmlEncode="true" />
 
-                                    <asp:TemplateField HeaderText="Số lượng">
+                                    <asp:TemplateField HeaderText="Quantity">
                                         <ItemTemplate>
                                             <div class="prd-amount">
                                                 <span class="btn-amount btn_decrement"><i class="fa fa-minus"></i></span><asp:TextBox ID="txtQuantity" runat="server" class="addtocart_quantity" type="text" Text='<%# Eval("Quantity") %>'></asp:TextBox><span class="btn-amount btn_increment"><i class="fa fa-plus"></i></span>
@@ -39,7 +39,7 @@
                                     </asp:TemplateField>
                                     <asp:TemplateField>
                                         <ItemTemplate>
-                                            <asp:LinkButton ID="lnkUpdate" runat="server" CausesValidation="false" CommandName="Update" ToolTip="Cập nhật"><i class="fa fa-refresh"></i></asp:LinkButton>
+                                            <asp:LinkButton ID="lnkUpdate" runat="server" CausesValidation="false" CommandName="Update" ToolTip="Update"><i class="fa fa-refresh"></i></asp:LinkButton>
                                             <asp:LinkButton ID="lnkDelete" runat="server" CausesValidation="false" CommandName="Delete" ToolTip="Xóa"><i class="fa fa-trash"></i></asp:LinkButton>
                                         </ItemTemplate>
                                     </asp:TemplateField>

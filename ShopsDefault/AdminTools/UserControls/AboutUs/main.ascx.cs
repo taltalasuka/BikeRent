@@ -34,7 +34,7 @@ namespace ShopsDefault.AdminTools.UserControls.AboutUs
             {
                 string getName = e.Row.Cells[1].Text;
                 LinkButton lnk = (LinkButton)e.Row.FindControl("lnkDelete");
-                lnk.Attributes.Add("onclick", "return confirm('Bạn có muốn xóa bài viết " + getName + " không?')");
+                lnk.Attributes.Add("onclick", "return confirm('Delete " + getName + "?')");
             }
         }
 
@@ -56,14 +56,14 @@ namespace ShopsDefault.AdminTools.UserControls.AboutUs
 
         protected void btnAdd_Click(object sender, EventArgs e)
         {
-            btnSave.Text = "Lưu";
+            btnSave.Text = "Save";
             RefreshText();
             popup.Show();
         }
 
         protected void btnEdit_Click(object sender, EventArgs e)
         {
-            btnSave.Text = "Cập nhật";
+            btnSave.Text = "Update";
             GridViewRow row = (GridViewRow)((LinkButton)sender).Parent.Parent;
             var ID_find = Convert.ToInt32(row.Cells[0].Text);
             Cls_AboutUs cls = Cls_AboutUs.getOject_Key(ID_find);
@@ -108,7 +108,7 @@ namespace ShopsDefault.AdminTools.UserControls.AboutUs
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
-            if (btnSave.Text == "Lưu")
+            if (btnSave.Text == "Save")
             {
                 Cls_AboutUs cls = new Cls_AboutUs();
                 cls.Title = txtTitle.Text.Trim();
@@ -141,7 +141,7 @@ namespace ShopsDefault.AdminTools.UserControls.AboutUs
                     ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), "", sMessages, true);
                 }
             }
-            else if (btnSave.Text == "Cập nhật")
+            else if (btnSave.Text == "Update")
             {
                 Cls_AboutUs cls = new Cls_AboutUs();
                 cls.ID_AboutUs_find = Convert.ToInt32(txtID_AboutUs.Text.Trim());
@@ -165,12 +165,12 @@ namespace ShopsDefault.AdminTools.UserControls.AboutUs
                 }
                 if (cls.doUpdate() == 1)
                 {
-                    string sMessages = "alert('Đã chỉnh sửa dữ liệu thành công!');";
+                    string sMessages = "alert('Đã chỉnh Edit dữ liệu thành công!');";
                     ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), "", sMessages, true);
                 }
                 else
                 {
-                    string sMessages = "alert('Đã xảy ra lỗi trong quá trình chỉnh sửa dữ liệu! Bạn vui lòng kiểm tra lại!');";
+                    string sMessages = "alert('Đã xảy ra lỗi trong quá trình chỉnh Edit dữ liệu! Bạn vui lòng kiểm tra lại!');";
                     ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), "", sMessages, true);
                 }
             }
