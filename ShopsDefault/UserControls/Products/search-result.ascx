@@ -9,26 +9,26 @@
                     <div class="item">
                         <asp:Label ID="lblID_Product" runat="server" Text='<%# Eval("ID_Product")%>' CssClass="d-none"></asp:Label>
                         <div class="image col-3">
-                            <a href="<%# Utils.getAHrefURL("san-pham", Eval("linkSEOCatalog"),Eval("LinkSEO"), Eval("ID_Product"))%>">
+                            <a href="<%# Utils.getAHrefURL("product", Eval("linkSEOCatalog"),Eval("LinkSEO"), Eval("ID_Product"))%>">
                                 <img src="<%# Eval("Image")%>" />
                             </a>
                         </div>
                         <div class="content col-6">
-                            <a href="<%# Utils.getAHrefURL("san-pham", Eval("linkSEOCatalog"),Eval("LinkSEO"), Eval("ID_Product"))%>">
+                            <a href="<%# Utils.getAHrefURL("product", Eval("linkSEOCatalog"),Eval("LinkSEO"), Eval("ID_Product"))%>">
                                 <h3 class="title"><%# Eval("ProductName")%></h3>
                             </a>
                             <div><%# Utils.subString(Convert.ToString(Eval("Description")), 120)%></div>
                             <ul>
-                                <li><span>Màu sắc:</span> <%# Eval("Color")%></li>
+                                <li><span>Color:</span> <%# Eval("Color")%></li>
                                 <li><span>Speed:</span> <%# Eval("Weight")%> km/h</li>
                                 <li><span>Quantity:</span> <%# Eval("SoLuongCon")%></li>
                             </ul>
                         </div>
                         <div class="action col-3">
-                            <h5>Giá thuê</h5>
+                            <h5>Price</h5>
                             <h4><%# Utils.getPrice(Eval("PriceOut"))%><sup>VNĐ</sup><span>/Ngày</span></h4>
                             <div>
-                                <asp:LinkButton ID="btnAddToCart" runat="server" CommandArgument='<%# Eval("ID_Product")%>' OnClick="btnAddToCart_Click" CausesValidation="false" Text="Thuê xe" UseSubmitBehavior="false" CssClass="btn-default add-to-cart" />
+                                <asp:LinkButton ID="btnAddToCart" runat="server" CommandArgument='<%# Eval("ID_Product")%>' OnClick="btnAddToCart_Click" CausesValidation="false" Text="Add to cart" UseSubmitBehavior="false" CssClass="btn-default add-to-cart" />
                             </div>
                         </div>
                     </div>
@@ -40,26 +40,26 @@
                     <div class="item">
                         <asp:Label ID="lblID_Product" runat="server" Text='<%# Eval("ID_Product")%>' CssClass="d-none"></asp:Label>
                         <div class="image col-3">
-                            <a href="<%# Utils.getAHrefURL("san-pham", Eval("linkSEOCatalog"),Eval("LinkSEO"), Eval("ID_Product"))%>">
+                            <a href="<%# Utils.getAHrefURL("product", Eval("linkSEOCatalog"),Eval("LinkSEO"), Eval("ID_Product"))%>">
                                 <img src="<%# Eval("Image")%>" />
                             </a>
                         </div>
                         <div class="content col-6">
-                            <a href="<%# Utils.getAHrefURL("san-pham", Eval("linkSEOCatalog"),Eval("LinkSEO"), Eval("ID_Product"))%>">
+                            <a href="<%# Utils.getAHrefURL("product", Eval("linkSEOCatalog"),Eval("LinkSEO"), Eval("ID_Product"))%>">
                                 <h3 class="title"><%# Eval("ProductName")%></h3>
                             </a>
                             <div><%# Utils.subString(Convert.ToString(Eval("Description")), 120)%></div>
                             <ul>
-                                <li><span>Màu sắc:</span> <%# Eval("Color")%></li>
+                                <li><span>Color:</span> <%# Eval("Color")%></li>
                                 <li><span>Speed:</span> <%# Eval("Weight")%> km/h</li>
                                 <li><span>Quantity:</span> <%# Eval("Amount")%></li>
                             </ul>
                         </div>
                         <div class="action col-3">
-                            <h5>Giá thuê</h5>
+                            <h5>Price</h5>
                             <h4><%# Utils.getPrice(Eval("PriceOut"))%><sup>VNĐ</sup><span>/Ngày</span></h4>
                             <div>
-                                <asp:LinkButton ID="btnAddToCart" runat="server" CommandArgument='<%# Eval("ID_Product")%>' OnClick="btnAddToCart_Click" CausesValidation="false" Text="Thuê xe" UseSubmitBehavior="false" CssClass="btn-default add-to-cart" />
+                                <asp:LinkButton ID="btnAddToCart" runat="server" CommandArgument='<%# Eval("ID_Product")%>' OnClick="btnAddToCart_Click" CausesValidation="false" Text="Add to cart" UseSubmitBehavior="false" CssClass="btn-default add-to-cart" />
                             </div>
                         </div>
                     </div>

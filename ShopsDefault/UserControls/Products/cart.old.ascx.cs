@@ -57,9 +57,9 @@ namespace ShopsDefault.UserControls.Products
         }
         protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-            //Xóa Products khỏi Cart
+            //Delete Products khỏi Cart
             string id = GridView1.DataKeys[e.RowIndex].Value.ToString();
-            //Duyệt qua Cart và xóa Products phù hợp
+            //Duyệt qua Cart và Delete Products phù hợp
             DataTable cart = Session["cart_items"] as DataTable;
             foreach (DataRow dr in cart.Rows)
             {

@@ -30,10 +30,10 @@
     function checkItem(quantity, e) {
         var totalamout = parseInt($('.total-amount').text());
         if (totalamout == 0) {
-            alert("Sản phẩm này đã hết hàng trong kho nên không Add vào giỏ hàng được!");
+            alert("There is no stock left!");
             e.preventDefault();
         } else if (totalamout - parseInt(quantity) < 0) {
-            alert("Sản phẩm cần mua chênh lệch cho với Products còn trong kho nên không Add vào giỏ hàng được!");
+            alert("We don't have enough stock available!");
             e.preventDefault();
         } else {
             //var cartCount = parseInt($('.hd-cart-item').text()) + parseInt(quantity);
@@ -55,15 +55,15 @@
                     </div>
                     <div class="col-6">
                         <div class="_line"><strong>Bike Type:</strong> <%# Eval("CatalogName")%></div>
-                        <div class="_line"><strong>Mã xe:</strong> <%# Eval("ProductCode")%></div>
-                        <div class="_line"><strong>Màu sắc:</strong> <%# Eval("Color")%></div>
+                        <div class="_line"><strong>Product code:</strong> <%# Eval("ProductCode")%></div>
+                        <div class="_line"><strong>Color:</strong> <%# Eval("Color")%></div>
                         <div class="_line"><strong>Speed:</strong> <%# Eval("Weight")%></div>
-                        <div class="_line"><strong>Giá thuê:</strong> <%# Utils.getPrice(Eval("PriceOut"))%><sup>VNĐ</sup><span>/Ngày</span></div>
+                        <div class="_line"><strong>Price:</strong> <%# Utils.getPrice(Eval("PriceOut"))%><sup>VNĐ</sup><span>/Day</span></div>
                         <div class="_line prd-amount"><strong>Quantity:</strong> <span class="btn-amount btn_decrement"><i class="fa fa-minus"></i></span><asp:TextBox ID="txtQuantity" runat="server" class="addtocart_quantity" type="text" value="1"></asp:TextBox><span class="btn-amount btn_increment"><i class="fa fa-plus"></i></span>
-                            <asp:Label ID="lblAmount" runat="server" class="total-amount" Text='<%= getAmount( Eval("Amount"))%>'></asp:Label>
-                            chiếc có sẵn</div>
+                            <asp:Label ID="lblAmount" runat="server" class="total-amount" Text='<% =getAmount( Eval("Amount"))%>'></asp:Label>
+                             Available</div>
                         <div>
-                            <asp:Button ID="btnAddToCart" runat="server" CommandArgument='<%# Eval("ID_Product")%>' OnClientClick="checkItem(quantityVal());" OnClick="btnAddToCart_Click" CausesValidation="false" Text="Thuê xe" UseSubmitBehavior="false" CssClass="btn-default add-to-cart" />
+                            <asp:Button ID="btnAddToCart" runat="server" CommandArgument='<%# Eval("ID_Product")%>' OnClientClick="checkItem(quantityVal());" OnClick="btnAddToCart_Click" CausesValidation="false" Text="Add to cart" UseSubmitBehavior="false" CssClass="btn-default add-to-cart" />
                         </div>
                     </div>
                     <div class="col-12">

@@ -2,7 +2,7 @@
 
 <div class="about-rental-process section">
     <div class="container">
-        <div class="block-header">Quy trình <span>cho thuê xe</span> EZ Bikes</div>
+        <div class="block-header">Quy trình <span>cho Add to cart</span> EZ Bikes</div>
         <div class="row">
             <div class="col-3">
                 <div class="item">
@@ -22,7 +22,7 @@
                     </div>
                     <div class="content">
                         <div class="title">Làm thủ tục đặt xe</div>
-                        <div class="desc">Chúng tôi sẽ giữ cmnd hoặc hộ chiếu, thanh toán tiền thuê xe và nhận xe để sử dụng.</div>
+                        <div class="desc">Chúng tôi sẽ giữ cmnd hoặc hộ chiếu, thanh toán tiền Add to cart và nhận xe để sử dụng.</div>
                     </div>
                 </div>
             </div>

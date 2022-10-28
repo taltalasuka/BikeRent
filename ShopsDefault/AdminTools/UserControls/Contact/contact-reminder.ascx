@@ -9,13 +9,13 @@
                 <PagerStyle CssClass="pagination" />
                 <Columns>
                     <asp:BoundField DataField="ID_Contact" HeaderText="ID" HtmlEncode="true" />
-                    <asp:BoundField DataField="FullName" HeaderText="Tên người gởi" HtmlEncode="true" />
+                    <asp:BoundField DataField="FullName" HeaderText="Name" HtmlEncode="true" />
                     <asp:BoundField DataField="Phone" HeaderText="Phone number" HtmlEncode="true" />
-                    <asp:BoundField DataField="Email" HeaderText="Địa chỉ Email" HtmlEncode="true" />
+                    <asp:BoundField DataField="Email" HeaderText="Email Address" HtmlEncode="true" />
                     <asp:TemplateField HeaderText="Action">
                         <ItemTemplate>
                             <asp:LinkButton ID="lnkEdit" runat="server" OnClick="btnEdit_Click" CssClass="btn btn-info"><i class="icon-pencil"></i> Details</asp:LinkButton>
-                            <asp:LinkButton ID="lnkDelete" runat="server" CausesValidation="false" CommandName="Delete" CssClass="btn btn-danger"><i class="icon-trash"></i> Xóa</asp:LinkButton>
+                            <asp:LinkButton ID="lnkDelete" runat="server" CausesValidation="false" CommandName="Delete" CssClass="btn btn-danger"><i class="icon-trash"></i> Delete</asp:LinkButton>
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>
@@ -35,17 +35,17 @@
                                         <asp:TextBox ID="txtContactName" runat="server" CssClass="form-control" ReadOnly="true"></asp:TextBox>
                                     </div>
                                     <div class="form-group">
-                                        <label for="company">Tên người gởi</label>
+                                        <label for="company">Name</label>
                                         <asp:TextBox ID="txtFullName" runat="server" CssClass="form-control" ReadOnly="true"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="form-group">
-                                        <label for="country">SĐT người gởi</label>
+                                        <label for="country">Phone number</label>
                                         <asp:TextBox ID="txtPhone" runat="server" CssClass="form-control" ReadOnly="true"></asp:TextBox>
                                     </div>
                                     <div class="form-group">
-                                        <label for="country">Email người gởi</label>
+                                        <label for="country">Email Address</label>
                                         <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" ReadOnly="true"></asp:TextBox>
                                     </div>
                                 </div>
@@ -55,7 +55,7 @@
                                 <CKEditor:CKEditorControl ID="txtDetail" Language="Vi" BasePath="~/ckeditor" runat="server"></CKEditor:CKEditorControl>
                             </div>
                             <div class="form-actions">
-                                <asp:LinkButton ID="btnCancel" runat="server" CssClass="btn btn-secondary">Tắt</asp:LinkButton>
+                                <asp:LinkButton ID="btnCancel" runat="server" CssClass="btn btn-secondary">Close</asp:LinkButton>
                             </div>
                         </div>
                     </div>

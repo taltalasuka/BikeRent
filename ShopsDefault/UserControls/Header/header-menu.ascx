@@ -6,7 +6,7 @@
             <ul class="hd-nav">
                 <li><a href="/ez-bikes.html">Home</a></li>
                 <li><a href="/gioi-thieu-1.html">About Us</a></li>
-                <li><a href="/san-pham.html">Products</a></li>
+                <li><a href="/product.html">Products</a></li>
                 <li><a href="/tin-tuc.html">Articles</a></li>
                 <li><a href="/lien-he.html">Contact Us</a></li>
             </ul>

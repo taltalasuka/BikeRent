@@ -14,12 +14,12 @@
                     <div class="col-lg-4">
                         <div class="item">
                             <div class="image">
-                                <a href="<%# Utils.getAHrefURL("san-pham", Eval("linkSEOCatalog"),Eval("LinkSEO"), Eval("ID_Product"))%>">
+                                <a href="<%# Utils.getAHrefURL("product", Eval("linkSEOCatalog"),Eval("LinkSEO"), Eval("ID_Product"))%>">
                                     <img src="<%# Eval("Image")%>" />
                                 </a>
                             </div>
                             <div class="content">
-                                <a href="<%# Utils.getAHrefURL("san-pham", Eval("linkSEOCatalog"),Eval("LinkSEO"), Eval("ID_Product"))%>">
+                                <a href="<%# Utils.getAHrefURL("product", Eval("linkSEOCatalog"),Eval("LinkSEO"), Eval("ID_Product"))%>">
                                     <h3 class="title"><%# Eval("ProductName")%></h3>
                                 </a>
                                 <h4><%# Utils.getPrice(Eval("PriceOut"))%><sup>VNĐ</sup><span>/Ngày</span></h4>
@@ -28,8 +28,8 @@
                                     <li><i class="fa fa-dashboard"></i><%# Eval("Weight")%> km/h</li>
                                 </ul>
                                 <div class="action">
-                                    <a href="#" class="btn-default">Thuê xe</a>
-                                    <a href="<%# Utils.getAHrefURL("san-pham", Eval("linkSEOCatalog"),Eval("LinkSEO"), Eval("ID_Product"))%>" class="btn-default">Details</a>
+                                    <a href="#" class="btn-default">Add to cart</a>
+                                    <a href="<%# Utils.getAHrefURL("product", Eval("linkSEOCatalog"),Eval("LinkSEO"), Eval("ID_Product"))%>" class="btn-default">Details</a>
                                 </div>
                             </div>
                         </div>

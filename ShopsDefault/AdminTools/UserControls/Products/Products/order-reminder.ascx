@@ -8,7 +8,7 @@
                 <PagerStyle CssClass="pagination" />
                 <Columns>
                     <asp:BoundField DataField="ID_OrderProduct" HeaderText="ID" HtmlEncode="true" />
-                    <asp:BoundField DataField="OrdersName" HeaderText="Tên người đặt" HtmlEncode="true" />
+                    <asp:BoundField DataField="OrdersName" HeaderText="Name" HtmlEncode="true" />
                     <asp:BoundField DataField="UserPhone" HeaderText="Phone number" HtmlEncode="true" />
                     <asp:BoundField DataField="DayOut" DataFormatString="{0:dd/MM/yyyy}" HeaderText="Ngày đặt" HtmlEncode="true" />
                     <asp:TemplateField HeaderText="Action">
@@ -25,32 +25,32 @@
                 <div class="popup-body">
                     <div class="card">
                         <div class="card-header">
-                            <i class="icon-note"></i>Thông tin Details đơn hàng
+                            <i class="icon-note"></i>Order details
                         </div>
                         <div class="card-body scrollbar-y-custom">
                             <div class="form-group d-none">
-                                <label for="company">ID đơn hàng</label>
+                                <label for="company">Order ID</label>
                                 <asp:TextBox ID="txtID_OrderProduct" runat="server" ReadOnly="true" CssClass="form-control"></asp:TextBox>
                             </div>
                             <ul class="nav nav-tabs" role="tablist">
                                 <li class="nav-item">
-                                    <a class="nav-link active" data-toggle="tab" href="#thong-tin-nguoi-dat">Thông tin người đặt</a>
+                                    <a class="nav-link active" data-toggle="tab" href="#customer-info">Customer information</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#thong-tin-don-hang">Order details</a>
+                                    <a class="nav-link" data-toggle="tab" href="#order-details">Order details</a>
                                 </li>
                             </ul>
                             <div class="tab-content">
-                                <div id="thong-tin-nguoi-dat" class="tab-pane active">
+                                <div id="customer-info" class="tab-pane active">
                                     <div class="row">
                                         <div class="col-4">
                                             <div class="form-group">
-                                                <label for="company">Tên người đặt</label>
+                                                <label for="company">Name</label>
                                                 <asp:TextBox ID="txtOrderName" runat="server" ReadOnly="true" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
-                                                <label for="company">Địa chỉ</label>
+                                                <label for="company">Address</label>
                                                 <asp:TextBox ID="txtAddress" runat="server" ReadOnly="true" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
@@ -64,11 +64,11 @@
                                                 <asp:TextBox ID="txtDayOut" runat="server" ReadOnly="true" TextMode="DateTime" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
-                                                <label for="company">Ngày trả</label>
+                                                <label for="company">Return date</label>
                                                 <asp:TextBox ID="txtDayIn" runat="server" ReadOnly="true" TextMode="DateTime" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
-                                                <label for="company">Địa chỉ Email</label>
+                                                <label for="company">Email Address</label>
                                                 <asp:TextBox ID="txtEmail" runat="server" ReadOnly="true" CssClass="form-control"></asp:TextBox>
                                             </div>
                                         </div>
@@ -78,24 +78,24 @@
                                                 <asp:TextBox ID="txtPayment" runat="server" ReadOnly="true" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
-                                                <label for="company">Tình trạng</label>
+                                                <label for="company">Status</label>
                                                 <asp:TextBox ID="txtStatus" runat="server" ReadOnly="true" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
-                                                <label for="street">Nội dung ghi chú</label>
+                                                <label for="street">Notes</label>
                                                 <asp:TextBox ID="txtDetail" runat="server" ReadOnly="true" TextMode="DateTime" CssClass="form-control"></asp:TextBox>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div id="thong-tin-don-hang" class="tab-pane fade">
+                                <div id="order-details" class="tab-pane fade">
                                     <div class="row">
                                         <div class="col-12">
                                             <asp:GridView ID="grvDetail" runat="server" AutoGenerateColumns="False" AllowPaging="True" DataKeyNames="ID_Product" CssClass="table table-default">
                                                 <Columns>
                                                     <asp:BoundField DataField="ID_Product" HeaderText="ID" HtmlEncode="true" />
-                                                    <asp:BoundField DataField="ProductCode" HeaderText="Mã xe" HtmlEncode="true" />
+                                                    <asp:BoundField DataField="ProductCode" HeaderText="Product code" HtmlEncode="true" />
                                                     <asp:BoundField DataField="ProductName" HeaderText="Tên xe" HtmlEncode="true" />
                                                     <asp:BoundField DataField="Amount" HeaderText="Quantity" HtmlEncode="true" />
                                                     <asp:BoundField DataField="PriceOut" HeaderText="Price" HtmlEncode="true" />
@@ -108,7 +108,7 @@
                             </div>
                             <div class="form-actions">
                                 <asp:LinkButton ID="btnUpdateStatus" runat="server" OnClick="btnUpdateStatus_Click" CssClass="btn btn-success" Text="Deliver"></asp:LinkButton>
-                                <asp:LinkButton ID="btnCancel" runat="server" CssClass="btn btn-secondary">Tắt</asp:LinkButton>
+                                <asp:LinkButton ID="btnCancel" runat="server" CssClass="btn btn-secondary">Close</asp:LinkButton>
                             </div>
                         </div>
                     </div>

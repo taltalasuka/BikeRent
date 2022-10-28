@@ -26,11 +26,11 @@ namespace ShopsDefault.UserControls.Header
                         {
                             if (string.IsNullOrEmpty(SuggestionList))
                             {
-                                SuggestionList += "{value: \"" + Utils.getAHrefURL("/san-pham", reader["linkSEOCatalog"].ToString(), reader["LinkSEO"].ToString(), reader["ID_Product"].ToString()) + "\",label: \"" + reader["ProductName"].ToString() + "\",},";
+                                SuggestionList += "{value: \"" + Utils.getAHrefURL("/product", reader["linkSEOCatalog"].ToString(), reader["LinkSEO"].ToString(), reader["ID_Product"].ToString()) + "\",label: \"" + reader["ProductName"].ToString() + "\",},";
                             }
                             else
                             {
-                                SuggestionList += "{value: \"" + Utils.getAHrefURL("/san-pham", reader["linkSEOCatalog"].ToString(), reader["LinkSEO"].ToString(), reader["ID_Product"].ToString()) + "\",label: \"" + reader["ProductName"].ToString() + "\",},";
+                                SuggestionList += "{value: \"" + Utils.getAHrefURL("/product", reader["linkSEOCatalog"].ToString(), reader["LinkSEO"].ToString(), reader["ID_Product"].ToString()) + "\",label: \"" + reader["ProductName"].ToString() + "\",},";
                             }
                         }
                     }

@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true"  CodeBehind="catalog.aspx.cs" Inherits="ShopsDefault.Modules.Products.catalog" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
-    <title>Danh Mục Products - EZ Bikes</title>
+    <title>Products Categories - EZ Bikes</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="css" runat="server">
 </asp:Content>

@@ -44,7 +44,7 @@ CKEDITOR.plugins.setLang( 'table', 'vi', {
 		deleteColumn: 'Xoá cột'
 	},
 	columns: 'Số cột',
-	deleteTable: 'Xóa bảng',
+	deleteTable: 'Delete bảng',
 	headers: 'Đầu đề',
 	headersBoth: 'Cả hai',
 	headersColumn: 'Cột đầu tiên',

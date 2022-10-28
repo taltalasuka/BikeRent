@@ -13,7 +13,7 @@
     function getLinkImage() {
         $('#<%= fuImage.ClientID %>').change(function () {
             var file = $('#<%= fuImage.ClientID %>')[0].files[0]
-            $('#<%= txtImage.ClientID %>').val('/images/UploadImages/san-pham/' + file.name);
+            $('#<%= txtImage.ClientID %>').val('/images/UploadImages/product/' + file.name);
         });
     }
 
@@ -44,14 +44,14 @@
                         <Columns>
                             <asp:BoundField DataField="ID_Catalog" HeaderText="ID" HtmlEncode="true" />
                             <asp:BoundField DataField="CatalogName" HeaderText="Product Category" HtmlEncode="true" />
-                            <asp:BoundField DataField="LinkSEO" HeaderText="Đường dẫn SEO" HtmlEncode="true" />
+                            <asp:BoundField DataField="LinkSEO" HeaderText="SEO URL" HtmlEncode="true" />
                             <asp:TemplateField HeaderText="Status" SortExpression="Hidden">
-                                <ItemTemplate><%# (Boolean.Parse(Eval("Hidden").ToString())) ? "Active" : "Không Active" %></ItemTemplate>
+                                <ItemTemplate><%# (Boolean.Parse(Eval("Hidden").ToString())) ? "Active" : "Not Active" %></ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="Action">
                                 <ItemTemplate>
                                     <asp:LinkButton ID="lnkEdit" runat="server" OnClick="btnEdit_Click" CssClass="btn btn-info"><i class="icon-pencil"></i> Edit</asp:LinkButton>
-                                    <asp:LinkButton ID="lnkDelete" runat="server" CausesValidation="false" CommandName="Delete" CssClass="btn btn-danger"><i class="icon-trash"></i> Xóa </asp:LinkButton>
+                                    <asp:LinkButton ID="lnkDelete" runat="server" CausesValidation="false" CommandName="Delete" CssClass="btn btn-danger"><i class="icon-trash"></i> Delete </asp:LinkButton>
                                 </ItemTemplate>
                             </asp:TemplateField>
                         </Columns>
@@ -73,8 +73,8 @@
                                 </div>
                                 <div class="card-body scrollbar-y-custom">
                                     <div class="form-group d-none">
-                                        <label for="company">ID danh mục</label>
-                                        <asp:TextBox ID="txtID_Catalog" runat="server" placeholder="ID Danh Mục" CssClass="form-control" ReadOnly="true"></asp:TextBox>
+                                        <label for="company">Category ID </label>
+                                        <asp:TextBox ID="txtID_Catalog" runat="server" placeholder="Catalog ID" CssClass="form-control" ReadOnly="true"></asp:TextBox>
                                     </div>
                                     <div class="form-group">
                                         <label for="company">Name</label>
@@ -110,9 +110,9 @@
 
                                     <div class="form-actions">
                                         <%--<asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" CssClass="btn btn-primary" />
-                                        <asp:Button ID="btnCancel" runat="server" Text="Hủy" CssClass="btn btn-secondary" />--%>
+                                        <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn btn-secondary" />--%>
                                         <asp:LinkButton ID="btnSave" runat="server" OnClick="btnSave_Click" CssClass="btn btn-primary">Save</asp:LinkButton>
-                                        <asp:LinkButton ID="btnCancel" runat="server" CssClass="btn btn-secondary">Hủy</asp:LinkButton>
+                                        <asp:LinkButton ID="btnCancel" runat="server" CssClass="btn btn-secondary">Cancel</asp:LinkButton>
                                     </div>
                                 </div>
                             </div>

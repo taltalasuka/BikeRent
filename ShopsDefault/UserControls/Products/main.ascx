@@ -13,22 +13,22 @@
                                     <div class="item">
                                         <asp:Label ID="lblID_Product" runat="server" Text='<%# Eval("ID_Product")%>' CssClass="d-none"></asp:Label>
                                         <div class="image">
-                                            <a href="<%# Utils.getAHrefURL("san-pham", Eval("linkSEOCatalog"),Eval("LinkSEO"), Eval("ID_Product"))%>">
+                                            <a href="<%# Utils.getAHrefURL("product", Eval("linkSEOCatalog"),Eval("LinkSEO"), Eval("ID_Product"))%>">
                                                 <img src="<%# Eval("Image")%>" />
                                             </a>
                                         </div>
                                         <div class="content">
-                                            <a href="<%# Utils.getAHrefURL("san-pham", Eval("linkSEOCatalog"),Eval("LinkSEO"), Eval("ID_Product"))%>">
+                                            <a href="<%# Utils.getAHrefURL("product", Eval("linkSEOCatalog"),Eval("LinkSEO"), Eval("ID_Product"))%>">
                                                 <h3 class="title"><%# Eval("ProductName")%></h3>
                                             </a>
-                                            <h4><%# Utils.getPrice(Eval("PriceOut"))%><sup>VNĐ</sup><span>/Ngày</span></h4>
+                                            <h4><%# Utils.getPrice(Eval("PriceOut"))%><sup>VNĐ</sup><span>/Date</span></h4>
                                             <ul>
                                                 <li><i class="fa fa-motorcycle"></i><%# Eval("Color")%></li>
                                                 <li><i class="fa fa-dashboard"></i><%# Eval("Weight")%> km/h</li>
                                             </ul>
                                             <div class="action">
-                                                <asp:LinkButton ID="btnAddToCart" runat="server" CommandArgument='<%# Eval("ID_Product")%>' OnClick="btnAddToCart_Click" CausesValidation="false" Text="Thuê xe" UseSubmitBehavior="false" CssClass="btn-default add-to-cart" />
-                                                <a href="<%# Utils.getAHrefURL("san-pham", Eval("linkSEOCatalog"),Eval("LinkSEO"), Eval("ID_Product"))%>" class="btn-default">Details</a>
+                                                <asp:LinkButton ID="btnAddToCart" runat="server" CommandArgument='<%# Eval("ID_Product")%>' OnClick="btnAddToCart_Click" CausesValidation="false" Text="Add to cart" UseSubmitBehavior="false" CssClass="btn-default add-to-cart" />
+                                                <a href="<%# Utils.getAHrefURL("product", Eval("linkSEOCatalog"),Eval("LinkSEO"), Eval("ID_Product"))%>" class="btn-default">Details</a>
                                             </div>
                                         </div>
                                     </div>

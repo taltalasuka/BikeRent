@@ -151,7 +151,7 @@
                                         <div class="col-8">
                                             <div>
                                                 <span class="quantity"><%# Eval("Quantity")%>x</span>
-                                                <span class="prd-name"><a href="<%# Utils.getAHrefURL("san-pham", Eval("linkSEOCatalog"),Eval("LinkSEO"), Eval("ID_Product"))%>"><%# Eval("ProductName")%></a></span>
+                                                <span class="prd-name"><a href="<%# Utils.getAHrefURL("product", Eval("linkSEOCatalog"),Eval("LinkSEO"), Eval("ID_Product"))%>"><%# Eval("ProductName")%></a></span>
                                             </div>
                                             <div>
                                                 Bike type: <strong style="font-weight: 600;"><%# Eval("CatalogName")%></strong>

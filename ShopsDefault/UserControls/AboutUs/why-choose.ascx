@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true"  CodeBehind="why-choose.ascx.cs" Inherits="ShopsDefault.UserControls.AboutUs.why_choose" %>
 <div class="about-why-choose bg-img section">
     <div class="container">
-        <div class="block-header">Tại sao nên <span>thuê xe máy</span> của chúng tôi</div>
+        <div class="block-header">Tại sao nên <span>Add to cart máy</span> của chúng tôi</div>
         <div class="row">
             <div class="col-3">
                 <div class="item">
@@ -24,7 +24,7 @@
             <div class="col-3">
                 <div class="item">
                     <i class="fa fa-headphones"></i>
-                    <div>Nhân viên hỗ trợ khách suốt quá trình thuê xe.</div>
+                    <div>Nhân viên hỗ trợ khách suốt quá trình Add to cart.</div>
                 </div>
             </div>
         </div>

@@ -13,7 +13,7 @@ CKEDITOR.plugins.setLang( 'link', 'vi', {
 		title: 'Thuộc tính điểm neo',
 		name: 'Tên của điểm neo',
 		errorName: 'Hãy  vào tên của điểm neo',
-		remove: 'Xóa neo'
+		remove: 'Delete neo'
 	},
 	anchorId: 'Theo định danh thành phần',
 	anchorName: 'Theo tên điểm neo',
@@ -31,7 +31,7 @@ CKEDITOR.plugins.setLang( 'link', 'vi', {
 	menu: 'Sửa liên kết',
 	name: 'Tên',
 	noAnchors: '(Không có điểm neo nào trong tài liệu)',
-	noEmail: 'Hãy đưa vào địa chỉ thư điện tử',
+	noEmail: 'Hãy đưa vào Address thư điện tử',
 	noUrl: 'Hãy đưa vào đường dẫn liên kết (URL)',
 	other: '<khác>',
 	popupDependent: 'Phụ thuộc (Netscape)',

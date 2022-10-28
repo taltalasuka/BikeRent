@@ -31,7 +31,7 @@
                             <asp:TemplateField HeaderText="Action">
                                 <ItemTemplate>
                                     <asp:LinkButton ID="lnkEdit" runat="server" OnClick="btnEdit_Click" CssClass="btn btn-info"><i class="icon-pencil"></i> Edit</asp:LinkButton>
-                                    <asp:LinkButton ID="lnkDelete" runat="server" CausesValidation="false" CommandName="Delete" CssClass="btn btn-danger"><i class="icon-trash"></i> Xóa </asp:LinkButton>
+                                    <asp:LinkButton ID="lnkDelete" runat="server" CausesValidation="false" CommandName="Delete" CssClass="btn btn-danger"><i class="icon-trash"></i> Delete </asp:LinkButton>
                                 </ItemTemplate>
                             </asp:TemplateField>
                         </Columns>
@@ -53,7 +53,7 @@
                                         <asp:TextBox ID="txtPaymentName" runat="server" placeholder=" Payment Methods" CssClass="form-control"></asp:TextBox>
                                     </div>
                                     <div class="form-group">
-                                        <label for="street">Nội dung Details</label>
+                                        <label for="street">Details</label>
                                         <div class="form-control custom-editor">
                                             <CKEditor:CKEditorControl ID="txtDetail" Language="Vi" BasePath="~/ckeditor" runat="server"></CKEditor:CKEditorControl>
                                         </div>

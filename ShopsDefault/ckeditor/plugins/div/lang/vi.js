@@ -12,7 +12,7 @@ CKEDITOR.plugins.setLang( 'div', 'vi', {
 	langDirLabel: 'Hướng ngôn ngữ',
 	langDirRTLLabel: 'Phải qua trái (RTL)',
 	languageCodeInputLabel: 'Mã ngôn ngữ',
-	remove: 'Xóa bỏ',
+	remove: 'Delete bỏ',
 	styleSelectLabel: 'Kiểu (style)',
 	title: 'Tạo khối các thành phần',
 	toolbar: 'Tạo khối các thành phần'

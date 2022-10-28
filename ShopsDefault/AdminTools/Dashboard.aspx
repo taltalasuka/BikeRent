@@ -21,7 +21,7 @@
                 <div class="col-12">
                     <div class="block-default">
                         <div class="block-header">
-                            <i class="icon-bag"></i>Danh sách đơn hàng ngày mai
+                            <i class="icon-bag"></i>Orders tomorrow
                         </div>
                         <div class="block-body">
                             <div id="order_reminder_ww" runat="server">
@@ -32,7 +32,7 @@
                 <div class="col-12">
                     <div class="block-default my-md-3">
                         <div class="block-header">
-                            <i class="icon-bag"></i>Danh sách đơn hàng tới ngày trả
+                            <i class="icon-bag"></i>Upcoming returns
                         </div>
                         <div class="block-body">
                             <div id="order_reminder_getback_ww" runat="server">
@@ -43,7 +43,7 @@
                 <div class="col-12">
                     <div class="block-default">
                         <div class="block-header">
-                            <i class="icon-bubble"></i>Khách hàng Contact Us gần đây
+                            <i class="icon-bubble"></i>Recent messages
                         </div>
                         <div class="block-body">
                             <div id="contact_reminder_ww" runat="server">

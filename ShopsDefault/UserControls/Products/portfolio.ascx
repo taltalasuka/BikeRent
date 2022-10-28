@@ -2,13 +2,13 @@
 
 <div class="prd-protfolio section">
     <div class="container">
-        <div class="block-header">Danh mục <span>xe cho thuê</span> EZ Bikes</div>
+        <div class="block-header"><span>Catalog</span></div>
         <div class="row">
             <div class="col-md-12">
                 <div class="prd-protfolio-tabs">
                     <ul class="nav nav-tabs" id="protfolioTab" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="true">Tất cả</a>
+                            <a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="true">All</a>
                         </li>
                         <asp:ObjectDataSource ID="dsCatalog" runat="server" OnSelecting="ds_Catalogs_Selecting" SelectMethod="GetDataTable_SQL_pro" TypeName="Librari.Cls_ShopsCatalogs" />
                         <asp:Repeater ID="Repeater1" runat="server" DataSourceID="dsCatalog">
@@ -29,23 +29,23 @@
                                             <div class="item">
                                                 <asp:Label ID="lblID_Product" runat="server" Text='<%# Eval("ID_Product")%>' CssClass="d-none"></asp:Label>
                                                 <div class="image">
-                                                    <a href="<%# Utils.getAHrefURL("san-pham", Eval("linkSEOCatalog"), Eval("LinkSEO"), Eval("ID_Product"))%>">
+                                                    <a href="<%# Utils.getAHrefURL("product", Eval("linkSEOCatalog"), Eval("LinkSEO"), Eval("ID_Product"))%>">
                                                         <img src="<%# Eval("Image")%>" />
                                                     </a>
                                                 </div>
                                                 <div class="content">
-                                                    <a href="<%# Utils.getAHrefURL("san-pham", Eval("linkSEOCatalog"), Eval("LinkSEO"), Eval("ID_Product"))%>">
+                                                    <a href="<%# Utils.getAHrefURL("product", Eval("linkSEOCatalog"), Eval("LinkSEO"), Eval("ID_Product"))%>">
                                                         <h3 class="title"><%# Eval("ProductName")%></h3>
                                                     </a>
-                                                    <h4><%# Utils.getPrice(Eval("PriceOut"))%><sup>VNĐ</sup><span>/Ngày</span></h4>
+                                                    <h4><%# Utils.getPrice(Eval("PriceOut"))%><sup>VNĐ</sup><span>/Day</span></h4>
                                                     <ul>
                                                         <li><i class="fa fa-motorcycle"></i><%# Eval("Color")%></li>
                                                         <li><i class="fa fa-dashboard"></i><%# Eval("Weight")%> km/h</li>
                                                     </ul>
                                                     <div class="action">
-                                                        <%--<a href="#" class="btn-default">Thuê xe</a>--%>
-                                                        <asp:LinkButton ID="btnAddToCart" runat="server" CommandArgument='<%# Eval("ID_Product")%>' OnClick="btnAddToCart_Click" CausesValidation="false" Text="Thuê xe" UseSubmitBehavior="false" CssClass="btn-default add-to-cart" />
-                                                        <a href="<%# Utils.getAHrefURL("san-pham", Eval("linkSEOCatalog"), Eval("LinkSEO"), Eval("ID_Product"))%>" class="btn-default">Details</a>
+                                                        <%--<a href="#" class="btn-default">Add to cart</a>--%>
+                                                        <asp:LinkButton ID="btnAddToCart" runat="server" CommandArgument='<%# Eval("ID_Product")%>' OnClick="btnAddToCart_Click" CausesValidation="false" Text="Add to cart" UseSubmitBehavior="false" CssClass="btn-default add-to-cart" />
+                                                        <a href="<%# Utils.getAHrefURL("product", Eval("linkSEOCatalog"), Eval("LinkSEO"), Eval("ID_Product"))%>" class="btn-default">Details</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -65,12 +65,12 @@
                                                     <div class="item">
                                                         <asp:Label ID="lblID_Product" runat="server" Text='<%# Eval("ID_Product")%>' CssClass="d-none"></asp:Label>
                                                         <div class="image">
-                                                            <a href="<%# Utils.getAHrefURL("san-pham", Eval("linkSEOCatalog"), Eval("LinkSEO"), Eval("ID_Product"))%>">
+                                                            <a href="<%# Utils.getAHrefURL("product", Eval("linkSEOCatalog"), Eval("LinkSEO"), Eval("ID_Product"))%>">
                                                                 <img src="<%# Eval("Image")%>" />
                                                             </a>
                                                         </div>
                                                         <div class="content">
-                                                            <a href="<%# Utils.getAHrefURL("san-pham", Eval("linkSEOCatalog"), Eval("linkSEO"), Eval("ID_Product"))%>">
+                                                            <a href="<%# Utils.getAHrefURL("product", Eval("linkSEOCatalog"), Eval("linkSEO"), Eval("ID_Product"))%>">
                                                                 <h3 class="title"><%# Eval("ProductName")%></h3>
                                                             </a>
                                                             <h4><%# Utils.getPrice(Eval("PriceOut"))%><sup>VNĐ</sup><span>/Ngày</span></h4>
@@ -79,8 +79,8 @@
                                                                 <li><i class="fa fa-dashboard"></i><%# Eval("Weight")%> km/h</li>
                                                             </ul>
                                                             <div class="action">
-                                                                <asp:LinkButton ID="btnAddToCart" runat="server" CommandArgument='<%# Eval("ID_Product")%>' OnClick="btnAddToCart_Click" CausesValidation="false" Text="Thuê xe" UseSubmitBehavior="false" CssClass="btn-default add-to-cart" />
-                                                                <a href="<%# Utils.getAHrefURL("san-pham", Eval("linkSEOCatalog"), Eval("LinkSEO"), Eval("ID_Product"))%>" class="btn-default">Details</a>
+                                                                <asp:LinkButton ID="btnAddToCart" runat="server" CommandArgument='<%# Eval("ID_Product")%>' OnClick="btnAddToCart_Click" CausesValidation="false" Text="Add to cart" UseSubmitBehavior="false" CssClass="btn-default add-to-cart" />
+                                                                <a href="<%# Utils.getAHrefURL("product", Eval("linkSEOCatalog"), Eval("LinkSEO"), Eval("ID_Product"))%>" class="btn-default">Details</a>
                                                             </div>
                                                         </div>
                                                     </div>

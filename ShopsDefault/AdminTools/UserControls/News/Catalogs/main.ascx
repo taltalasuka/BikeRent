@@ -13,7 +13,7 @@
     function getLinkImage() {
         $('#<%= fuImage.ClientID %>').change(function () {
             var file = $('#<%= fuImage.ClientID %>')[0].files[0]
-            $('#<%= txtImage.ClientID %>').val('/images/UploadImages/san-pham/' + file.name);
+            $('#<%= txtImage.ClientID %>').val('/images/UploadImages/product/' + file.name);
         });
     }
 
@@ -51,7 +51,7 @@
                             <asp:TemplateField HeaderText="Action">
                                 <ItemTemplate>
                                     <asp:LinkButton ID="lnkEdit" runat="server" OnClick="btnEdit_Click" CssClass="btn btn-info"><i class="icon-pencil"></i> Edit</asp:LinkButton>
-                                    <asp:LinkButton ID="lnkDelete" runat="server" CausesValidation="false" CommandName="Delete" CssClass="btn btn-danger"><i class="icon-trash"></i> Xóa </asp:LinkButton>
+                                    <asp:LinkButton ID="lnkDelete" runat="server" CausesValidation="false" CommandName="Delete" CssClass="btn btn-danger"><i class="icon-trash"></i> Delete </asp:LinkButton>
                                 </ItemTemplate>
                             </asp:TemplateField>
                         </Columns>
@@ -73,8 +73,8 @@
                                 </div>
                                 <div class="card-body scrollbar-y-custom">
                                     <div class="form-group d-none">
-                                        <label for="company">ID danh mục</label>
-                                        <asp:TextBox ID="txtID_Catalog" runat="server" placeholder="ID Danh Mục" CssClass="form-control" ReadOnly="true"></asp:TextBox>
+                                        <label for="company">Catalog ID</label>
+                                        <asp:TextBox ID="txtID_Catalog" runat="server" placeholder="Catalog ID" CssClass="form-control" ReadOnly="true"></asp:TextBox>
                                     </div>
                                     <div class="form-group">
                                         <label for="company">Name</label>
