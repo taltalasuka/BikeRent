@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true"  CodeBehind="search-result.ascx.cs" Inherits="ShopsDefault.UserControls.Products.search_result" %>
 <div class="prd-default search-result">
     <div class="section-1">
-        <div class="block-header">Kết quả Search</div>
+        <div class="block-header">Search Results</div>
         <div class="container">
             <asp:ObjectDataSource ID="ds" runat="server" OnSelecting="ds_Selecting" SelectMethod="GetDataTable_SQL_pro" TypeName="Librari.Cls_ShopsProducts" />
             <asp:Repeater ID="Repeater4" runat="server" DataSourceID="ds">
