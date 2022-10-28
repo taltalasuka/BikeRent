@@ -41,7 +41,7 @@ namespace ShopsDefault.AdminTools.UserControls.Products.Products
             {
                 string getName = e.Row.Cells[1].Text;
                 LinkButton lnk = (LinkButton)e.Row.FindControl("lnkDelete");
-                lnk.Attributes.Add("onclick", "return confirm('Bạn có muốn xóa sản phẩm " + getName + " không?')");
+                lnk.Attributes.Add("onclick", "return confirm('Bạn có muốn xóa Products " + getName + " không?')");
             }
         }
 

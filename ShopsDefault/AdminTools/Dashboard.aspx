@@ -1,7 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminTools/AdminTools.Master" AutoEventWireup="true"  CodeBehind="BanLamViec.aspx.cs" Inherits="ShopsDefault.AdminTools.BanLamViec" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminTools/AdminTools.Master" AutoEventWireup="true"  CodeBehind="Dashboard.aspx.cs" Inherits="ShopsDefault.AdminTools.Dashboard" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
-    <title>ENSCore - Bàn làm việc</title>
+    <title>EZ Bikes - Bàn làm việc</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="css" runat="server">
 </asp:Content>
@@ -43,7 +43,7 @@
                 <div class="col-12">
                     <div class="block-default">
                         <div class="block-header">
-                            <i class="icon-bubble"></i>Khách hàng liên hệ gần đây
+                            <i class="icon-bubble"></i>Khách hàng Contact Us gần đây
                         </div>
                         <div class="block-body">
                             <div id="contact_reminder_ww" runat="server">

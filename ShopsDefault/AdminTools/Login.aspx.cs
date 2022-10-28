@@ -38,12 +38,12 @@ namespace ShopsDefault.AdminTools
                 if (dt.Rows.Count > 0)
                 {
                     Session["username"] = Username;
-                    Response.Redirect("/AdminTools/BanLamViec.html");
+                    Response.Redirect("/AdminTools/Dashboard.html");
                     Session.RemoveAll();
                 }
                 else if (Username == "" || Password == "")
                 {
-                    lblError.Text = "Lỗi: Tên đăng nhập/Mật khẩu không được để rỗng!";
+                    lblError.Text = "Lỗi: Tên Login/Mật khẩu không được để rỗng!";
                     if (Username == "")
                     {
                         txtUserName.Focus();
@@ -56,7 +56,7 @@ namespace ShopsDefault.AdminTools
                 }
                 else
                 {
-                    lblError.Text = "Lỗi: Sai tên đăng nhập hoặc mật khẩu!";
+                    lblError.Text = "Lỗi: Sai tên Login hoặc mật khẩu!";
                     txtUserName.Focus();
                 }
                 conn.Close();

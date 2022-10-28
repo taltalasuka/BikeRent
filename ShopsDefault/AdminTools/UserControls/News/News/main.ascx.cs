@@ -40,7 +40,7 @@ namespace ShopsDefault.AdminTools.UserControls.News.News
             {
                 string getName = e.Row.Cells[1].Text;
                 LinkButton lnk = (LinkButton)e.Row.FindControl("lnkDelete");
-                lnk.Attributes.Add("onclick", "return confirm('Bạn có muốn xóa tin tức " + getName + " không?')");
+                lnk.Attributes.Add("onclick", "return confirm('Bạn có muốn xóa Articles " + getName + " không?')");
             }
         }
 

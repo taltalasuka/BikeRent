@@ -3,7 +3,7 @@
 <%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 
 <ul class="breadcrumb">
-    <li><a href="/AdminTools/BanLamViec.html">Bàn làm việc</a></li>
+    <li><a href="/AdminTools/Dashboard.html">Bàn làm việc</a></li>
     <li>Hình thức thanh toán</li>
 </ul>
 

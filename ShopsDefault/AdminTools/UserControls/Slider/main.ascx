@@ -16,7 +16,7 @@
 </script>
 
 <ul class="breadcrumb">
-    <li><a href="/AdminTools/BanLamViec.html">Bàn làm việc</a></li>
+    <li><a href="/AdminTools/Dashboard.html">Bàn làm việc</a></li>
     <li>slider</li>
 </ul>
 

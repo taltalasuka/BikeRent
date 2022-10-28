@@ -25,7 +25,7 @@
                 <div class="popup-body">
                     <div class="card">
                         <div class="card-header">
-                            <i class="icon-note"></i>Chi tiết liên hệ
+                            <i class="icon-note"></i>Chi tiết Contact Us
                         </div>
                         <div class="card-body scrollbar-y-custom">
                             <div class="row">

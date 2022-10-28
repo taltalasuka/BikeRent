@@ -3,13 +3,13 @@
 <%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="CKEditor" %>
 
 <ul class="breadcrumb">
-    <li><a href="/AdminTools/BanLamViec.html">Bàn làm việc</a></li>
-    <li>Nhóm tin tức</li>
+    <li><a href="/AdminTools/Dashboard.html">Bàn làm việc</a></li>
+    <li>Nhóm Articles</li>
 </ul>
 <div class="container-fluid">
     <div class="block-default">
         <div class="block-header">
-            <i class="icon-bubble"></i>Khách liên hệ
+            <i class="icon-bubble"></i>Khách Contact Us
         </div>
         <div class="block-body">
             <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
@@ -36,7 +36,7 @@
                         <div class="popup-body">
                             <div class="card">
                                 <div class="card-header">
-                                    <i class="icon-note"></i>Chi tiết liên hệ
+                                    <i class="icon-note"></i>Chi tiết Contact Us
                                 </div>
                                 <div class="card-body scrollbar-y-custom">
                                     <div class="row">

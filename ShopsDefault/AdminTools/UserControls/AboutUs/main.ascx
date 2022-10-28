@@ -24,7 +24,7 @@
 </script>
 
 <ul class="breadcrumb">
-    <li><a href="/AdminTools/BanLamViec.html">Bàn làm việc</a></li>
+    <li><a href="/AdminTools/Dashboard.html">Bàn làm việc</a></li>
     <li>slider</li>
 </ul>
 
@@ -75,8 +75,8 @@
                                 </div>
                                 <div class="card-body scrollbar-y-custom">
                                     <div class="form-group d-none">
-                                        <label for="company">ID giới thiệu</label>
-                                        <asp:TextBox ID="txtID_AboutUs" runat="server" placeholder="ID giới thiệu" CssClass="form-control" ReadOnly="true"></asp:TextBox>
+                                        <label for="company">ID About Us</label>
+                                        <asp:TextBox ID="txtID_AboutUs" runat="server" placeholder="ID About Us" CssClass="form-control" ReadOnly="true"></asp:TextBox>
                                     </div>                                    
                                     <div class="form-group">
                                         <label for="company">Tiêu đề</label>

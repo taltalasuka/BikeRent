@@ -1,4 +1,4 @@
-/*! jQuery UI - v1.12.1 - 2019-12-03
+/*! jQuery UI - v1.12.1 - 2022-12-03
 * http://jqueryui.com
 * Includes: widget.js, position.js, keycode.js, unique-id.js, widgets/autocomplete.js, widgets/datepicker.js, widgets/menu.js
 * Copyright jQuery Foundation and other contributors; Licensed MIT */

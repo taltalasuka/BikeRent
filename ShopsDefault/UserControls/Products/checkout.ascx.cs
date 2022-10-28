@@ -135,7 +135,7 @@ namespace ShopsDefault.UserControls.Products
                     "</div>" +
                     "<div style='line-height: 24px;' class='_footer_ckout fr_col12'>" +
                        "<b>Thank you for placing your order at " +
-                       "<a href='" + domain + "/quoc-minh.html' target='_blank'>EZ Bikes</a>!</b>" +
+                       "<a href='" + domain + "/ez-bikes.html' target='_blank'>EZ Bikes</a>!</b>" +
                     "</div>" +
 
                     "<div style='line-height: 24px;'>" +
@@ -267,7 +267,7 @@ namespace ShopsDefault.UserControls.Products
         //        string sMessages = "alert('Order has been placed! Please check your email inbox for details!');";
         //        ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "", sMessages, true);
         //        Session["cart_items"] = null;
-        //        //Response.Redirect("/quoc-minh.html");
+        //        //Response.Redirect("/ez-bikes.html");
         //    }
         //    else
         //    {

@@ -24,13 +24,13 @@
 </script>
 
 <ul class="breadcrumb">
-    <li><a href="/AdminTools/BanLamViec.html">Bàn làm việc</a></li>
-    <li>Nhóm tin tức</li>
+    <li><a href="/AdminTools/Dashboard.html">Bàn làm việc</a></li>
+    <li>Nhóm Articles</li>
 </ul>
 <div class="container-fluid">
     <div class="block-default">
         <div class="block-header">
-            <i class="icon-grid"></i>Nhóm tin tức
+            <i class="icon-grid"></i>Nhóm Articles
         </div>
         <div class="block-body">
             <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
@@ -43,7 +43,7 @@
                         <PagerStyle CssClass="pagination" />
                         <Columns>
                             <asp:BoundField DataField="ID_Catalog" HeaderText="ID" HtmlEncode="true" />
-                            <asp:BoundField DataField="CatalogName" HeaderText="Tên nhóm tin tức" HtmlEncode="true" />
+                            <asp:BoundField DataField="CatalogName" HeaderText="Tên nhóm Articles" HtmlEncode="true" />
                             <asp:BoundField DataField="LinkSEO" HeaderText="Đường dẫn SEO" HtmlEncode="true" />
                             <asp:TemplateField HeaderText="Trạng thái" SortExpression="Hidden">
                                 <ItemTemplate><%# (Boolean.Parse(Eval("Hidden").ToString())) ? "Kích hoạt" : "Không kích hoạt" %></ItemTemplate>

@@ -2,7 +2,7 @@
 
 <div class="prd-protfolio section">
     <div class="container">
-        <div class="block-header">Danh mục <span>xe cho thuê</span> ENSCore</div>
+        <div class="block-header">Danh mục <span>xe cho thuê</span> EZ Bikes</div>
         <div class="row">
             <div class="col-md-12">
                 <div class="prd-protfolio-tabs">

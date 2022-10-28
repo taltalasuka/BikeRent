@@ -34,7 +34,7 @@ namespace ShopsDefault.AdminTools.UserControls.Contact
             {
                 string getName = e.Row.Cells[1].Text;
                 LinkButton lnk = (LinkButton)e.Row.FindControl("lnkDelete");
-                lnk.Attributes.Add("onclick", "return confirm('Bạn có muốn xóa liên hệ " + getName + " không?')");
+                lnk.Attributes.Add("onclick", "return confirm('Bạn có muốn xóa Contact Us " + getName + " không?')");
             }
         }
 

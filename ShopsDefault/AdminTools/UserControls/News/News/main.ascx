@@ -30,15 +30,15 @@
 </style>
 
 <ul class="breadcrumb">
-    <li><a href="/AdminTools/BanLamViec.html">Bàn làm việc</a></li>
-    <li>tin tức</li>
+    <li><a href="/AdminTools/Dashboard.html">Bàn làm việc</a></li>
+    <li>Articles</li>
 </ul>
 
 
 <div class="container-fluid">
     <div class="block-default">
         <div class="block-header">
-            <i class="icon-book-open"></i>Danh sách tin tức
+            <i class="icon-book-open"></i>Danh sách Articles
         </div>
         <div class="block-body">
             <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
@@ -52,7 +52,7 @@
                         <Columns>
                             <asp:BoundField DataField="ID_News" HeaderText="ID" HtmlEncode="true" />
                             <asp:BoundField DataField="Title" HeaderText="Tiêu đề" HtmlEncode="true" />
-                            <asp:BoundField DataField="CatalogName" HeaderText="Tên nhóm tin tức" HtmlEncode="true" />
+                            <asp:BoundField DataField="CatalogName" HeaderText="Tên nhóm Articles" HtmlEncode="true" />
                             <asp:TemplateField HeaderText="Trạng thái" SortExpression="Hidden">
                                 <ItemTemplate><%# (Boolean.Parse(Eval("Hidden").ToString())) ? "Kích hoạt" : "Không kích hoạt" %></ItemTemplate>
                             </asp:TemplateField>
@@ -81,15 +81,15 @@
                                 </div>
                                 <div class="card-body scrollbar-y-custom">
                                     <div class="form-group d-none">
-                                        <label for="company">ID tin tức</label>
-                                        <asp:TextBox ID="txtID_News" runat="server" placeholder="ID tin tức" CssClass="form-control" ReadOnly="true"></asp:TextBox>
+                                        <label for="company">ID Articles</label>
+                                        <asp:TextBox ID="txtID_News" runat="server" placeholder="ID Articles" CssClass="form-control" ReadOnly="true"></asp:TextBox>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="company">Nhóm tin tức</label>
+                                        <label for="company">Nhóm Articles</label>
                                         <asp:SqlDataSource ID="ds" runat="server" EnableCaching="false"></asp:SqlDataSource>
                                         <asp:DropDownList ID="txtID_Catalog" runat="server" DataSourceID="ds" DataTextField="CatalogName" DataValueField="ID_Catalog" AppendDataBoundItems="true" CssClass="form-control">
-                                            <asp:ListItem Text="Chọn nhóm tin tức" Value="0" Selected="true" />
+                                            <asp:ListItem Text="Chọn nhóm Articles" Value="0" Selected="true" />
                                         </asp:DropDownList>
                                     </div>
                                     <div class="form-group">
@@ -98,7 +98,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="company">Mô tả</label>
-                                        <asp:TextBox ID="txtSummaryContent" runat="server" placeholder="Nhập mô tả tin tức" CssClass="form-control"></asp:TextBox>
+                                        <asp:TextBox ID="txtSummaryContent" runat="server" placeholder="Nhập mô tả Articles" CssClass="form-control"></asp:TextBox>
                                     </div>
                                     <div class="form-group">
                                         <label for="company">Hình ảnh</label>

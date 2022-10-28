@@ -22,7 +22,7 @@
                 </div>
                 <div class="hd-nav">
                     <ul>
-                        <li><a href="/AdminTools/BanLamViec.html">Bàn làm việc</a></li>
+                        <li><a href="/AdminTools/Dashboard.html">Bàn làm việc</a></li>
                         <li><a href="#">Người dùng</a></li>
                         <li><a href="#">Cài đặt</a></li>
                     </ul>
@@ -42,7 +42,7 @@
                                     <a href="#"><i class="icon-settings"></i>Đổi mật khẩu</a>
                                 </li>
                                 <li>
-                                    <a href="/AdminTools/DangNhap.html"><i class="icon-logout"></i>Đăng xuất</a>
+                                    <a href="/AdminTools/DangNhap.html"><i class="icon-logout"></i>Log out</a>
                                 </li>
                             </ul>
                         </li>

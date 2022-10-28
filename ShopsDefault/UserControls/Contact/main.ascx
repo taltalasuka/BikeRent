@@ -27,23 +27,23 @@
     $(function () {
         $('.btn-contact').click(function (e) {
             if ($('.check-contact-name').val() == '') {
-                alert('Nhập tiêu đề để gởi liên hệ');
+                alert('Subject title');
                 $('.check-contact-name').focus();
                 e.preventDefault();
             } else if ($('.check-full-name').val() == '') {
-                alert('Nhập họ tên để gởi liên hệ');
+                alert('Your name');
                 $('.check-full-name').focus();
                 e.preventDefault();
             } else if ($('.check-phone').val() == '') {
-                alert('Nhập số điện thoại để gởi liên hệ');
+                alert('Your phone number');
                 $('.check-phone').focus();
                 e.preventDefault();
             } else if ($('.check-email').val() == '') {
-                alert('Nhập email để gởi liên hệ');
+                alert('Your email');
                 $('.check-email').focus();
                 e.preventDefault();
             } else if ($('.check-detail').val() == '') {
-                alert('Nhập nội dung để gởi liên hệ');
+                alert('Your message');
                 $('.check-detail').focus();
                 e.preventDefault();
             }
@@ -54,40 +54,40 @@
     <div class="container">
         <div class="row">
             <div class="col-6">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d931.1777464937883!2d105.84477717420418!3d21.00421929770967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac76ccab6dd7%3A0x55e92a5b07a97d03!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBCw6FjaCBraG9hIEjDoCBO4buZaQ!5e0!3m2!1svi!2s!4v1575891413161!5m2!1svi!2s" width="100%" height="570" frameborder="0" style="border: 0;" allowfullscreen=""></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.137840514864!2d106.65107171476419!3d10.800753192305008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529477b5c7c99%3A0x567b889fd80bf3d8!2zMjAgxJAuIEPhu5luZyBIw7JhLCBQaMaw4budbmcgNCwgVMOibiBCw6xuaCwgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaWV0bmFt!5e0!3m2!1sen!2s!4v1666937523344!5m2!1sen!2s" width="100%" height="570" frameborder="0" style="border: 0;" allowfullscreen=""></iframe>
             </div>
             <div class="col-6">
-                <div class="block-header custome-block-header">Liên hệ với chúng tôi</div>
+                <div class="block-header custome-block-header">Contact Us</div>
                 <%--<div>
-                   <p>Đừng ngần ngại, hãy liên hệ ngay với chúng tôi bất cứ lúc nào thông qua Chat trực tuyến hoặc số điện thoại công ty, chúng tôi luôn hoan nghênh và sẵn sàng tư vấn, hỗ trợ bạn!</p>
-                        <p>Đường dây nóng (hỗ trợ 24/7): <a href="tel:0343554888" style="font-size: 19px; font-weight: 500;">0343 554 888</a></p>
-                        <p><i class="fa fa-map-marker"></i><b>Địa chỉ</b>: 1 Đại Cồ Việt, Bách Khoa, Hai Bà Trưng, Hà Nội</p>
-                        <p><i class="fa fa-envelope"></i><b>Email</b>: <a href="mailto:doquocminh@gmail.com">doquocminh@gmail.com</a></p>
+                   <p>Our contact details:</p>
+                        <p>Hotline: <a href="tel:02873002266" style="font-size: 19px; font-weight: 500;">028.7300.2266</a></p>
+                        <p><i class="fa fa-map-marker"></i><b>Address</b>: 20 Cong Hoa, Ward 12, Tan Binh, HCMC</p>
+                        <p><i class="fa fa-envelope"></i><b>Email</b>: <a href="mailto:dnvknguyen@gmail.com">dnvknguyen@gmail.com</a></p>
                     
                 </div>--%>
                 <div>
                     <div class="form-group">
-                        <label for="company">Tiêu đề</label>
-                        <asp:TextBox ID="txtContactName" runat="server" placeholder="Nhập tiêu đề" CssClass="form-control check-contact-name"></asp:TextBox>
+                        <label for="company">Subject</label>
+                        <asp:TextBox ID="txtContactName" runat="server" placeholder="Subject" CssClass="form-control check-contact-name"></asp:TextBox>
                     </div>
                     <div class="form-group">
-                        <label for="company">Họ và tên</label>
-                        <asp:TextBox ID="txtFullName" runat="server" placeholder="Nhập họ tên" CssClass="form-control check-full-name"></asp:TextBox>
+                        <label for="company">Name</label>
+                        <asp:TextBox ID="txtFullName" runat="server" placeholder="Name" CssClass="form-control check-full-name"></asp:TextBox>
                     </div>
                     <div class="form-group">
-                        <label for="company">Số điện thoại</label>
-                        <asp:TextBox ID="txtPhone" runat="server" placeholder="Nhập số điện thoại" CssClass="form-control check-phone"></asp:TextBox>
+                        <label for="company">Phone number</label>
+                        <asp:TextBox ID="txtPhone" runat="server" placeholder="Phone number" CssClass="form-control check-phone"></asp:TextBox>
                     </div>
                     <div class="form-group">
-                        <label for="company">Địa chỉ email</label>
-                        <asp:TextBox ID="txtEmail" runat="server" placeholder="Nhập địa chỉ Email" CssClass="form-control check-email"></asp:TextBox>
+                        <label for="company">Email address</label>
+                        <asp:TextBox ID="txtEmail" runat="server" placeholder="Email address" CssClass="form-control check-email"></asp:TextBox>
                     </div>
                     <div class="form-group">
-                        <label for="street">Nội dung</label>
-                        <asp:TextBox ID="txtDetail" runat="server" TextMode="MultiLine" placeholder="Nhập nội dung" CssClass="form-control check-detail"></asp:TextBox>
+                        <label for="street">Message</label>
+                        <asp:TextBox ID="txtDetail" runat="server" TextMode="MultiLine" placeholder="Message" CssClass="form-control check-detail"></asp:TextBox>
                     </div>
                     <div class="form-actions text-center">
-                        <asp:LinkButton ID="btnSave" runat="server" OnClick="btnSave_Click" CssClass="btn-default btn-contact" Text="Gởi liên hệ"></asp:LinkButton>
+                        <asp:LinkButton ID="btnSave" runat="server" OnClick="btnSave_Click" CssClass="btn-default btn-contact" Text="Submit"></asp:LinkButton>
                     </div>
                 </div>
             </div>

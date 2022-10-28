@@ -2,7 +2,7 @@
 
 <div class="about-rental-process section">
     <div class="container">
-        <div class="block-header">Quy trình <span>cho thuê xe</span> ENSCore</div>
+        <div class="block-header">Quy trình <span>cho thuê xe</span> EZ Bikes</div>
         <div class="row">
             <div class="col-3">
                 <div class="item">
@@ -44,7 +44,7 @@
                     </div>
                     <div class="content">
                         <div class="title">Chọn và đặt xe</div>
-                        <div class="desc">Liên hệ nhân viên đến lấy xe hoặc quý khách tự mang xe đến trả tại cửa hàng.</div>
+                        <div class="desc">Contact Us nhân viên đến lấy xe hoặc quý khách tự mang xe đến trả tại cửa hàng.</div>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true"  CodeBehind="detail.aspx.cs" Inherits="ShopsDefault.Modules.News.detail" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
-    <title>Cho Thuê Xe Máy Ở Hà Nội</title>
+    <title>EZ Bikes</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="css" runat="server">
     <link href="/css/detail-news.css" rel="stylesheet" />

@@ -30,15 +30,15 @@
 </style>
 
 <ul class="breadcrumb">
-    <li><a href="/AdminTools/BanLamViec.html">Bàn làm việc</a></li>
-    <li>Sản phẩm</li>
+    <li><a href="/AdminTools/Dashboard.html">Bàn làm việc</a></li>
+    <li>Products</li>
 </ul>
 
 
 <div class="container-fluid">
     <div class="block-default">
         <div class="block-header">
-            <i class="icon-bag"></i>Danh sách sản phẩm
+            <i class="icon-bag"></i>Danh sách Products
         </div>
         <div class="block-body">
             <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
@@ -86,29 +86,29 @@
                                 </div>
                                 <div class="card-body scrollbar-y-custom">
                                     <div class="form-group d-none">
-                                        <label for="company">ID sản phẩm</label>
-                                        <asp:TextBox ID="txtID_Product" runat="server" placeholder="ID sản phẩm" CssClass="form-control" ReadOnly="true"></asp:TextBox>
+                                        <label for="company">ID Products</label>
+                                        <asp:TextBox ID="txtID_Product" runat="server" placeholder="ID Products" CssClass="form-control" ReadOnly="true"></asp:TextBox>
                                     </div>
                                     <div class="row">
                                         <div class="col-6">
                                             <div class="form-group">
-                                                <label for="company">Nhóm sản phẩm</label>
+                                                <label for="company">Nhóm Products</label>
                                                 <asp:SqlDataSource ID="ds" runat="server" EnableCaching="false"></asp:SqlDataSource>
                                                 <asp:DropDownList ID="txtID_Catalog" runat="server" DataSourceID="ds" DataTextField="CatalogName" DataValueField="ID_Catalog" AppendDataBoundItems="true" CssClass="form-control">
-                                                    <asp:ListItem Text="Chọn nhóm sản phẩm" Value="0" Selected="true" />
+                                                    <asp:ListItem Text="Chọn nhóm Products" Value="0" Selected="true" />
                                                 </asp:DropDownList>
                                             </div>
                                             <div class="form-group">
-                                                <label for="company">Tên sản phẩm</label>
+                                                <label for="company">Tên Products</label>
                                                 <asp:TextBox ID="txtProductName" runat="server" placeholder="Nhập tên danh mục" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
-                                                <label for="company">Mã sản phẩm</label>
-                                                <asp:TextBox ID="txtProductCode" runat="server" placeholder="Nhập mã sản phẩm" CssClass="form-control"></asp:TextBox>
+                                                <label for="company">Mã Products</label>
+                                                <asp:TextBox ID="txtProductCode" runat="server" placeholder="Nhập mã Products" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
-                                                <label for="company">Giá sản phẩm</label>
-                                                <asp:TextBox ID="txtPriceOut" runat="server" placeholder="Nhập giá sản phẩm" CssClass="form-control"></asp:TextBox>
+                                                <label for="company">Giá Products</label>
+                                                <asp:TextBox ID="txtPriceOut" runat="server" placeholder="Nhập giá Products" CssClass="form-control"></asp:TextBox>
                                             </div>
                                         </div>
                                         <div class="col-6">                                            
@@ -118,15 +118,15 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="company">Màu sắc</label>
-                                                <asp:TextBox ID="txtColor" runat="server" placeholder="Nhập màu sản phẩm" CssClass="form-control"></asp:TextBox>
+                                                <asp:TextBox ID="txtColor" runat="server" placeholder="Nhập màu Products" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
                                                 <label for="company">Tốc độ</label>
-                                                <asp:TextBox ID="txtWeight" runat="server" placeholder="Nhập tốc độ sản phẩm" CssClass="form-control"></asp:TextBox>
+                                                <asp:TextBox ID="txtWeight" runat="server" placeholder="Nhập tốc độ Products" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
                                                 <label for="company">Mô tả</label>
-                                                <asp:TextBox ID="txtSummaryContent" runat="server" placeholder="Nhập mô tả sản phẩm" CssClass="form-control"></asp:TextBox>
+                                                <asp:TextBox ID="txtSummaryContent" runat="server" placeholder="Nhập mô tả Products" CssClass="form-control"></asp:TextBox>
                                             </div>
                                         </div>
                                     </div>

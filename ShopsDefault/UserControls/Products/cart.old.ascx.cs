@@ -34,15 +34,15 @@ namespace ShopsDefault.UserControls.Products
 
         protected void GridView1_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
         {
-            //Sửa thông tin giỏ hàng
+            //Sửa thông tin Cart
             string id = GridView1.DataKeys[e.NewSelectedIndex].Value.ToString();
             TextBox quantity = GridView1.Rows[e.NewSelectedIndex].Cells[2].FindControl("txtQuantity")
                 as TextBox;
-            //Duyệt qua Giỏ hàng và tăng số lượng
+            //Duyệt qua Cart và tăng số lượng
             DataTable cart = Session["cart_items"] as DataTable;
             foreach (DataRow dr in cart.Rows)
             {
-                //Kiểm tra mã sản phẩm phù hợp để gán số lượng khách hàng mua
+                //Kiểm tra mã Products phù hợp để gán số lượng khách hàng mua
                 if (dr["ID_Product"].ToString() == id)
                 {
                     dr["Amount"] = int.Parse(quantity.Text);
@@ -51,19 +51,19 @@ namespace ShopsDefault.UserControls.Products
             }
             //Lưu lại vào Session
             Session["cart"] = cart;
-            //Hiển thị giỏ hàng với thông tin mới
+            //Hiển thị Cart với thông tin mới
             GridView1.DataSource = cart;
             GridView1.DataBind();
         }
         protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-            //Xóa sản phẩm khỏi giỏ hàng
+            //Xóa Products khỏi Cart
             string id = GridView1.DataKeys[e.RowIndex].Value.ToString();
-            //Duyệt qua Giỏ hàng và xóa sản phẩm phù hợp
+            //Duyệt qua Cart và xóa Products phù hợp
             DataTable cart = Session["cart_items"] as DataTable;
             foreach (DataRow dr in cart.Rows)
             {
-                //Kiểm tra mã sản phẩm phù hợp để tăng số lượng
+                //Kiểm tra mã Products phù hợp để tăng số lượng
                 if (dr["Amount"].ToString() == id)
                 {
                     dr.Delete();
@@ -72,7 +72,7 @@ namespace ShopsDefault.UserControls.Products
             }
             //Lưu lại vào Session
             Session["cart"] = cart;
-            //Hiển thị giỏ hàng với thông tin mới
+            //Hiển thị Cart với thông tin mới
             GridView1.DataSource = cart;
             GridView1.DataBind();
         }

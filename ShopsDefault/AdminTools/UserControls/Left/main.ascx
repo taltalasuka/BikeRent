@@ -2,7 +2,7 @@
 <div class="left-main scrollbar-y-custom">
     <ul class="nav">
         <li class="nav-item active">
-            <a href="/AdminTools/BanLamViec.html">
+            <a href="/AdminTools/Dashboard.html">
                 <i class="icon-speedometer"></i>Bàn làm việc
             </a>
         </li>
@@ -12,19 +12,19 @@
                 <i class="icon-equalizer"></i>Danh sách Silder
             </a>
         </li>
-        <li class="nav-title">Giới thiệu</li>
+        <li class="nav-title">About Us</li>
         <li>
             <a href="/AdminTools/GioiThieu.html">
                 <i class="icon-drop"></i>Về chúng tôi</a>
         </li>
-        <li class="nav-title">Sản phẩm</li>
+        <li class="nav-title">Products</li>
         <li>
             <a href="/AdminTools/QuanLyNhomSanPham.html">
-                <i class="icon-grid"></i>Nhóm sản phẩm</a>
+                <i class="icon-grid"></i>Nhóm Products</a>
         </li>
         <li>
             <a href="/AdminTools/QuanLySanPham.html">
-                <i class="icon-bag"></i>Danh sách sản phẩm</a>
+                <i class="icon-bag"></i>Danh sách Products</a>
         </li>
         <li>
             <a href="/AdminTools/QuanLyDonHang.html">
@@ -34,19 +34,19 @@
             <a href="/AdminTools/QuanLyHinhThucThanhToan.html">
                 <i class="icon-credit-card"></i>Hình thức thanh toán</a>
         </li>
-        <li class="nav-title">Tin tức</li>
+        <li class="nav-title">Articles</li>
         <li>
             <a href="/AdminTools/QuanLyNhomTinTuc.html">
-                <i class="icon-grid"></i>Nhóm tin tức</a>
+                <i class="icon-grid"></i>Nhóm Articles</a>
         </li>
         <li>
             <a href="/AdminTools/QuanLyTinTuc.html">
-                <i class="icon-book-open"></i>Tin tức</a>
+                <i class="icon-book-open"></i>Articles</a>
         </li>
-        <li class="nav-title">Liên hệ</li>
+        <li class="nav-title">Contact Us</li>
         <li>
             <a href="/AdminTools/QuanLyLienHe.html">
-                <i class="icon-bubble"></i>Khách liên hệ</a>
+                <i class="icon-bubble"></i>Khách Contact Us</a>
         </li>
     </ul>
 </div>

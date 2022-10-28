@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true"  CodeBehind="cart.ascx.cs" Inherits="ShopsDefault.UserControls.Products.cart" %>
 
 <div class="prd-cart section">
-    <div class="block-header">Giỏ hàng</div>
+    <div class="block-header">Cart</div>
     <div class="container">
         <asp:Label runat="server" ID="lblEmpty" CssClass="text-empty"></asp:Label>
         <asp:ScriptManager ID="ScriptManager1" runat="server">
@@ -16,7 +16,7 @@
                                 <Columns>
                                     <asp:BoundField DataField="ID_Product" HeaderText="ID" HtmlEncode="true" />
 
-                                    <asp:BoundField DataField="ProductName" HeaderText="Tên sản phẩm" HtmlEncode="true" />
+                                    <asp:BoundField DataField="ProductName" HeaderText="Tên Products" HtmlEncode="true" />
 
                                     <asp:TemplateField HeaderText="Số lượng">
                                         <ItemTemplate>
@@ -52,7 +52,7 @@
                         <div class="cart-info">
                             <table>
                                 <tr>
-                                    <th colspan="2">Thông tin giỏ hàng</th>
+                                    <th colspan="2">Thông tin Cart</th>
                                 </tr>
                                 <tr>
                                     <td>Tổng cộng:</td>
@@ -61,7 +61,7 @@
                                 <tr>
                                     <td><a href="/san-pham.html" class="btn-default">Mua thêm</a></td>
                                     <td>
-                                        <a href="/dat-hang.html" class="btn-default">Đặt hàng</a></td>
+                                        <a href="/dat-hang.html" class="btn-default">Submit</a></td>
                                 </tr>
                             </table>
                         </div>

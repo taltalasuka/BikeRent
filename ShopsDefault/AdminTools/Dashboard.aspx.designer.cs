@@ -11,7 +11,7 @@ namespace ShopsDefault.AdminTools
 {
 
 
-    public partial class BanLamViec
+    public partial class Dashboard
     {
 
         /// <summary>

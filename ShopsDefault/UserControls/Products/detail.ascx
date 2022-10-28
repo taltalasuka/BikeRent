@@ -33,7 +33,7 @@
             alert("Sản phẩm này đã hết hàng trong kho nên không thêm vào giỏ hàng được!");
             e.preventDefault();
         } else if (totalamout - parseInt(quantity) < 0) {
-            alert("Sản phẩm cần mua chênh lệch cho với sản phẩm còn trong kho nên không thêm vào giỏ hàng được!");
+            alert("Sản phẩm cần mua chênh lệch cho với Products còn trong kho nên không thêm vào giỏ hàng được!");
             e.preventDefault();
         } else {
             //var cartCount = parseInt($('.hd-cart-item').text()) + parseInt(quantity);

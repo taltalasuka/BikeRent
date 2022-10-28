@@ -6,32 +6,31 @@
             <div class="col-4">
                 <div class="item">
                     <div class="image">
-                        <h3 class="title">Về chúng tôi</h3>
+                        <h3 class="title">About Us</h3>
                         <div class="content">
-                            Cung cấp cho quý khách những tiện nghi phù hợp, dịch vụ đạt chuẩn và chất lượng tốt với mức giá cả bình dân 
-                        sẽ giúp quý khách có những chuyến đi vui vẻ thoải mái, tiết kiệm được chi phí mà vẫn đảm bảo an ninh, an toàn.
+                            We are a local business that provides motorcycles for tourists.
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-4">
                 <div class="item info-contact">
-                    <h3 class="title">Thông tin liên hệ</h3>
+                    <h3 class="title">Contact Information</h3>
                     <div class="content">
-                        <div class="address">Đại học bách khoa - Khoa CNTT, Tp. Hà Nội</div>
-                        <div class="phone">Phone: (+84) 343 554 888</div>
-                        <div class="mail">Email: doquocminh@gmail.com</div>
-                        <div class="work-time">Giờ làm việc: 06:00 - 22:00</div>
+                        <div class="address">20 Cong Hoa, Ward 12, Tan Binh, HCMC</div>
+                        <div class="phone">Phone: 028.7300.2266</div>
+                        <div class="mail">Email: dnvknguyen@gmail.com</div>
+                        <div class="work-time">Open: 06:00 - 22:00</div>
                     </div>
                 </div>
             </div>
             <div class="col-4">
                 <div class="item">
-                    <h3 class="title">Đăng ký nhận tin</h3>
+                    <h3 class="title">Newsletters</h3>
                     <div class="content">
-                        <div class="address">Hãy đăng ký với chúng tôi để cập nhật thông tin mới nhất, thông tin khuyến mãi, các sản phẩm hoặc các sự kiện miễn phí</div>
+                        <div class="address">Sign up for newsletters to receive information on our deals</div>
                         <div class="news-letter">
-                            <input type="email" placeholder="Nhập địa chỉ email" />
+                            <input type="email" placeholder="Email Address" />
                             <button type="button"><i class="fa fa-paper-plane"></i></button>
                         </div>
                     </div>
@@ -42,7 +41,7 @@
 
     <div class="ft-copyright">
         <div class="coppyright">
-            Copyright © 2019 by doquocminh@gmail.com. All rights reserved.
+            Copyright © 2022 DNVKN Softwares. All rights reserved.
         </div>
     </div>
 </div>

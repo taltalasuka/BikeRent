@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true"  CodeBehind="cart.aspx.cs" Inherits="ShopsDefault.Modules.Products.cart" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
-    <title>Giỏ hàng - Cho Thuê Xe Máy Ở Hà Nội</title>
+    <title>Cart - EZ Bikes</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="css" runat="server">
     <link href="/css/cart.css" rel="stylesheet" />

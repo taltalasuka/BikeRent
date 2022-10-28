@@ -60,7 +60,7 @@
     });
 </script>
 <div class="prd-checkout section">
-    <div class="block-header">Đặt hàng</div>
+    <div class="block-header">Submit</div>
 
     <%--<asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
@@ -180,11 +180,11 @@
                         </asp:Repeater>
                     </div>
                     <div class="text-center">
-                        <a href="gio-hang.html" class="btn-default">Giỏ hàng</a>
-                        <asp:LinkButton ID="btnCheckout" runat="server" OnClientClick="return validateForm(ckName, ckPhone, ckEmail, ckAddress)" OnClick="btnCheckout_Click" CssClass="btn-default">Đặt hàng</asp:LinkButton>
+                        <a href="gio-hang.html" class="btn-default">Cart</a>
+                        <asp:LinkButton ID="btnCheckout" runat="server" OnClientClick="return validateForm(ckName, ckPhone, ckEmail, ckAddress)" OnClick="btnCheckout_Click" CssClass="btn-default">Submit</asp:LinkButton>
                     </div>
                     <div class="checkout-warning-text">
-                        Quý khách vui lòng kiểm tra lại thông tin đơn hàng trước khi nhấn vào nút đặt hàng
+                        Quý khách vui lòng kiểm tra lại thông tin đơn hàng trước khi nhấn vào nút Submit
                     </div>
                 </div>
             </div>

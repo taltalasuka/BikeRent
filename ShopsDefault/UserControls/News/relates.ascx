@@ -3,7 +3,7 @@
 <link href="/css/hot-news.css" rel="stylesheet" />
 <div class="news-hot-news section">
     <div class="container">
-        <div class="block-header style1">Tin tức liên quan</div>
+        <div class="block-header style1">Articles liên quan</div>
         <div class="row">
             <asp:ObjectDataSource ID="ds" runat="server" OnSelecting="ds_Selecting" SelectMethod="GetDataTable_SQL_pro" TypeName="Librari.Cls_ShopsProducts" />
             <asp:Repeater ID="Repeater1" runat="server" DataSourceID="ds">

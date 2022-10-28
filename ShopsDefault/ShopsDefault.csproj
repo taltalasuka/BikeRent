@@ -78,7 +78,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AdminTools\BanLamViec.aspx" />
+    <Content Include="AdminTools\Dashboard.aspx" />
     <Content Include="AdminTools\css\dark.css" />
     <Content Include="AdminTools\css\login.css" />
     <Content Include="AdminTools\css\pace.min.css" />
@@ -4242,12 +4242,12 @@
     <Compile Include="AdminTools\AdminTools.Master.designer.cs">
       <DependentUpon>AdminTools.Master</DependentUpon>
     </Compile>
-    <Compile Include="AdminTools\BanLamViec.aspx.cs">
-      <DependentUpon>BanLamViec.aspx</DependentUpon>
+    <Compile Include="AdminTools\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AdminTools\BanLamViec.aspx.designer.cs">
-      <DependentUpon>BanLamViec.aspx</DependentUpon>
+    <Compile Include="AdminTools\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminTools\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

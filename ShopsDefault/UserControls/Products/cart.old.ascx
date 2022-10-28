@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true"  CodeBehind="cart.old.ascx.cs" Inherits="ShopsDefault.UserControls.Products.cartold" %>
 
     <div class="prd-cart section">
-        <div class="block-header">Giỏ hàng</div>
+        <div class="block-header">Cart</div>
         <div class="container">
             <div class="row">
                 <div class="col-8">
