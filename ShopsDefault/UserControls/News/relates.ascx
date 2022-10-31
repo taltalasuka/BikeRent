@@ -23,7 +23,7 @@
                             <div class="author">
                                 <div class="poster">Admin</div>
                                 <div class="date-post"><%#Eval("AddTime", "{0:dd/MM/yyyy}")%></div>
-                                <div class="read-more"><a href="<%# Utils.getAHrefURL("articles", Eval("linkSEOCatalog"), Eval("linkSEO"), Eval("ID_News"))%>" class="btn-default">Read</a></div>
+                                <div class="read-more"><a href="<%# Utils.getAHrefURL2("articles", Eval("linkSEOCatalog"), Eval("linkSEO"), Eval("ID_News"))%>" class="btn-default">Read</a></div>
                             </div>
                         </div>
                     </div>
