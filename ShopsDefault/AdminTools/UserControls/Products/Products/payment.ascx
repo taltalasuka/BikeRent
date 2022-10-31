@@ -24,7 +24,7 @@
                         <PagerStyle CssClass="pagination" />
                         <Columns>
                             <asp:BoundField DataField="ID_Payment" HeaderText="ID" HtmlEncode="true" />
-                            <asp:BoundField DataField="PaymentName" HeaderText="Tên Payment Methods" HtmlEncode="true" />
+                            <asp:BoundField DataField="PaymentName" HeaderText="Payment Method" HtmlEncode="true" />
                             <asp:TemplateField HeaderText="Status" SortExpression="Hidden">
                                 <ItemTemplate><%# (Boolean.Parse(Eval("Hidden").ToString())) ? "Active" : "Not Active" %></ItemTemplate>
                             </asp:TemplateField>
@@ -49,7 +49,7 @@
                                         <asp:TextBox ID="txtID_Payment" runat="server" placeholder="ID Thanh toán" CssClass="form-control" ReadOnly="true"></asp:TextBox>
                                     </div>
                                     <div class="form-group">
-                                        <label for="company">Tên Payment Methods</label>
+                                        <label for="company">Payment Method</label>
                                         <asp:TextBox ID="txtPaymentName" runat="server" placeholder=" Payment Methods" CssClass="form-control"></asp:TextBox>
                                     </div>
                                     <div class="form-group">

@@ -60,7 +60,7 @@ namespace ShopsDefault.AdminTools.UserControls.Products.Products
             {
                 string getName = e.Row.Cells[1].Text;
                 LinkButton lnk = (LinkButton)e.Row.FindControl("lnkUpdate");
-                lnk.Attributes.Add("onclick", "return confirm('Bạn có muốn Cancel đơn hàng " + getName + " Not?')");
+                lnk.Attributes.Add("onclick", "return confirm('Cancel " + getName + "?')");
             }
         }
 
@@ -145,12 +145,12 @@ namespace ShopsDefault.AdminTools.UserControls.Products.Products
 
                 if (cls.doUpdateStatus() == 1)
                 {
-                    string sMessages = "alert('Update dữ liệu thành công');";
+                    string sMessages = "alert('Success!');";
                     ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), "", sMessages, true);
                 }
                 else
                 {
-                    string sMessages = "alert('Đã xảy ra lỗi trong quá trình Update dữ liệu');";
+                    string sMessages = "alert('An error has occured!');";
                     ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), "", sMessages, true);
                 }
             }
@@ -182,12 +182,12 @@ namespace ShopsDefault.AdminTools.UserControls.Products.Products
 
                 if (cls.doUpdateStatus() == 1)
                 {
-                    string sMessages = "alert('Update dữ liệu thành công');";
+                    string sMessages = "alert('Success!');";
                     ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), "", sMessages, true);
                 }
                 else
                 {
-                    string sMessages = "alert('Đã xảy ra lỗi trong quá trình Update dữ liệu');";
+                    string sMessages = "alert('An error has occured!');";
                     ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), "", sMessages, true);
                 }
             }
@@ -203,12 +203,12 @@ namespace ShopsDefault.AdminTools.UserControls.Products.Products
             cls.Hidden = false;
             if (cls.doUpdateHidden() == 1)
             {
-                string sMessages = "alert('Đã Cancel đơn hàng thành công');";
+                string sMessages = "alert('Success');";
                 ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), "", sMessages, true);
             }
             else
             {
-                string sMessages = "alert('Đã xảy ra lỗi trong quá trình Cancel đơn hàng dữ liệu');";
+                string sMessages = "alert('An error has occured');";
                 ScriptManager.RegisterStartupScript(UpdatePanel1, UpdatePanel1.GetType(), "", sMessages, true);
             }
             BindData();

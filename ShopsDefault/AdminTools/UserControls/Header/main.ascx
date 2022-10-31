@@ -15,7 +15,7 @@
             <div class="hd-item">
                 <div class="hd-logo">
                     <a href="#">
-                        <img src="/AdminTools/images/logo-cho-thue-xe-may-QM-white.png" height="40" /></a>
+                        <img src="/AdminTools/images/logo.png" height="40" /></a>
                 </div>
                 <div class="hd-toggler-icon">
                     <i class="icon-menu"></i>
@@ -35,7 +35,7 @@
                     <ul>
                         <li class="avatar">
                             <a class="has-sub" href="#">
-                                <img src="/AdminTools/images/user/minh-quoc.jpg" /></a>
+                                <img src="/AdminTools/images/user/admin.png" /></a>
                             <ul class="hd-nav-sub">
                                 <li class="nav-group">Settings</li>
                                 <li>

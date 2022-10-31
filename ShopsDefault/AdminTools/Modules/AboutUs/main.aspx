@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminTools/AdminTools.Master" AutoEventWireup="true"  CodeBehind="main.aspx.cs" Inherits="ShopsDefault.AdminTools.Modules.AboutUs.main" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
-    <title>EZ Bikes - Quản Lý About Us</title>
+    <title>EZ Bikes -  About Us</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="css" runat="server">
 </asp:Content>

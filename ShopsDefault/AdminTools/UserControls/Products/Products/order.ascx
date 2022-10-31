@@ -4,7 +4,7 @@
 
 <ul class="breadcrumb">
     <li><a href="/AdminTools/Dashboard.html">Dashboard</a></li>
-    <li>Đơn hàng</li>
+    <li>Order</li>
 </ul>
 
 
@@ -24,8 +24,8 @@
                             <asp:BoundField DataField="OrdersName" HeaderText="Name" HtmlEncode="true" />
                             <asp:BoundField DataField="Status" HeaderText="Status" HtmlEncode="true" />
                             <asp:BoundField DataField="UserPhone" HeaderText="Phone number" HtmlEncode="true" />
-                            <asp:BoundField DataField="PaymentName" HeaderText="Tên HTTT" HtmlEncode="true" />
-                            <asp:BoundField DataField="DayOut" HeaderText="Ngày đặt" HtmlEncode="true" />
+                            <asp:BoundField DataField="PaymentName" HeaderText="Name" HtmlEncode="true" />
+                            <asp:BoundField DataField="DayOut" HeaderText="Order date" HtmlEncode="true" />
                             <asp:BoundField DataField="DayIn" HeaderText="Return date" HtmlEncode="true" />
                             <asp:TemplateField HeaderText="Action">
                                 <ItemTemplate>
@@ -75,7 +75,7 @@
                                                 </div>
                                                 <div class="col-4">
                                                     <div class="form-group">
-                                                        <label for="company">Ngày đặt</label>
+                                                        <label for="company">Date</label>
                                                         <asp:TextBox ID="txtDayOut" runat="server" ReadOnly="true" TextMode="DateTime" CssClass="form-control"></asp:TextBox>
                                                     </div>
                                                     <div class="form-group">
@@ -111,7 +111,7 @@
                                                         <Columns>
                                                             <asp:BoundField DataField="ID_Product" HeaderText="ID" HtmlEncode="true" />
                                                             <asp:BoundField DataField="ProductCode" HeaderText="Product code" HtmlEncode="true" />
-                                                            <asp:BoundField DataField="ProductName" HeaderText="Tên xe" HtmlEncode="true" />
+                                                            <asp:BoundField DataField="ProductName" HeaderText="Name" HtmlEncode="true" />
                                                             <asp:BoundField DataField="Amount" HeaderText="Quantity" HtmlEncode="true" />
                                                             <asp:BoundField DataField="PriceOut" HeaderText="Price" HtmlEncode="true" />
                                                             <asp:BoundField DataField="PriceTotal" HeaderText="Total" HtmlEncode="true" />

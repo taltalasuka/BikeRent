@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminTools/AdminTools.Master" AutoEventWireup="true"  CodeBehind="order.aspx.cs" Inherits="ShopsDefault.AdminTools.Modules.Products.Products.order" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
-    <title>EZ Bikes - Quản Lý Đơn Hàng</title>
+    <title>EZ Bikes -  Orders</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="css" runat="server">
 </asp:Content>

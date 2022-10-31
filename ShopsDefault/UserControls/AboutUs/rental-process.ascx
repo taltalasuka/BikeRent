@@ -7,7 +7,7 @@
             <div class="col-3">
                 <div class="item">
                     <div class="image">
-                        <img src="../../images/UploadImages/ve-chung-toi/chon-va-goi-xe.png" />
+                        <img src="../../images/UploadImages/about-us/choose.png" />
                     </div>
                     <div class="content">
                         <div class="title">Choose your desired bikes</div>      
@@ -17,7 +17,7 @@
             <div class="col-3">
                 <div class="item">
                     <div class="image">
-                        <img src="../../images/UploadImages/ve-chung-toi/thu-tuc-nhan-xe.png" />
+                        <img src="../../images/UploadImages/about-us/info.png" />
                     </div>
                     <div class="content">
                         <div class="title">Fill out your information</div>
@@ -27,7 +27,7 @@
             <div class="col-3">
                 <div class="item">
                     <div class="image">
-                        <img src="../../images/UploadImages/ve-chung-toi/tan-huong-chuyen-di.png" />
+                        <img src="../../images/UploadImages/about-us/enjoy.png" />
                     </div>
                     <div class="content">
                         <div class="title">Enjoy your ride</div>
@@ -37,7 +37,7 @@
             <div class="col-3">
                 <div class="item">
                     <div class="image">
-                        <img src="../../images/UploadImages/ve-chung-toi/tra-xe-da-thue.png" />
+                        <img src="../../images/UploadImages/about-us/return.png" />
                     </div>
                     <div class="content">
                         <div class="title">Return</div>

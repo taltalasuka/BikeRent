@@ -43,12 +43,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AjaxControlToolkit">
-      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+    <Reference Include="AjaxControlToolkit, Version=20.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.20.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
     </Reference>
-    <Reference Include="CKEditor.NET, Version=3.6.1.0, Culture=neutral, PublicKeyToken=e379cdf2f8354999, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\CKEditor.NET.dll</HintPath>
+    <Reference Include="CKEditor.NET, Version=3.6.6.2, Culture=neutral, PublicKeyToken=e379cdf2f8354999, processorArchitecture=MSIL">
+      <HintPath>..\packages\CKEditor.NET.3.6.6.2.3.6.6.2\lib\CKEditor.NET.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
@@ -90,6 +89,7 @@
     <Content Include="AdminTools\fonts\Simple-Line\Simple-Line-Icons.svg" />
     <Content Include="AdminTools\images\folder-icon-1.png" />
     <Content Include="AdminTools\images\folder-icon.png" />
+    <Content Include="AdminTools\images\user\admin.png" />
     <Content Include="AdminTools\js\custom-jquery.js" />
     <Content Include="AdminTools\js\pace.min.js" />
     <Content Include="AdminTools\Login.aspx" />
@@ -4155,7 +4155,7 @@
     <Content Include="css\style.css" />
     <Content Include="css\why-choose.css" />
     <Content Include="images\UploadImages\footer\bg-footer.jpg" />
-    <Content Include="AdminTools\images\logo-cho-thue-xe-may-QM-white.png" />
+    <Content Include="AdminTools\images\logo.png" />
     <Content Include="images\UploadImages\san-pham\bg-search-filter.jpg" />
     <Content Include="images\UploadImages\san-pham\xe-may\future.jpg" />
     <Content Include="images\UploadImages\san-pham\xe-may\sirius.jpg" />
@@ -4168,21 +4168,21 @@
     <Content Include="images\UploadImages\tin-tuc\mua-nao-di-du-lich-tot-nhat.jpg" />
     <Content Include="images\UploadImages\tin-tuc\nhung-dia-diem-an-uong-khong-the-bo-qua.jpg" />
     <Content Include="images\UploadImages\user\minh-quoc.jpg" />
-    <Content Include="images\UploadImages\ve-chung-toi\bg-why-choose.jpg" />
+    <Content Include="images\UploadImages\about-us\bg-why-choose.jpg" />
     <Content Include="images\UploadImages\favicon.ico" />
-    <Content Include="images\UploadImages\logo-cho-thue-xe-may-QM.png" />
+    <Content Include="images\UploadImages\logo.png" />
     <Content Include="images\UploadImages\slider\next-slider.png" />
     <Content Include="images\UploadImages\slider\prev-slider.png" />
     <Content Include="images\UploadImages\slider\slider-cho-thue-xe-may-1.jpg" />
     <Content Include="images\UploadImages\slider\slider-cho-thue-xe-may-2.jpg" />
     <Content Include="images\UploadImages\slider\slider-cho-thue-xe-may-3.jpg" />
     <Content Include="images\UploadImages\slider\slider-cho-thue-xe-may-4.jpg" />
-    <Content Include="images\UploadImages\ve-chung-toi\chon-va-goi-xe.png" />
-    <Content Include="images\UploadImages\ve-chung-toi\bg-rental-process.jpg" />
-    <Content Include="images\UploadImages\ve-chung-toi\gioi-thieu.jpg" />
-    <Content Include="images\UploadImages\ve-chung-toi\tan-huong-chuyen-di.png" />
-    <Content Include="images\UploadImages\ve-chung-toi\thu-tuc-nhan-xe.png" />
-    <Content Include="images\UploadImages\ve-chung-toi\tra-xe-da-thue.png" />
+    <Content Include="images\UploadImages\about-us\choose.png" />
+    <Content Include="images\UploadImages\about-us\bg-rental-process.jpg" />
+    <Content Include="images\UploadImages\about-us\gioi-thieu.jpg" />
+    <Content Include="images\UploadImages\about-us\enjoy.png" />
+    <Content Include="images\UploadImages\about-us\info.png" />
+    <Content Include="images\UploadImages\about-us\return.png" />
     <Content Include="index.aspx" />
     <Content Include="index.html" />
     <Content Include="js\add-to-cart.js" />

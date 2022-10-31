@@ -11,7 +11,8 @@
                     </tr>
                  
                     <tr>
-                        <td>Wave RSX</td>                       
+                        <td>Wave RSX</td>       
+                        <td>http://localhost:50488/product/xe-so/wave-rsx-2018-125cc-2.html</td>
                     </tr>
                     <tr>
                         <td>Sirius</td>             

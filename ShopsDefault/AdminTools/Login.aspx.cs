@@ -43,7 +43,7 @@ namespace ShopsDefault.AdminTools
                 }
                 else if (Username == "" || Password == "")
                 {
-                    lblError.Text = "Lỗi: Tên Login/Mật khẩu Not được để rỗng!";
+                    lblError.Text = "This field must not be empty!";
                     if (Username == "")
                     {
                         txtUserName.Focus();
@@ -56,7 +56,7 @@ namespace ShopsDefault.AdminTools
                 }
                 else
                 {
-                    lblError.Text = "Lỗi: Sai tên Login hoặc mật khẩu!";
+                    lblError.Text = "Invalid username/password!";
                     txtUserName.Focus();
                 }
                 conn.Close();

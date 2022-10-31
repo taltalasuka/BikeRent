@@ -35,7 +35,6 @@
                 <div class="item">
                     <div class="hd-search">
                         <asp:TextBox ID="txtSearch" runat="server" CssClass="search-text" placeholder="Search"></asp:TextBox>
-                        <button class="hd-btn-search"><i class="fa fa-search"></i></button>
                     </div>
                 </div>
             </div>

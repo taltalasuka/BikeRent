@@ -96,7 +96,7 @@
                                                 <Columns>
                                                     <asp:BoundField DataField="ID_Product" HeaderText="ID" HtmlEncode="true" />
                                                     <asp:BoundField DataField="ProductCode" HeaderText="Product code" HtmlEncode="true" />
-                                                    <asp:BoundField DataField="ProductName" HeaderText="Tên xe" HtmlEncode="true" />
+                                                    <asp:BoundField DataField="ProductName" HeaderText="Name" HtmlEncode="true" />
                                                     <asp:BoundField DataField="Amount" HeaderText="Quantity" HtmlEncode="true" />
                                                     <asp:BoundField DataField="PriceOut" HeaderText="Price" HtmlEncode="true" />
                                                     <asp:BoundField DataField="PriceTotal" HeaderText="Total" HtmlEncode="true" />

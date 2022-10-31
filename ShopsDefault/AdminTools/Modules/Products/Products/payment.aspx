@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminTools/AdminTools.Master" AutoEventWireup="true"  CodeBehind="payment.aspx.cs" Inherits="ShopsDefault.AdminTools.Modules.Products.Products.payment" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
-    <title>EZ Bikes - Quản Lý Payment Methods</title>
+    <title>EZ Bikes -  Payment Methods</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="css" runat="server">
 </asp:Content>
