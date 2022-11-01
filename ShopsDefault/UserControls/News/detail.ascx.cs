@@ -31,33 +31,33 @@ namespace ShopsDefault.UserControls.News
             string thu = "";
             if (th.Substring(0, 3) == "MON")
             {
-                thu = "Thứ 2";
+                thu = "Monday";
             }
             else if (th.Substring(0, 3) == "TUE")
             {
-                thu = "Thứ 3";
+                thu = "Tuesday";
             }
             else if (th.Substring(0, 3) == "WED")
             {
-                thu = "Thứ 4";
+                thu = "Wednesday";
             }
             else if (th.Substring(0, 3) == "THU")
             {
-                thu = "Thứ 5";
+                thu = "Thursday";
             }
             else if (th.Substring(0, 3) == "FRI")
             {
-                thu = "Thứ 6";
+                thu = "Friday";
             }
             else if (th.Substring(0, 3) == "SAT")
             {
-                thu = "Thứ 7";
+                thu = "Saturday";
             }
             else if (th.Substring(0, 3) == "SUN")
             {
-                thu = "Chủ nhật";
+                thu = "Sunday";
             }
-            return thu + ", " + Convert.ToDateTime(date).ToString("dd/MM/yyyy") + ", " + Convert.ToDateTime(date).ToString("HH:mm tt");
+            return thu + ", " + Convert.ToDateTime(date).ToString("dd/MM/yyyy") + ", " + Convert.ToDateTime(date).ToString("HH:mm");
         }
     }
 }

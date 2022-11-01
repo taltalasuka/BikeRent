@@ -6,7 +6,7 @@
     function getLinkImage() {
         $('#<%= fuImage.ClientID %>').change(function () {
             var file = $('#<%= fuImage.ClientID %>')[0].files[0]
-            $('#<%= txtImage.ClientID %>').val('/images/UploadImages/product/' + file.name);
+            $('#<%= txtImage.ClientID %>').val('/images/UploadImages/products/' + file.name);
         });
     }
 

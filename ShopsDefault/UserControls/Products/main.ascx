@@ -21,7 +21,7 @@
                                             <a href="<%# Utils.getAHrefURL("product", Eval("linkSEOCatalog"),Eval("LinkSEO"), Eval("ID_Product"))%>">
                                                 <h3 class="title"><%# Eval("ProductName")%></h3>
                                             </a>
-                                            <h4><%# Utils.getPrice(Eval("PriceOut"))%><sup>VNĐ</sup><span>/Date</span></h4>
+                                            <h4><%# Utils.getPrice(Eval("PriceOut"))%><sup>VNĐ</sup><span>/Day</span></h4>
                                             <ul>
                                                 <li><i class="fa fa-motorcycle"></i><%# Eval("Color")%></li>
                                                 <li><i class="fa fa-dashboard"></i><%# Eval("Weight")%> km/h</li>
