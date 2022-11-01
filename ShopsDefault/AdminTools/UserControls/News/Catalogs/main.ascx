@@ -13,7 +13,7 @@
     function getLinkImage() {
         $('#<%= fuImage.ClientID %>').change(function () {
             var file = $('#<%= fuImage.ClientID %>')[0].files[0]
-            $('#<%= txtImage.ClientID %>').val('/images/UploadImages/product/' + file.name);
+            $('#<%= txtImage.ClientID %>').val('/images/UploadImages/products/' + file.name);
         });
     }
 
@@ -44,7 +44,7 @@
                         <Columns>
                             <asp:BoundField DataField="ID_Catalog" HeaderText="ID" HtmlEncode="true" />
                             <asp:BoundField DataField="CatalogName" HeaderText="Articles category" HtmlEncode="true" />
-                            <asp:BoundField DataField="LinkSEO" HeaderText="Đường dẫn SEO" HtmlEncode="true" />
+                            <asp:BoundField DataField="LinkSEO" HeaderText="SEO URL" HtmlEncode="true" />
                             <asp:TemplateField HeaderText="Status" SortExpression="Hidden">
                                 <ItemTemplate><%# (Boolean.Parse(Eval("Hidden").ToString())) ? "Active" : "Not Active" %></ItemTemplate>
                             </asp:TemplateField>

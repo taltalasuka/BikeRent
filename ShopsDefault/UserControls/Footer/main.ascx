@@ -6,7 +6,7 @@
             <div class="col-4">
                 <div class="item">
                     <div class="image">
-                        <h3 class="title">About Us</h3>
+                        <h3 class="title">EZ Bikes</h3>
                         <div class="content">
                             We are a local business that provides motorcycles for tourists.
                         </div>

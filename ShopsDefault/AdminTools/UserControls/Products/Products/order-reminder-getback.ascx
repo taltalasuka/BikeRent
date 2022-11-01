@@ -58,7 +58,7 @@
                                         </div>
                                         <div class="col-4">
                                             <div class="form-group">
-                                                <label for="company">Ngày đặt</label>
+                                                <label for="company">Order date</label>
                                                 <asp:TextBox ID="txtDayOut" runat="server" ReadOnly="true" TextMode="DateTime" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="form-group">

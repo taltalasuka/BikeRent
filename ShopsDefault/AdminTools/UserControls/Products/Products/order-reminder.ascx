@@ -10,7 +10,7 @@
                     <asp:BoundField DataField="ID_OrderProduct" HeaderText="ID" HtmlEncode="true" />
                     <asp:BoundField DataField="OrdersName" HeaderText="Name" HtmlEncode="true" />
                     <asp:BoundField DataField="UserPhone" HeaderText="Phone number" HtmlEncode="true" />
-                    <asp:BoundField DataField="DayOut" DataFormatString="{0:dd/MM/yyyy}" HeaderText="Ngày đặt" HtmlEncode="true" />
+                    <asp:BoundField DataField="DayOut" DataFormatString="{0:dd/MM/yyyy}" HeaderText="Order date" HtmlEncode="true" />
                     <asp:TemplateField HeaderText="Action">
                         <ItemTemplate>
                             <asp:LinkButton ID="lnkEdit" runat="server" OnClick="btnEdit_Click" CssClass="btn btn-info"><i class="icon-pencil"></i> Details</asp:LinkButton>
@@ -60,7 +60,7 @@
                                         </div>
                                         <div class="col-4">
                                             <div class="form-group">
-                                                <label for="company">Ngày đặt</label>
+                                                <label for="company">Order date</label>
                                                 <asp:TextBox ID="txtDayOut" runat="server" ReadOnly="true" TextMode="DateTime" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="form-group">

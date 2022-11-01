@@ -13,7 +13,7 @@
     function getLinkImage() {
         $('#<%= fuImage.ClientID %>').change(function () {
             var file = $('#<%= fuImage.ClientID %>')[0].files[0]
-            $('#<%= txtImage.ClientID %>').val('/images/UploadImages/product/' + file.name);
+            $('#<%= txtImage.ClientID %>').val('/images/UploadImages/about-us/' + file.name);
         });
     }
 
@@ -75,7 +75,7 @@
                                 </div>
                                 <div class="card-body scrollbar-y-custom">
                                     <div class="form-group d-none">
-                                        <label for="company">ID About Us</label>
+                                        <label for="company">ID</label>
                                         <asp:TextBox ID="txtID_AboutUs" runat="server" placeholder="ID About Us" CssClass="form-control" ReadOnly="true"></asp:TextBox>
                                     </div>                                    
                                     <div class="form-group">
