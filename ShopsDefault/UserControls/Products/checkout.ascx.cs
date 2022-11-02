@@ -81,7 +81,6 @@ namespace ShopsDefault.UserControls.Products
             DataTable cart = Session["cart_items"] as DataTable;
             double Total = Convert.ToDouble(getTotal());
             string domain = Request.Url.GetLeftPart(UriPartial.Authority);
-            string paymentMethod = "Thanh toán tại cửa hàng";
             string str = "<div style='font-size: 14px;'>" +
                 "<div>" +
                     "<div>" +
@@ -100,11 +99,7 @@ namespace ShopsDefault.UserControls.Products
                                 "<li>" +
                                     "<strong>Order placed at :</strong>" +
                                     "<span> " + DateTime.Now.ToString("dd/MM/yyyy hh:mm") + "</span>" +
-                                "</li>" +
-                                "<li>" +
-                                    "<strong>Payment Method :</strong>" +
-                                    "<span> " + paymentMethod + "</span>" +
-                                "</li>" +
+                                "</li>" +                               
                             "</ul>" +
                             "<table>" +
                                 "<tr style='font-weight: 600;'>" +
