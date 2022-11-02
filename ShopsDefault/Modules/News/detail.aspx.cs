@@ -13,7 +13,7 @@ namespace ShopsDefault.Modules.News
         protected void Page_Load(object sender, EventArgs e)
         {
             News_Detail_Load();
-            News_Relates_Load();
+            News_related_Load();
         }
 
         private void News_Detail_Load()
@@ -27,13 +27,13 @@ namespace ShopsDefault.Modules.News
 
         }
 
-        private void News_Relates_Load()
+        private void News_related_Load()
         {
-            string linkFile = "/UserControls/News/relates.ascx";
+            string linkFile = "/UserControls/News/related.ascx";
             if (File.Exists(Server.MapPath(linkFile)))
             {
                 Control main = LoadControl(linkFile);
-                news_relates_w.Controls.Add(main);
+                news_related_w.Controls.Add(main);
             }
 
         }

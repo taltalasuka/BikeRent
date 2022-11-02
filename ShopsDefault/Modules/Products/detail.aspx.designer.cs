@@ -24,12 +24,12 @@ namespace ShopsDefault.Modules.Products
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl product_detail_w;
 
         /// <summary>
-        /// product_relates_w control.
+        /// product_related_w control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl product_relates_w;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl product_related_w;
     }
 }

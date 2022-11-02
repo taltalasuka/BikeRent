@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 namespace ShopsDefault.UserControls.News
 {
-    public partial class relates : System.Web.UI.UserControl
+    public partial class related : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {

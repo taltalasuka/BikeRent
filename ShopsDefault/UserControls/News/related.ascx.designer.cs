@@ -11,7 +11,7 @@ namespace ShopsDefault.UserControls.News
 {
 
 
-    public partial class relates
+    public partial class related
     {
 
         /// <summary>

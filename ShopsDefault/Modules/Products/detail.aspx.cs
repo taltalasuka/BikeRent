@@ -13,7 +13,7 @@ namespace ShopsDefault.Modules.Products
         protected void Page_Load(object sender, EventArgs e)
         {
             Products_Detail_Load();
-            Products_Relates_Load();
+            Products_related_Load();
         }
 
         private void Products_Detail_Load()
@@ -27,13 +27,13 @@ namespace ShopsDefault.Modules.Products
 
         }
 
-        private void Products_Relates_Load()
+        private void Products_related_Load()
         {
-            string linkFile = "/UserControls/Products/relates.ascx";
+            string linkFile = "/UserControls/Products/related.ascx";
             if (File.Exists(Server.MapPath(linkFile)))
             {
                 Control main = LoadControl(linkFile);
-                product_relates_w.Controls.Add(main);
+                product_related_w.Controls.Add(main);
             }
 
         }

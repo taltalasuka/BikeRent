@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true"  CodeBehind="relates.ascx.cs" Inherits="ShopsDefault.UserControls.News.relates" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true"  CodeBehind="related.ascx.cs" Inherits="ShopsDefault.UserControls.News.related" %>
 
 <link href="/css/hot-news.css" rel="stylesheet" />
 <div class="news-hot-news section">

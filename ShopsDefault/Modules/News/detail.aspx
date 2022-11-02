@@ -13,7 +13,7 @@
 </asp:Content>
 <asp:Content ID="Content6" ContentPlaceHolderID="ContentMain" runat="server">
     <div id="news_detail_w" runat="server"></div>
-    <div id="news_relates_w" runat="server"></div>
+    <div id="news_related_w" runat="server"></div>
 </asp:Content>
 <asp:Content ID="Content7" ContentPlaceHolderID="Right" runat="server">
 </asp:Content>

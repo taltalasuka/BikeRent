@@ -4210,7 +4210,7 @@
     <Content Include="UserControls\News\detail.ascx" />
     <Content Include="UserControls\News\hot-news.ascx" />
     <Content Include="UserControls\News\main.ascx" />
-    <Content Include="UserControls\News\relates.ascx" />
+    <Content Include="UserControls\News\related.ascx" />
     <Content Include="UserControls\Products\cart.ascx" />
     <Content Include="UserControls\Products\cart.old.ascx" />
     <Content Include="UserControls\Products\checkout.ascx" />
@@ -4218,7 +4218,7 @@
     <Content Include="UserControls\Products\main.ascx" />
     <Content Include="UserControls\Products\portfolio.ascx" />
     <Content Include="UserControls\Products\popular.ascx" />
-    <Content Include="UserControls\Products\relates.ascx" />
+    <Content Include="UserControls\Products\related.ascx" />
     <Content Include="UserControls\Products\search-filter.ascx" />
     <Content Include="UserControls\Products\search-result.ascx" />
     <Content Include="UserControls\Slider\main.ascx" />
@@ -4569,12 +4569,12 @@
     <Compile Include="UserControls\News\main.ascx.designer.cs">
       <DependentUpon>main.ascx</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\News\relates.ascx.cs">
-      <DependentUpon>relates.ascx</DependentUpon>
+    <Compile Include="UserControls\News\related.ascx.cs">
+      <DependentUpon>related.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserControls\News\relates.ascx.designer.cs">
-      <DependentUpon>relates.ascx</DependentUpon>
+    <Compile Include="UserControls\News\related.ascx.designer.cs">
+      <DependentUpon>related.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Products\cart.ascx.cs">
       <DependentUpon>cart.ascx</DependentUpon>
@@ -4625,12 +4625,12 @@
     <Compile Include="UserControls\Products\popular.ascx.designer.cs">
       <DependentUpon>popular.ascx</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\Products\relates.ascx.cs">
-      <DependentUpon>relates.ascx</DependentUpon>
+    <Compile Include="UserControls\Products\related.ascx.cs">
+      <DependentUpon>related.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserControls\Products\relates.ascx.designer.cs">
-      <DependentUpon>relates.ascx</DependentUpon>
+    <Compile Include="UserControls\Products\related.ascx.designer.cs">
+      <DependentUpon>related.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Products\search-filter.ascx.cs">
       <DependentUpon>search-filter.ascx</DependentUpon>

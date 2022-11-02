@@ -1,10 +1,10 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true"  CodeBehind="relates.ascx.cs" Inherits="ShopsDefault.UserControls.Products.relates" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true"  CodeBehind="related.ascx.cs" Inherits="ShopsDefault.UserControls.Products.related" %>
 <style>
-    .prd-relates.section {
+    .prd-related.section {
         padding-top: 0;
     }
 </style>
-<div class="prd-relates prd-default section">
+<div class="prd-related prd-default section">
     <div class="container">
         <div class="block-header style1">Related Products</div>
         <div class="row">
@@ -19,7 +19,7 @@
                                 </a>
                             </div>
                             <div class="content">
-                                <a href="<%# Utils.getAHrefURL("product", Eval("linkSEOCatalog"),Eval("LinkSEO"), Eval("ID_Product"))%>">
+                                <a href="<%# Utils.getAHrefURL2("product", Eval("linkSEOCatalog"),Eval("LinkSEO"), Eval("ID_Product"))%>">
                                     <h3 class="title"><%# Eval("ProductName")%></h3>
                                 </a>
                                 <h4><%# Utils.getPrice(Eval("PriceOut"))%><sup>VNĐ</sup><span>/Day</span></h4>
