@@ -16,7 +16,7 @@ namespace ShopsDefault.UserControls.AboutUs
 
         protected void ds_Selecting(object sender, ObjectDataSourceSelectingEventArgs e)
         {
-            string sql = "SELECT * FROM tbAboutUs where ID_AboutUs = 1";
+            string sql = "SELECT * FROM tbAboutUs where Hidden = 1";
             e.InputParameters["sSQL"] = sql;
         }
     }
