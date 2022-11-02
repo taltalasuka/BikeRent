@@ -7,7 +7,7 @@
 
         .search-filter .filter-box {
             background-color: #fff;
-            background-image: url(/images/UploadImages/product/bg-search-filter.jpg);
+            background-image: url(/images/UploadImages/products/bg-search-filter.jpg);
             background-repeat: no-repeat;
             background-size: 25%;
             padding: 30px 15px;
