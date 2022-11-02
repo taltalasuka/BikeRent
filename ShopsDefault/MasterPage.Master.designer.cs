@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ShopsDefault {
-    
-    
-    public partial class MasterPage {
-        
+namespace ShopsDefault
+{
+
+
+    public partial class MasterPage
+    {
+
         /// <summary>
         /// title control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace ShopsDefault {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder title;
-        
+
         /// <summary>
         /// css control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace ShopsDefault {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder css;
-        
+
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace ShopsDefault {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
+
         /// <summary>
         /// Header control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace ShopsDefault {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder Header;
-        
+
         /// <summary>
         /// Banner_Slider control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace ShopsDefault {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder Banner_Slider;
-        
+
         /// <summary>
         /// Left control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace ShopsDefault {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder Left;
-        
+
         /// <summary>
         /// ContentMain control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace ShopsDefault {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentMain;
-        
+
         /// <summary>
         /// Right control.
         /// </summary>
@@ -83,16 +85,7 @@ namespace ShopsDefault {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder Right;
-        
-        /// <summary>
-        /// Footer_Site control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder Footer_Site;
-        
+
         /// <summary>
         /// Footer control.
         /// </summary>
@@ -101,7 +94,7 @@ namespace ShopsDefault {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder Footer;
-        
+
         /// <summary>
         /// js control.
         /// </summary>
