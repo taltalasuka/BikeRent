@@ -171,7 +171,7 @@
                                         </div>
                                         <div class="col-6">
                                             <div class="total">
-                                                <%= Utils.getPrice(getTotal() ) %><sup>đ</sup>
+                                                <%= Utils.getPrice(getTotal())%><sup>đ</sup>
                                             </div>
                                         </div>
                                     </div>

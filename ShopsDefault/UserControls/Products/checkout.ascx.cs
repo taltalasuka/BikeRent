@@ -40,6 +40,8 @@ namespace ShopsDefault.UserControls.Products
         protected string getTotal()
         {
             int count = 0;
+            TimeSpan ts = DateTime.ParseExact(txtDayOff.Text, "dd/MM/yyyy", null) - DateTime.ParseExact(txtDatePick.Text, "dd/MM/yyyy", null);
+            int days = (int)(Math.Round(Math.Abs(ts.TotalDays)));
             object total;
             DataTable dt = (DataTable)Session["cart_items"];
             if (dt != null)
@@ -51,7 +53,7 @@ namespace ShopsDefault.UserControls.Products
                 }
                 else
                 {
-                    count = Convert.ToInt32(total.ToString());
+                    count = Convert.ToInt32(total.ToString()) * days ;
                 }
 
             }
@@ -98,7 +100,7 @@ namespace ShopsDefault.UserControls.Products
                                 "</li>" +
                                 "<li>" +
                                     "<strong>Order placed at :</strong>" +
-                                    "<span> " + DateTime.Now.ToString("dd/MM/yyyy hh:mm") + "</span>" +
+                                    "<span> " + DateTime.Now.ToString("dd/MM/yyyy HH:MM") + "</span>" +
                                 "</li>" +                               
                             "</ul>" +
                             "<table>" +
@@ -146,7 +148,7 @@ namespace ShopsDefault.UserControls.Products
             mail.To.Add(new System.Net.Mail.MailAddress(MailTo));
             mail.CC.Add(new System.Net.Mail.MailAddress("dnvknguyen@gmail.com"));
             mail.BodyEncoding = System.Text.Encoding.UTF8;
-            mail.Subject = "Your bike rental order!";
+            mail.Subject = "EZ Bikes - Your Order";
             mail.Body = str;
             mail.IsBodyHtml = true;
             System.Net.Mail.SmtpClient client = new System.Net.Mail.SmtpClient("smtp.gmail.com", 587);
