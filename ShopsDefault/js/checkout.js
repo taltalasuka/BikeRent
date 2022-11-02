@@ -6,9 +6,9 @@
         producePrompt('This field cannot be blank', 'name-error');
         return false;
 
-    } else if (!name.match(/^[A-Za-z ]*/)) {
+    } else if (!name.match(/^[A-Za-z ]$/)) {
         $('#name-error').removeClass('d-none');
-        producePrompt('Please enter your full name, 'name-error');
+        producePrompt('Please enter your full name', 'name-error');
         return false;
     } else {
         producePrompt('', 'name-error');
