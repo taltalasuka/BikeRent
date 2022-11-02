@@ -57,7 +57,7 @@
                         <div class="_line"><strong>Bike Type:</strong> <%# Eval("CatalogName")%></div>
                         <div class="_line"><strong>Product code:</strong> <%# Eval("ProductCode")%></div>
                         <div class="_line"><strong>Color:</strong> <%# Eval("Color")%></div>
-                        <div class="_line"><strong>Speed:</strong> <%# Eval("Weight")%></div>
+                        <div class="_line"><strong>Speed:</strong> <%# Eval("Weight")%> Km/h</div>
                         <div class="_line"><strong>Price:</strong> <%# Utils.getPrice(Eval("PriceOut"))%><sup>VNĐ</sup><span>/Day</span></div>
                         <div class="_line prd-amount"><strong>Quantity:</strong> <span class="btn-amount btn_decrement"><i class="fa fa-minus"></i></span><asp:TextBox ID="txtQuantity" runat="server" class="addtocart_quantity" type="text" value="1"></asp:TextBox><span class="btn-amount btn_increment"><i class="fa fa-plus"></i></span>
                             <asp:Label ID="lblAmount" runat="server" class="total-amount" Text='<%# getAmount( Eval("Amount"))%>'></asp:Label>
